@@ -1,0 +1,134 @@
+/* ==============================
+   Global Styles
+============================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #fdfdfd;
+  color: #333;
+  line-height: 1.7;
+}
+
+/* ==============================
+   Navbar
+============================== */
+nav {
+  background: #222;
+  color: #fff;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 20px;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #FFD43B; /* modern yellow */
+}
+
+/* ==============================
+   Hero / Carousel
+============================== */
+.carousel-caption {
+  background: rgba(0, 0, 0, 0.55);
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.carousel-caption h2 {
+  color: #FFD43B;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/* ==============================
+   Buttons
+============================== */
+button, .btn {
+  background: #FFD43B;
+  color: #222;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+button:hover, .btn:hover {
+  background: #e6b800;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+/* ==============================
+   Sections
+============================== */
+section {
+  padding: 60px 20px;
+}
+
+section h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+section p {
+  max-width: 900px;
+  margin: 0 auto 20px auto;
+  text-align: center;
+}
+
+/* ==============================
+   Footer
+============================== */
+footer {
+  background: #222;
+  color: #fff;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+footer a {
+  color: #FFD43B;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* ==============================
+   Responsive Layout
+============================== */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+  }
+  
+  .carousel-caption h2 {
+    font-size: 1.5rem;
+  }
+
+  section h2 {
+    font-size: 1.8rem;
+  }
+}
