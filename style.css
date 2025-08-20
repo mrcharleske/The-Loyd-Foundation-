@@ -1,27 +1,25 @@
-/* ==============================
-   Global Styles
-============================== */
+/* ===============================
+   Global Reset & Basics
+================================= */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  scroll-behavior: smooth;
 }
 
 body {
-  background: #fdfdfd;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  line-height: 1.6;
+  background: #f9fafb;
   color: #333;
-  line-height: 1.7;
 }
 
-/* ==============================
-   Navbar
-============================== */
+/* ===============================
+   Navigation Bar
+================================= */
 nav {
   background: #222;
-  color: #fff;
-  padding: 15px 40px;
+  padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -30,143 +28,198 @@ nav {
   z-index: 1000;
 }
 
-nav a {
-  color: #fff;
+nav h1 {
+  color: #f5b400; /* Modern yellow accent */
+  font-size: 1.5rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.2rem;
+}
+
+nav ul li a {
   text-decoration: none;
-  margin-left: 20px;
+  color: #fff;
+  font-weight: 600;
   transition: color 0.3s ease;
 }
 
-nav a:hover {
-  color: #FFD43B; /* modern yellow */
+nav ul li a:hover,
+nav ul li a.active {
+  color: #f5b400;
 }
 
-/* ==============================
-   Hero / Carousel
-============================== */
-.carousel-caption {
-  background: rgba(0, 0, 0, 0.55);
-  padding: 20px;
-  border-radius: 12px;
-}
-
-.carousel-caption h2 {
-  color: #FFD43B;
-  font-size: 2rem;
-  font-weight: bold;
-}
-
-/* ==============================
-   Buttons
-============================== */
-button, .btn {
-  background: #FFD43B;
-  color: #222;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 25px;
-  font-weight: bold;
-  transition: all 0.3s ease;
-  cursor: pointer;
-}
-
-button:hover, .btn:hover {
-  background: #e6b800;
+/* ===============================
+   Hero / Banner
+================================= */
+.hero {
+  height: 80vh;
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+              url('images/banner.jpg') center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: #fff;
-  transform: scale(1.05);
+  text-align: center;
 }
 
-/* ==============================
-   Sections
-============================== */
+.hero h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  animation: fadeInDown 1.5s ease;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  animation: fadeInUp 2s ease;
+}
+
+/* ===============================
+   Section Defaults
+================================= */
 section {
-  padding: 60px 20px;
+  padding: 3rem 2rem;
+  max-width: 1100px;
+  margin: auto;
 }
 
 section h2 {
-  text-align: center;
-  font-size: 2.2rem;
-  margin-bottom: 20px;
+  font-size: 2rem;
+  margin-bottom: 1rem;
   color: #222;
-}
-
-section p {
-  max-width: 900px;
-  margin: 0 auto 20px auto;
   text-align: center;
+  position: relative;
 }
 
-/* ==============================
+section h2::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: #f5b400;
+  margin: 0.5rem auto 1.5rem auto;
+  border-radius: 2px;
+}
+
+/* ===============================
+   About Page Styling
+================================= */
+.about-container {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.about-image img {
+  width: 350px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+.about-image img:hover {
+  transform: scale(1.05);
+}
+
+.about-text {
+  flex: 1;
+  font-size: 1.1rem;
+  color: #444;
+}
+
+/* Responsive About */
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-image img {
+    width: 80%;
+    max-width: 320px;
+  }
+
+  .about-text {
+    text-align: left;
+  }
+}
+
+/* ===============================
+   Programs / Projects
+================================= */
+.programs {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.program {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.program:hover {
+  transform: translateY(-8px);
+}
+
+.program img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+/* ===============================
+   Contact Section
+================================= */
+.contact-info {
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.contact-info p {
+  margin-bottom: 1rem;
+}
+
+.qr-code img {
+  width: 200px;
+  margin: 1rem auto;
+  display: block;
+}
+
+/* ===============================
    Footer
-============================== */
+================================= */
 footer {
   background: #222;
   color: #fff;
-  padding: 40px 20px;
   text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
 }
 
-footer a {
-  color: #FFD43B;
-  margin: 0 10px;
-  text-decoration: none;
+footer p {
+  margin: 0.5rem 0;
 }
 
-footer a:hover {
-  text-decoration: underline;
-}
-
-/* ==============================
-   Responsive Layout
-============================== */
-@media (max-width: 768px) {
-  nav {
-    flex-direction: column;
-  }
-  
-  .carousel-caption h2 {
-    font-size: 1.5rem;
-  }
-
-  section h2 {
-    font-size: 1.8rem;
-  }
-}
-
-/* ==============================
+/* ===============================
    Animations
-============================== */
-.fade-in {
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInUp 1s ease forwards;
-}
-
-.fade-in-delay {
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInUp 1s ease forwards;
-  animation-delay: 0.5s;
+================================= */
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
-/* Smooth image hover */
-img {
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-  border-radius: 10px;
-}
-
-img:hover {
-  transform: scale(1.05);
-  box-shadow: 0px 8px 20px rgba(0,0,0,0.2);
+.fade-in {
+  opacity: 0;
+  animation: fadeInUp 1.5s ease forwards;
 }
