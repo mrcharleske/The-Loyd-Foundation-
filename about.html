@@ -1,68 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f5b400">
+  <link rel="manifest" href="manifest.json">
   <title>About - The Loyd Foundation</title>
-  <link rel="stylesheet" href="style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <nav>
-      <h1>The Loyd Foundation</h1>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html" class="active">About</a></li>
-        <li><a href="programs.html">Programs</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand text-warning fw-bold" href="index.html">The Loyd Foundation</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="programs.html">Programs</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact & Donate</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
   <main>
     <!-- About Founder Section -->
-    <section class="about-founder fade-in">
-      <div class="about-container">
-        <div class="about-image">
-          <img src="images/nathan-loyd.jpg" alt="Nathan Loyd - Founder & CEO of The Loyd Foundation">
-        </div>
-        <div class="about-text">
-          <h2>About Nathan Loyd</h2>
-          <p>
-            Nathan Loyd is a seasoned entrepreneur, CEO, and author with over 30 years of
-            transformative experience in international trade, real estate, agriculture, and
-            mineral processing. His career has been marked by a commitment to innovation,
-            sustainability, and empowering communities across Africa and beyond.
-          </p>
-          <p>
-            As the Founder & CEO of <strong>Avoveg Health LLC</strong> and
-            <strong>Avoveg Health Kenya Ltd</strong>, Nathan was instrumental in establishing
-            Kenya as a leading exporter of avocados to Europe and the Middle East, creating
-            opportunities for farmers and strengthening international trade relationships.
-          </p>
-          <p>
-            He also led <strong>DN International</strong>, a major real estate firm in Rwanda,
-            where he spearheaded large-scale housing and commercial projects that contributed
-            significantly to Rwanda’s urban development.
-          </p>
-          <p>
-            Today, through <strong>The Loyd Foundation</strong>, Nathan dedicates his expertise
-            and resources to philanthropic initiatives — from education and youth empowerment
-            programs, to supporting farmers and SMEs, and advancing community healthcare and
-            environmental sustainability.
-          </p>
-          <p>
-            His vision is rooted in giving back to the community and inspiring the next
-            generation of leaders, entrepreneurs, and changemakers across Africa.
-          </p>
+    <section class="about-founder py-5" data-aos="fade-up">
+      <div class="container">
+        <div class="about-container">
+          <div class="about-image">
+            <img src="images/nathan-loyd.jpg" alt="Nathan Loyd - Founder & CEO of The Loyd Foundation" class="img-fluid rounded shadow-sm" loading="lazy">
+          </div>
+          <div class="about-text">
+            <h2 class="text-warning fw-bold">About Nathan Loyd</h2>
+            <p class="text-secondary">
+              Nathan Loyd is a trailblazing entrepreneur, CEO, and author whose remarkable 30-year career has left an indelible mark on 
+              international trade, real estate, agriculture, and mineral processing. His journey is a testament to innovation, sustainability, 
+              and a deep commitment to empowering communities across Africa and beyond. With a heart full of compassion, Nathan has turned 
+              his successes into a powerful force for good through The Loyd Foundation.
+            </p>
+            <p class="text-secondary">
+              As the visionary behind <strong>Avoveg Health LLC</strong> and <strong>Avoveg Health Kenya Ltd</strong>, Nathan revolutionized 
+              Kenya’s avocado industry, establishing it as a leading exporter to Europe and the Middle East. His leadership created thousands 
+              of opportunities for local farmers, strengthened trade relationships, and showcased the power of sustainable agriculture.
+            </p>
+            <p class="text-secondary">
+              At <strong>DN International</strong> in Rwanda, Nathan spearheaded transformative real estate projects, building large-scale 
+              housing and commercial developments that fueled urban growth and improved living standards. His strategic vision turned 
+              challenges into opportunities, leaving a legacy of progress.
+            </p>
+            <p class="text-secondary">
+              Today, through <strong>The Loyd Foundation</strong>, Nathan channels his expertise and resources into life-changing 
+              philanthropic efforts. From pioneering education and youth empowerment programs to supporting farmers and SMEs, and advancing 
+              community healthcare and environmental sustainability, his work inspires hope. His vision? To give back to the community and 
+              ignite the next generation of leaders, entrepreneurs, and changemakers across Africa.
+            </p>
+            <a href="contact.html" class="btn btn-warning mt-3">Get Involved</a>
+          </div>
         </div>
       </div>
     </section>
   </main>
 
-  <footer>
-    <p>&copy; 2025 The Loyd Foundation | All Rights Reserved</p>
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-3">
+    <div class="social-icons">
+      <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+      <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+      <a href="#" class="text-white"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+    <p class="mb-0">&copy; 2025 The Loyd Foundation | All Rights Reserved</p>
   </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <script src="script.js"></script>
 </body>
 </html>
