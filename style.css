@@ -1,6 +1,4 @@
-/* ===============================
-   Global Reset & Basics
-================================= */
+/* Global Reset & Basics */
 * {
   margin: 0;
   padding: 0;
@@ -8,104 +6,120 @@
 }
 
 body {
-  font-family: 'Segoe UI', Arial, sans-serif;
+  font-family: 'Roboto', sans-serif;
   line-height: 1.6;
   background: #f9fafb;
   color: #333;
+  transition: background 0.3s, color 0.3s;
 }
 
-/* ===============================
-   Navigation Bar
-================================= */
-nav {
-  background: #222;
+body.dark-mode {
+  background: #1a1a1a;
+  color: #e0e0e0;
+}
+
+.dark-mode .text-secondary {
+  color: #b0b0b0 !important;
+}
+
+.dark-mode .bg-light {
+  background: #2d2d2d !important;
+}
+
+.dark-mode .navbar-dark {
+  background: #333;
+}
+
+/* Navigation Bar */
+.navbar {
   padding: 1rem 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   position: sticky;
   top: 0;
   z-index: 1000;
 }
 
-nav h1 {
-  color: #f5b400; /* Modern yellow accent */
+.navbar-brand {
+  font-family: 'Poppins', sans-serif;
   font-size: 1.5rem;
 }
 
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 1.2rem;
-}
-
-nav ul li a {
-  text-decoration: none;
-  color: #fff;
-  font-weight: 600;
+.nav-link {
+  font-weight: 500;
   transition: color 0.3s ease;
 }
 
-nav ul li a:hover,
-nav ul li a.active {
-  color: #f5b400;
+.nav-link:hover, .nav-link.active {
+  color: #f5b400 !important;
 }
 
-/* ===============================
-   Hero / Banner
-================================= */
-.hero {
+/* Hero / Banner */
+#heroCarousel {
   height: 80vh;
-  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-              url('images/banner.jpg') center/cover no-repeat;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #fff;
-  text-align: center;
 }
 
-.hero h2 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-  animation: fadeInDown 1.5s ease;
+.carousel-item img {
+  object-fit: cover;
+  height: 80vh;
 }
 
-.hero p {
-  font-size: 1.2rem;
-  animation: fadeInUp 2s ease;
+.carousel-caption {
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
 }
 
-/* ===============================
-   Section Defaults
-================================= */
+.slider-text {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2rem;
+  color: #f5b400;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: slide 6s infinite;
+}
+
+@keyframes slide {
+  0% { transform: translateX(100%); }
+  25% { transform: translateX(0); }
+  50% { transform: translateX(0); }
+  75% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+.slider-text span {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+/* Section Defaults */
 section {
-  padding: 3rem 2rem;
-  max-width: 1100px;
+  padding: 4rem 2rem;
+  max-width: 1200px;
   margin: auto;
 }
 
-section h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
+h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
   color: #222;
   text-align: center;
   position: relative;
 }
 
-section h2::after {
+h2::after {
   content: '';
   display: block;
   width: 80px;
   height: 4px;
   background: #f5b400;
-  margin: 0.5rem auto 1.5rem auto;
+  margin: 0.5rem auto 1.5rem;
   border-radius: 2px;
 }
 
-/* ===============================
-   About Page Styling
-================================= */
+.dark-mode h2 {
+  color: #f5b400;
+}
+
+/* About Page Styling */
 .about-container {
   display: flex;
   align-items: center;
@@ -126,7 +140,6 @@ section h2::after {
 .about-text {
   flex: 1;
   font-size: 1.1rem;
-  color: #444;
 }
 
 /* Responsive About */
@@ -135,20 +148,16 @@ section h2::after {
     flex-direction: column;
     text-align: center;
   }
-
   .about-image img {
     width: 80%;
     max-width: 320px;
   }
-
   .about-text {
     text-align: left;
   }
 }
 
-/* ===============================
-   Programs / Projects
-================================= */
+/* Programs / Projects */
 .programs {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -173,53 +182,66 @@ section h2::after {
   margin-bottom: 1rem;
 }
 
-/* ===============================
-   Contact Section
-================================= */
+/* Contact Section */
+.map-container svg {
+  transition: transform 0.3s ease;
+}
+
+.map-container svg:hover {
+  transform: scale(1.05);
+}
+
 .contact-info {
   text-align: center;
   font-size: 1.2rem;
 }
 
-.contact-info p {
-  margin-bottom: 1rem;
+.social-icons a {
+  transition: color 0.3s ease;
 }
 
-.qr-code img {
-  width: 200px;
-  margin: 1rem auto;
-  display: block;
+.social-icons a:hover {
+  color: #f5b400 !important;
 }
 
-/* ===============================
-   Footer
-================================= */
+/* Footer */
 footer {
   background: #222;
   color: #fff;
-  text-align: center;
   padding: 1rem;
-  margin-top: 2rem;
 }
 
-footer p {
-  margin: 0.5rem 0;
+footer .social-icons {
+  margin-bottom: 0.5rem;
 }
 
-/* ===============================
-   Animations
-================================= */
-@keyframes fadeInDown {
-  from { opacity: 0; transform: translateY(-20px); }
-  to { opacity: 1; transform: translateY(0); }
+/* Buttons */
+.btn {
+  font-family: 'Poppins', sans-serif;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-@keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
-.fade-in {
+.btn-warning {
+  background-color: #f5b400;
+  border-color: #f5b400;
+}
+
+.btn-warning:hover {
+  background-color: #e0a200;
+  border-color: #e0a200;
+}
+
+/* Animations */
+[data-aos] {
   opacity: 0;
-  animation: fadeInUp 1.5s ease forwards;
+  transition-property: opacity, transform;
+}
+
+[data-aos].aos-animate {
+  opacity: 1;
 }
