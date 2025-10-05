@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Offline — The Loyd Foundation</title>
+  <meta name="description" content="You’re offline. Please check your connection and try again.">
+  <link rel="canonical" href="https://mrcharleske.github.io/The-Loyd-Foundation-/offline.html">
+  <meta name="robots" content="noindex, nofollow">
+  <!-- OG/Twitter (minimal) -->
+  <meta property="og:title" content="Offline — The Loyd Foundation">
+  <meta property="og:description" content="You’re offline. Please check your connection and try again.">
+  <meta property="og:image" content="https://mrcharleske.github.io/The-Loyd-Foundation-/images/loydfavicon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mrcharleske.github.io/The-Loyd-Foundation-/offline.html">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:image" content="https://mrcharleske.github.io/The-Loyd-Foundation-/images/loydfavicon.png">
+  <!-- PWA iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Loyd Foundation">
+  <!-- Perf Preconnects -->
+  <link rel="preconnect" href="https://unpkg.com">
+  <link rel="preconnect" href="https://formspree.io">
+  <link rel="dns-prefetch" href="https://www.google.com">
+  <!-- CSP -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://unpkg.com https://formspree.io; style-src 'self' https://unpkg.com; frame-src https://www.google.com; img-src 'self' data: https:; media-src 'self' blob:;">
+  <!-- Favicon/Manifest -->
+  <link rel="icon" type="image/png" href="images/loydfavicon.png">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#1e6f5c">
+  <!-- Hreflang -->
+  <link rel="alternate" hreflang="en-KE" href="https://mrcharleske.github.io/The-Loyd-Foundation-/offline.html">
+  <link rel="alternate" hreflang="en-US" href="https://mrcharleske.github.io/The-Loyd-Foundation-/offline.html">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+  <!-- Schema (minimal for offline) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Offline Page",
+    "url": "https://mrcharleske.github.io/The-Loyd-Foundation-/offline.html"
+  }
+  </script>
+</head>
+<body>
+  <!-- Install Button -->
+  <button class="btn-install" id="installBtn" style="display: none;">Install The Loyd Foundation</button>
+
+  <!-- Header -->
+  <header class="navbar">
+    <div class="wrap nav">
+      <div class="logo">
+        <img src="images/loydfavicon.png" alt="The Loyd Foundation Logo">
+        <strong>The Loyd Foundation</strong>
+      </div>
+      <nav class="nav-links" id="navMenu">
+        <a href="index.html">Home</a>
+        <a href="programs.html">Programs</a>
+        <a href="about.html">About</a>
+        <a href="impact.html">Impact</a>
+        <a href="donate.html">Donate</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <button class="hamburger" id="hamburger">☰</button>
+    </div>
+  </header>
+
+  <!-- Offline Message -->
+  <section class="wrap" data-aos="fade-up">
+    <div class="offline-content">
+      <img src="images/loydfavicon.png" alt="The Loyd Foundation Logo" class="offline-logo" data-aos="zoom-in">
+      <h1>You’re Offline</h1>
+      <p class="muted">It looks like you’re not connected to the internet. Please check your connection and try again. Your recent actions (like forms) are queued and will sync when back online.</p>
+      <button class="btn-primary" id="retryBtn">Try Again</button>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="wrap">
+      <div class="footer-content">
+        <div><strong>The Loyd Foundation</strong></div>
+        <div class="text-sm muted">© <span id="year"></span> The Loyd Foundation — All rights reserved. <a href="privacy.html">Privacy Policy</a> | Donations may be tax-deductible (consult advisor).</div>
+        <div class="social-links">
+          <a href="https://facebook.com/loydfoundation" data-aos="fade-up">Facebook</a> |
+          <a href="https://instagram.com/loydfoundation" data-aos="fade-up" data-aos-delay="100">Instagram</a> |
+          <a href="https://linkedin.com/company/loydfoundation" data-aos="fade-up" data-aos-delay="200">LinkedIn</a> |
+          <a href="https://twitter.com/loydfoundation" data-aos="fade-up" data-aos-delay="300">Twitter</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+</body>
+</html>
