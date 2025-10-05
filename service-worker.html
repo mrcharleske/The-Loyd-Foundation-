@@ -1,147 +1,197 @@
-const CACHE_NAME = 'loyd-foundation-v2';
+// service-worker.js - Loyds Foundation PWA: Full Offline, Queue, Install
+const CACHE_NAME = 'loyds-v1.2025-10-06';
 const urlsToCache = [
-  '/',
-  '/index.html',
-  '/programs.html',
-  '/about.html',
-  '/impact.html',
-  '/donate.html',
-  '/contact.html',
-  '/offline.html',
-  '/404.html',
-  '/donate-success.html',
-  '/privacy.html',
-  '/style.css',
-  '/main.js',
-  '/manifest.json',
-  'https://unpkg.com/aos@next/dist/aos.css',
-  'https://unpkg.com/aos@next/dist/aos.js',
-  // Images and Videos (add WebP if added)
-  '/images/home-hero.png',
-  '/images/home-hero.mp4',
-  '/images/home-impact.jpg',
-  '/images/home-farmers.png',
-  '/images/home-smes.jpg',
-  '/images/home-feeding.png',
-  '/images/home-education.jpg',
-  '/images/logo-partner1.png',
-  '/images/placeholder.png',
-  '/images/loydfounder.jpg',
-  '/images/about-team.jpg',
-  '/images/about-project1.jpg',
-  '/images/about-project2.jpg',
-  '/images/about-project3.jpg',
-  '/images/program-smes-banner.jpg',
-  '/images/program-smes-support.jpg',
-  '/images/program-farmers-banner.png',
-  '/images/program-farmers-support.png',
-  '/images/program-feeding-banner.png',
-  '/images/program-feeding-support.png',
-  '/images/program-education-banner.jpg',
-  '/images/program-education-support.jpg',
-  '/images/donation-bg.jpg',
-  '/images/donation-success.jpg',
-  '/images/video-drone.mp4',
-  '/images/loydfarmers.mp4',
-  '/images/loydfeeding.mp4',
-  '/images/loydstudent.mp4',
-  '/images/video-sme.mp4',
-  '/images/loydfavicon.png'
+    '/',
+    '/index.html',
+    '/who-we-are.html',
+    '/programs.html',
+    '/impact.html',
+    '/donate.html',
+    '/donate-success.html',
+    '/contact.html',
+    '/privacy.html',
+    '/offline.html',
+    '/style.css',
+    '/main.js',
+    '/manifest.json',
+    // Images: All your ✅ assets, prioritized
+    '/images/home-hero.png',
+    '/images/home-hero.mp4',
+    '/images/home-impact.jpg',
+    '/images/home-farmer.png',
+    '/images/home-smes.jpg',
+    '/images/home-feeding.png',
+    '/images/home-education.jpg',
+    '/images/logo-partner1.png',
+    '/images/loydfounder.jpg',
+    '/images/about-team.jpg',
+    '/images/about-project1.jpg',
+    '/images/about-project2.jpg',
+    '/images/about-project3.jpg',
+    '/images/program-smes-banner.jpg',
+    '/images/program-smes-support.jpg',
+    '/images/program-farmers-banner.png',
+    '/images/program-farmers-support.png',
+    '/images/program-feeding-banner.png',
+    '/images/program-feeding-support.png',
+    '/images/program-education-banner.jpg',
+    '/images/program-education-support.jpg',
+    '/images/donation-bg.jpg',
+    '/images/donation-success.jpg',
+    '/images/video-drone.mp4',
+    '/images/loyfarmers.mp4',
+    '/images/loydfeeding.mp4',
+    '/images/loydstudent.mp4',
+    '/images/video-sme.mp4',
+    '/images/loydfavicon.png',
+    // Lang placeholders (expand for translations)
+    // '/lang/en.json', '/lang/sw.json', etc.
 ];
 
+// Install: Cache Core Assets
 self.addEventListener('install', (event) => {
-  event.waitUntil(
-    caches.open(CACHE_NAME).then((cache) => {
-      return cache.addAll(urlsToCache);
-    })
-  );
-  self.skipWaiting();
+    event.waitUntil(
+        caches.open(CACHE_NAME).then((cache) => {
+            console.log('Caching assets...');
+            return cache.addAll(urlsToCache);
+        }).then(() => self.skipWaiting())
+    );
 });
 
+// Activate: Clean Old Caches
 self.addEventListener('activate', (event) => {
-  event.waitUntil(
-    caches.keys().then((cacheNames) => {
-      return Promise.all(
-        cacheNames.map((cacheName) => {
-          if (cacheName !== CACHE_NAME) {
-            return caches.delete(cacheName);
-          }
-        })
-      );
-    })
-  );
-  self.clients.claim();
-  // Notify clients of update
-  event.waitUntil(self.clients.matchAll().then(clients => clients.forEach(client => client.postMessage({type: 'SW_UPDATED'}))));
+    event.waitUntil(
+        caches.keys().then((cacheNames) => {
+            return Promise.all(
+                cacheNames.map((cacheName) => {
+                    if (cacheName !== CACHE_NAME) {
+                        return caches.delete(cacheName);
+                    }
+                })
+            );
+        }).then(() => self.clients.claim())
+    );
 });
 
+// Fetch: Strategies - Cache-First Static, Network-First Dynamic, Offline Fallback
 self.addEventListener('fetch', (event) => {
-  // Performance mark
-  self.performance.mark('sw-fetch-start');
-  event.respondWith(
-    (async () => {
-      // Runtime caching for Formspree
-      if (event.request.url.includes('formspree.io')) {
-        const cache = await caches.open(CACHE_NAME);
-        const cached = await cache.match(event.request);
-        if (cached) return cached; // Stale-while-revalidate for GET
-        try {
-          const network = await fetch(event.request);
-          cache.put(event.request, network.clone());
-          return network;
-        } catch (err) {
-          return new Response('Form service unavailable offline.', { status: 503 });
-        }
-      }
+    const url = new URL(event.request.url);
 
-      // Standard cache-first with fallback
-      const cached = await caches.match(event.request);
-      if (cached) {
-        self.performance.mark('sw-fetch-end');
-        self.performance.measure('sw-fetch-time', 'sw-fetch-start', 'sw-fetch-end');
-        return cached;
-      }
+    // Offline Fallback
+    if (event.request.mode === 'navigate' && !navigator.onLine) {
+        event.respondWith(caches.match('/offline.html'));
+        return;
+    }
 
-      // Handle range requests for videos
-      if (event.request.headers.has('range')) {
-        const cache = await caches.open(CACHE_NAME);
-        const cachedRange = await cache.match(event.request);
-        if (cachedRange) return cachedRange;
-        try {
-          return await fetch(event.request);
-        } catch (err) {
-          return new Response('Video unavailable offline.', { status: 503 });
-        }
-      }
+    // Cache-First: Static Assets (HTML/CSS/JS/Images)
+    if (urlsToCache.some(cachedUrl => url.pathname.includes(cachedUrl)) || /\.(html|css|js|png|jpg|jpeg|svg|ico)$/i.test(url.pathname)) {
+        event.respondWith(
+            caches.match(event.request).then((response) => response || fetch(event.request).catch(() => caches.match('/offline.html')))
+        );
+        return;
+    }
 
-      // Fallback for navigation
-      try {
-        const network = await fetch(event.request);
-        return network;
-      } catch (err) {
-        if (event.request.mode === 'navigate') {
-          return await caches.match('/offline.html');
+    // Network-First: Forms/APIs (Queue if Offline)
+    if (event.request.method === 'POST' || url.origin === location.origin && (url.pathname.includes('formspree.io') || event.request.headers.get('Content-Type')?.includes('application/x-www-form-urlencoded'))) {
+        if (navigator.onLine) {
+            event.respondWith(fetch(event.request));
+        } else {
+            // Queue to IndexedDB
+            event.respondWith(queueRequest(event.request));
         }
-        return new Response('Offline and no cache available.', { status: 503 });
-      }
-    })()
-  );
+        return;
+    }
+
+    // Stale-While-Revalidate: Videos (Cache with Network Update)
+    if (/\.mp4$/i.test(url.pathname)) {
+        event.respondWith(
+            caches.open(CACHE_NAME).then((cache) => {
+                return cache.match(event.request).then((cachedResponse) => {
+                    const fetchPromise = fetch(event.request).then((networkResponse) => {
+                        cache.put(event.request, networkResponse.clone());
+                        return networkResponse;
+                    }).catch(() => cachedResponse);
+                    return cachedResponse || fetchPromise;
+                });
+            })
+        );
+        return;
+    }
+
+    // Default: Network-Fallback-to-Cache
+    event.respondWith(
+        fetch(event.request).then((response) => {
+            // Cache successful responses
+            if (response && response.status === 200 && response.headers.get('Content-Type')?.match(/text\.html/)) {
+                return caches.open(CACHE_NAME).then((cache) => {
+                    cache.put(event.request, response.clone());
+                    return response;
+                });
+            }
+            return response;
+        }).catch(() => caches.match(event.request) || caches.match('/offline.html'))
+    );
 });
 
-// Background sync for queued forms
-self.addEventListener('sync', (event) => {
-  if (event.tag === 'form-sync') {
-    event.waitUntil(syncQueuedForms());
-  }
-});
+// Queue POST Requests Offline (Donations/Signups)
+function queueRequest(request) {
+    // Use IndexedDB for queue
+    const dbPromise = indexedDB.open('LoydsQueue', 1);
+    dbPromise.onupgradeneeded = (e) => {
+        const db = e.target.result;
+        db.createObjectStore('queue', { keyPath: 'id', autoIncrement: true });
+    };
 
-async function syncQueuedForms() {
-  try {
-    const clients = await self.clients.matchAll({ type: 'window' });
-    clients.forEach(client => client.postMessage({ type: 'sync-forms' }));
-  } catch (err) {
-    console.error('Sync failed:', err);
-    // Retry logic: Re-register sync after 5min
-    setTimeout(() => self.registration.sync.register('form-sync'), 300000);
-  }
+    return dbPromise.then((db) => {
+        const tx = db.transaction('queue', 'readwrite');
+        const store = tx.objectStore('queue');
+        return store.add({ request: request.clone(), timestamp: Date.now() });
+    }).then(() => {
+        // Respond with offline message
+        return new Response('Queued offline—syncs on reconnect.', { status: 202 });
+    });
 }
+
+// Sync on Online (Post Queue)
+self.addEventListener('sync', (event) => {
+    if (event.tag === 'sync-queue') {
+        event.waitUntil(syncQueuedRequests());
+    }
+});
+
+function syncQueuedRequests() {
+    const dbPromise = indexedDB.open('LoydsQueue', 1);
+    return dbPromise.then((db) => {
+        const tx = db.transaction('queue', 'readonly');
+        const store = tx.objectStore('queue');
+        return store.getAll().then((queued) => {
+            return Promise.all(queued.map((item) => {
+                return fetch(item.request).then(() => {
+                    // Delete on success
+                    const deleteTx = db.transaction('queue', 'readwrite');
+                    const deleteStore = deleteTx.objectStore('queue');
+                    deleteStore.delete(item.id);
+                }).catch((err) => console.log('Sync failed:', err));
+            }));
+        });
+    });
+}
+
+// Push Notifications (Opt-In Future)
+self.addEventListener('push', (event) => {
+    const options = {
+        body: event.data ? event.data.text() : 'New update from Loyds!',
+        icon: '/images/loydfavicon.png',
+        badge: '/images/loydfavicon.png',
+        vibrate: [100, 50, 100]
+    };
+    event.waitUntil(self.registration.showNotification('Loyds Foundation', options));
+});
+
+// Install Prompt (After Load)
+let deferredPrompt;
+self.addEventListener('beforeinstallprompt', (e) => {
+    e.preventDefault();
+    deferredPrompt = e;
+    // Trigger after 10s via main.js
+});
