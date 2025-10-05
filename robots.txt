@@ -1,8 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /404.html
-Disallow: /offline.html
-Disallow: /donate-success.html
-Disallow: /privacy.html$  # Optional, but indexable
-Crawl-delay: 1
-Sitemap: /sitemap.xml
+
+Sitemap: https://mrcharleske.github.io/The-Loyd-Foundation-/sitemap.xml
