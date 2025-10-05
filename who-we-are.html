@@ -75,10 +75,13 @@
                 <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
                     <span></span><span></span><span></span>
                 </button>
-                <!-- Language Toggle Placeholder -->
+                <!-- Language Toggle with Five Options -->
                 <select id="lang-toggle" aria-label="Language">
                     <option value="en">EN</option>
                     <option value="sw">SW</option>
+                    <option value="fr">FR</option>
+                    <option value="es">ES</option>
+                    <option value="ar">AR</option>
                 </select>
             </div>
         </nav>
@@ -86,28 +89,27 @@
 
     <!-- Main Content -->
     <main id="main-content">
-        <!-- Hero Section -->
+        <!-- Hero Section (No Overlay) -->
         <section class="hero hero-about" role="banner">
             <div class="hero-image-container">
-                <img src="images/loydfounder.jpg" alt="Loyd Founder: Visionary leader in community empowerment" class="hero-image" loading="lazy">
-                <div class="hero-overlay">
-                    <div class="hero-content" data-aos="fade-up">
-                        <h1>Our Story: From Vision to Global Impact</h1>
-                        <p>Founded on the belief that every community holds untapped potential, Loyds bridges Kenya's grassroots needs with worldwide support.</p>
-                        <div class="hero-buttons">
-                            <a href="#founder" class="cta-button secondary">Meet the Founder</a>
-                            <a href="programs.html" class="cta-button gold">Explore Programs</a>
-                        </div>
+                <img src="images/loydfounder.jpg" alt="Loyd Founder: Visionary leader in community empowerment" class="hero-image" loading="lazy" height="400">
+                <div class="hero-content" data-aos="fade-up">
+                    <h1>Our Story: From Vision to Global Impact</h1>
+                    <p>Founded on the belief that every community holds untapped potential, Loyds bridges Kenya's grassroots needs with worldwide support.</p>
+                    <div class="hero-buttons">
+                        <a href="contact.html" class="cta-button secondary">Contact Us</a>
+                        <a href="programs.html" class="cta-button gold">Explore Programs</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Founder Section -->
-        <section id="founder" class="founder" data-aos="fade-up">
+        <!-- Founder Section: Image Left, Text Right -->
+        <section id="founder" class="founder layout-row" data-aos="fade-up">
             <div class="container">
                 <h2>The Founder</h2>
                 <div class="founder-content">
+                    <img src="images/loydfounder.jpg" alt="Portrait of Loyd Founder" class="founder-image" loading="lazy" height="300">
                     <div class="founder-text">
                         <p>Loyd [Last Name], a Kenyan social entrepreneur with roots in rural agriculture and a Harvard fellowship under his belt, launched Loyds in 2020. Witnessing SME struggles during COVID and education gaps in slums, he rallied USA partners for seed funding. "It's not charity—it's shared prosperity," Loyd says. Today, his vision has touched 1,200 lives, blending local wisdom with global resources.</p>
                         <blockquote>"Empower one, uplift all—from Nairobi markets to New York boardrooms."</blockquote>
@@ -116,12 +118,17 @@
             </div>
         </section>
 
-        <!-- Team Section -->
-        <section class="team" data-aos="fade-up">
+        <!-- Team Section: Text Left, Image Right -->
+        <section class="team layout-row-reverse" data-aos="fade-up">
             <div class="container">
                 <h2>Our Dedicated Team</h2>
                 <p>A multicultural crew: Kenyan field experts and USA strategists, united by impact.</p>
-                <img src="images/about-team.jpg" alt="Loyds Team: Diverse group collaborating in a workshop" loading="lazy" class="team-image">
+                <div class="team-content">
+                    <div class="team-text">
+                        <p>Our team of 15+ combines on-the-ground passion with strategic insight, ensuring every program delivers lasting change. From logistics in Nairobi to donor relations in the US, we're a family forging global ties.</p>
+                    </div>
+                    <img src="images/about-team.jpg" alt="Loyds Team: Diverse group collaborating in a workshop" class="team-image" loading="lazy" height="300">
+                </div>
             </div>
         </section>
 
@@ -132,7 +139,7 @@
                 <div class="grid">
                     <!-- Project 1 -->
                     <article class="card project-card" data-aos="fade-up" data-aos-delay="100">
-                        <img src="images/about-project1.jpg" alt="Project 1: SME Bootcamp in Nairobi" loading="lazy">
+                        <img src="images/about-project1.jpg" alt="Project 1: SME Bootcamp in Nairobi" loading="lazy" height="250">
                         <div class="card-content">
                             <h3>SME Empowerment Hub</h3>
                             <p>Aisha's Nairobi startup thrived post-bootcamp—USA donor Mike's support scaled it globally. "Cross-continental collaboration at its best."</p>
@@ -141,7 +148,7 @@
                     </article>
                     <!-- Project 2 -->
                     <article class="card project-card" data-aos="fade-up" data-aos-delay="200">
-                        <img src="images/about-project2.jpg" alt="Project 2: Farmer Irrigation Initiative" loading="lazy">
+                        <img src="images/about-project2.jpg" alt="Project 2: Farmer Irrigation Initiative" loading="lazy" height="250">
                         <div class="card-content">
                             <h3>Rural Resilience Program</h3>
                             <p>Juma's Kitui farm doubled output with Loyds' tech—matched by California grants. "Seeds of change, sown worldwide."</p>
@@ -150,7 +157,7 @@
                     </article>
                     <!-- Project 3 -->
                     <article class="card project-card" data-aos="fade-up" data-aos-delay="300">
-                        <img src="images/about-project3.jpg" alt="Project 3: Education Outreach" loading="lazy">
+                        <img src="images/about-project3.jpg" alt="Project 3: Education Outreach" loading="lazy" height="250">
                         <div class="card-content">
                             <h3>Scholarship Bridges</h3>
                             <p>Kelvin's story from dropout to scholar, fueled by Seattle contributions. "Education knows no borders."</p>
