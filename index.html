@@ -55,9 +55,9 @@
     <!-- Skip Link for Accessibility -->
     <a href="#main-content" class="skip-link">Skip to main content</a>
     
-    <!-- Header -->
+    <!-- Header with Navigation Bar -->
     <header class="header">
-        <nav class="nav" role="navigation" aria-label="Main navigation">
+        <nav class="nav-bar" role="navigation" aria-label="Main navigation">
             <div class="nav-container">
                 <a href="index.html" class="logo" aria-label="Loyds Foundation Home">
                     <img src="images/loydfavicon.png" alt="Loyds Foundation Logo" width="40" height="40">
@@ -88,15 +88,18 @@
         <!-- Hero Section -->
         <section class="hero" role="banner">
             <div class="hero-video-container">
-                <video autoplay muted loop playsinline poster="images/home-hero.png">
+                <video autoplay muted loop playsinline poster="images/home-hero.png" class="hero-video">
                     <source src="images/home-hero.mp4" type="video/mp4">
-                    <img src="images/home-hero.png" alt="Empowering communities: A vibrant montage of farmers, students, and families">
+                    <img src="images/home-hero.png" alt="Empowering communities: A vibrant montage of farmers, students, and families" class="hero-image">
                 </video>
                 <div class="hero-overlay">
                     <div class="hero-content" data-aos="fade-up">
                         <h1>Empowering Communities, Transforming Lives</h1>
                         <p>From Kenyan fields to global partnerships, Loyds Foundation bridges worlds for sustainable change. Join us in building a brighter tomorrow.</p>
-                        <a href="donate.html" class="cta-button gold">Donate Now</a>
+                        <div class="hero-buttons">
+                            <a href="who-we-are.html" class="cta-button secondary">Learn More</a>
+                            <a href="donate.html" class="cta-button gold">Donate Now</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -216,25 +219,6 @@
     <!-- Footer -->
     <footer class="footer" role="contentinfo">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <a href="index.html" class="logo">Loyds Foundation</a>
-                    <p>Empowering global change, one community at a time.</p>
-                </div>
-                <nav class="footer-nav">
-                    <ul>
-                        <li><a href="who-we-are.html">Who We Are</a></li>
-                        <li><a href="programs.html">Programs</a></li>
-                        <li><a href="impact.html">Impact</a></li>
-                        <li><a href="donate.html">Donate</a></li>
-                    </ul>
-                    <ul>
-                        <li><a href="privacy.html">Privacy</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                        <li><a href="sitemap.xml">Sitemap</a></li>
-                    </ul>
-                </nav>
-            </div>
             <div class="footer-bottom">
                 <p>&copy; 2025 Loyds Foundation. All rights reserved. | <a href="privacy.html">Privacy Policy</a></p>
             </div>
@@ -255,4 +239,4 @@
         }
     </script>
 </body>
-                        </html>
+</html>
