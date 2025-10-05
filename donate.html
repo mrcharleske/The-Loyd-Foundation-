@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Donate — The Loyd Foundation</title>
+  <meta name="description" content="Support The Loyd Foundation’s mission to empower communities through your donation. Choose your cause and make a difference.">
+  <link rel="canonical" href="https://mrcharleske.github.io/The-Loyd-Foundation-/donate.html">
+  <meta name="robots" content="index, follow">
+  <!-- OG/Twitter -->
+  <meta property="og:title" content="Donate — The Loyd Foundation">
+  <meta property="og:description" content="Support The Loyd Foundation’s mission to empower communities through your donation. Choose your cause and make a difference.">
+  <meta property="og:image" content="https://mrcharleske.github.io/The-Loyd-Foundation-/images/donation-bg.jpg">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mrcharleske.github.io/The-Loyd-Foundation-/donate.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://mrcharleske.github.io/The-Loyd-Foundation-/images/donation-bg.jpg">
+  <!-- PWA iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Loyd Foundation">
+  <!-- Perf Preconnects -->
+  <link rel="preconnect" href="https://unpkg.com">
+  <link rel="preconnect" href="https://formspree.io">
+  <link rel="dns-prefetch" href="https://www.google.com">
+  <!-- CSP -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://unpkg.com https://formspree.io; style-src 'self' https://unpkg.com; frame-src https://www.google.com; img-src 'self' data: https:; media-src 'self' blob:;">
+  <!-- Favicon/Manifest -->
+  <link rel="icon" type="image/png" href="images/loydfavicon.png">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#1e6f5c">
+  <!-- Hreflang -->
+  <link rel="alternate" hreflang="en-KE" href="https://mrcharleske.github.io/The-Loyd-Foundation-/donate.html">
+  <link rel="alternate" hreflang="en-US" href="https://mrcharleske.github.io/The-Loyd-Foundation-/donate.html">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+  <!-- Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "NGO",
+    "name": "The Loyd Foundation",
+    "description": "Support our mission with a donation to empower communities.",
+    "url": "https://mrcharleske.github.io/The-Loyd-Foundation-/donate.html",
+    "contactPoint": {"@type": "ContactPoint", "email": "loydfoundation.co@gmail.com"},
+    "sameAs": ["https://facebook.com/loydfoundation", "https://instagram.com/loydfoundation", "https://linkedin.com/company/loydfoundation", "https://twitter.com/loydfoundation"]
+  }
+  </script>
+</head>
+<body>
+  <!-- Install Button -->
+  <button class="btn-install" id="installBtn" style="display: none;">Install The Loyd Foundation</button>
+
+  <!-- Header -->
+  <header class="navbar">
+    <div class="wrap nav">
+      <div class="logo">
+        <img src="images/loydfavicon.png" alt="The Loyd Foundation Logo">
+        <strong>The Loyd Foundation</strong>
+      </div>
+      <nav class="nav-links" id="navMenu">
+        <a href="index.html">Home</a>
+        <a href="programs.html">Programs</a>
+        <a href="about.html">About</a>
+        <a href="impact.html">Impact</a>
+        <a href="donate.html" class="active">Donate</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <button class="hamburger" id="hamburger">☰</button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" data-aos="fade-up">
+    <div class="wrap hero-content">
+      <div class="hero-media">
+        <img src="images/donation-bg.jpg" alt="Donation Banner" class="flap">
+        <div class="hero-overlay"></div>
+      </div>
+      <div class="hero-text">
+        <h1>Make a Difference</h1>
+        <p>Your support fuels entrepreneurship, agriculture, nutrition, and education for communities in need.</p>
+        <!-- Donation Thermometer -->
+        <div class="donation-thermometer">
+          <p class="text-sm muted">Total Raised This Year: KES 2,500,000</p>
+          <div class="progress-bar">
+            <div class="progress-fill" style="width: 62.5%;"></div> <!-- Mock 62.5% of 4M goal -->
+          </div>
+          <small class="text-sm muted">Goal: KES 4,000,000</small>
+        </div>
+        <button class="btn-primary" data-modal="donate">Donate Now</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Donation Info -->
+  <section class="section-alt" data-aos="fade-up">
+    <div class="wrap">
+      <h2>Why Donate?</h2>
+      <p class="muted">Every contribution, big or small, helps us empower communities through sustainable programs.</p>
+      <div class="cards">
+        <div class="card" data-aos="zoom-in" data-aos-delay="100">
+          <img src="images/home-smes.jpg" alt="SME Empowerment Donation" class="flap">
+          <h3>SME Empowerment</h3>
+          <p class="text-sm muted">Your donation provides training and micro-grants to help small businesses grow. KES 1,000 trains one entrepreneur.</p>
+          <button class="btn-ghost" data-modal="donate" data-cause="sme_empowerment">Support SMEs</button>
+        </div>
+        <div class="card" data-aos="zoom-in" data-aos-delay="200">
+          <img src="images/home-farmers.png" alt="Farmers Empowerment Donation" class="flap">
+          <h3>Farmers Empowerment</h3>
+          <p class="text-sm muted">Support farmers with seeds, training, and market access for sustainable growth. KES 500 buys seeds for one farm.</p>
+          <button class="btn-ghost" data-modal="donate" data-cause="farmers_empowerment">Support Farmers</button>
+        </div>
+        <div class="card" data-aos="zoom-in" data-aos-delay="300">
+          <img src="images/home-feeding.png" alt="Feeding Program Donation" class="flap">
+          <h3>Feeding Program</h3>
+          <p class="text-sm muted">Help provide nutritious meals to children in schools and communities. KES 100 feeds a child for a week.</p>
+          <button class="btn-ghost" data-modal="donate" data-cause="feeding_program">Support Feeding</button>
+        </div>
+        <div class="card" data-aos="zoom-in" data-aos-delay="400">
+          <img src="images/home-education.jpg" alt="Education Donation" class="flap">
+          <h3>Education & Scholarships</h3>
+          <p class="text-sm muted">Fund scholarships and supplies for students to achieve their dreams. KES 2,000 covers one semester.</p>
+          <button class="btn-ghost" data-modal="donate" data-cause="education_scholarship">Support Education</button>
+        </div>
+      </div>
+      <div class="action">
+        <button class="btn-primary" data-modal="donate">Donate Now</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="wrap">
+      <div class="footer-content">
+        <div><strong>The Loyd Foundation</strong></div>
+        <div class="text-sm muted">© <span id="year"></span> The Loyd Foundation — All rights reserved. <a href="privacy.html">Privacy Policy</a> | Donations may be tax-deductible (consult advisor).</div>
+        <div class="social-links">
+          <a href="https://facebook.com/loydfoundation" data-aos="fade-up">Facebook</a> |
+          <a href="https://instagram.com/loydfoundation" data-aos="fade-up" data-aos-delay="100">Instagram</a> |
+          <a href="https://linkedin.com/company/loydfoundation" data-aos="fade-up" data-aos-delay="200">LinkedIn</a> |
+          <a href="https://twitter.com/loydfoundation" data-aos="fade-up" data-aos-delay="300">Twitter</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Donation Modal -->
+  <div class="modal-backdrop" id="modalBackdrop" aria-hidden="true">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="donateTitle" data-aos="zoom-in">
+      <h3 id="donateTitle">Make a Donation</h3>
+      <div class="steps" id="modalSteps">
+        <div class="step active"></div>
+        <div class="step"></div>
+        <div class="step"></div>
+      </div>
+      <div id="stepContent">
+        <!-- Step 1: Choose Cause -->
+        <div class="step-panel" data-step="1">
+          <p class="muted">Support a cause that matters. Your gift creates lasting impact.</p>
+          <div id="causeTiles">
+            <button class="amount-btn" data-cause="general">General Support</button>
+            <button class="amount-btn" data-cause="sme_empowerment">SME Empowerment</button>
+            <button class="amount-btn" data-cause="farmers_empowerment">Farmers Empowerment</button>
+            <button class="amount-btn" data-cause="feeding_program">Feeding Program</button>
+            <button class="amount-btn" data-cause="education_scholarship">Education Scholarships</button>
+          </div>
+          <div class="modal-actions">
+            <button class="btn-ghost" id="modalClose">Cancel</button>
+            <button class="btn-primary" id="toStep2">Next</button>
+          </div>
+        </div>
+        <!-- Step 2: Amount & Frequency -->
+        <div class="step-panel" data-step="2" style="display: none;">
+          <p class="muted">Select amount or enter custom amount</p>
+          <div class="grid-2">
+            <div>
+              <div class="amount-options">
+                <button class="amount-btn" data-amount="500">KES 500</button>
+                <button class="amount-btn" data-amount="1000">KES 1,000</button>
+                <button class="amount-btn" data-amount="2500">KES 2,500</button>
+                <button class="amount-btn" data-amount="5000">KES 5,000</button>
+                <button class="amount-btn" data-amount="custom">Custom</button>
+              </div>
+              <input type="number" id="customAmount" placeholder="Enter amount (KES)" class="form-input" min="100">
+            </div>
+            <div>
+              <div class="frequency-label">Frequency</div>
+              <div class="frequency-options">
+                <button class="amount-btn" data-frequency="one_time">One-time</button>
+                <button class="amount-btn" data-frequency="monthly">Monthly</button>
+              </div>
+              <div id="selectedAmountPreview" class="muted"></div>
+            </div>
+          </div>
+          <div class="modal-actions">
+            <button class="btn-ghost" id="backToStep1">Back</button>
+            <button class="btn-primary" id="toStep3">Next</button>
+          </div>
+        </div>
+        <!-- Step 3: Payment & Donor Info -->
+        <div class="step-panel" data-step="3" style="display: none;">
+          <p class="muted">Choose payment method</p>
+          <div class="payment-options">
+            <button class="amount-btn" data-payment="paypal">PayPal</button>
+            <button class="amount-btn" data-payment="bank_card">Bank Card</button>
+            <button class="amount-btn" data-payment="mpesa">M-Pesa</button>
+            <button class="amount-btn" data-payment="offline">Offline</button>
+          </div>
+          <!-- Mock Cause Progress Bar -->
+          <div class="cause-progress" id="causeProgress" style="display: none;">
+            <p class="text-sm muted" id="progressText">Progress for selected cause</p>
+            <div class="progress-bar">
+              <div class="progress-fill" id="progressFill" style="width: 0%;"></div>
+            </div>
+          </div>
+          <form id="donationForm" action="https://formspree.io/f/xovkarkw" method="POST">
+            <input type="hidden" name="cause" id="form_cause">
+            <input type="hidden" name="amount" id="form_amount">
+            <input type="hidden" name="currency" value="KES">
+            <input type="hidden" name="frequency" id="form_frequency">
+            <input type="hidden" name="payment_method" id="form_payment">
+            <input type="hidden" name="_subject" value="Donation Inquiry">
+            <input type="text" name="_gotcha" style="display:none;">
+            <div id="form-errors" role="alert" aria-live="polite"></div>
+            <label for="donor_name">Full Name <span aria-hidden="true">*</span></label>
+            <input id="donor_name" type="text" name="name" placeholder="Full name" required class="form-input" aria-required="true" autocomplete="name">
+            <label for="donor_email">Email Address <span aria-hidden="true">*</span></label>
+            <input id="donor_email" type="email" name="_replyto" placeholder="Email address" required class="form-input" aria-required="true" autocomplete="email">
+            <label for="donor_phone">Phone (optional)</label>
+            <input id="donor_phone" type="tel" name="phone" placeholder="Phone (optional)" class="form-input" autocomplete="tel">
+            <label for="donor_message">Message (optional)</label>
+            <textarea id="donor_message" name="message" placeholder="Message (optional)" rows="3" class="form-input" autocomplete="off"></textarea>
+            <p class="text-sm muted">Donations tax-deductible in eligible regions—receipt emailed. <a href="privacy.html">Privacy Policy</a></p>
+            <div class="modal-actions">
+              <button type="button" class="btn-ghost" id="backToStep2">Back</button>
+              <button type="submit" class="btn-primary" id="confirmDonate">Confirm & Donate</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <!-- Inline JS for donate progress (tied to main.js) -->
+  <script>
+    // Mock progress data by cause
+    const progressData = {
+      general: { text: 'General Fund: 70% to goal', width: 70 },
+      sme_empowerment: { text: 'SME Program: 55% funded', width: 55 },
+      farmers_empowerment: { text: 'Farmers Support: 80% complete', width: 80 },
+      feeding_program: { text: 'Feeding Initiative: 45% reached', width: 45 },
+      education_scholarship: { text: 'Scholarships: 60% awarded', width: 60 }
+    };
+    document.addEventListener('DOMContentLoaded', () => {
+      const causeProgress = document.getElementById('causeProgress');
+      const progressText = document.getElementById('progressText');
+      const progressFill = document.getElementById('progressFill');
+      // Listen for cause select (from main.js)
+      document.addEventListener('causeSelected', (e) => { // Emit in main.js if needed
+        const data = progressData[e.detail.cause] || progressData.general;
+        progressText.textContent = data.text;
+        progressFill.style.width = data.width + '%';
+        causeProgress.style.display = 'block';
+      });
+    });
+  </script>
+</body>
+</html>
