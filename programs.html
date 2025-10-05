@@ -1,236 +1,246 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Programs — The Loyd Foundation</title>
-  <meta name="description" content="Explore The Loyd Foundation’s programs: SME empowerment, farmers support, feeding programs, and education scholarships.">
-  <link rel="canonical" href="https://mrcharleske.github.io/The-Loyd-Foundation-/programs.html">
-  <meta name="robots" content="index, follow">
-  <!-- OG/Twitter -->
-  <meta property="og:title" content="Programs — The Loyd Foundation">
-  <meta property="og:description" content="Explore The Loyd Foundation’s programs: SME empowerment, farmers support, feeding programs, and education scholarships.">
-  <meta property="og:image" content="https://mrcharleske.github.io/The-Loyd-Foundation-/images/program-smes-banner.jpg">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://mrcharleske.github.io/The-Loyd-Foundation-/programs.html">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="https://mrcharleske.github.io/The-Loyd-Foundation-/images/program-smes-banner.jpg">
-  <!-- PWA iOS -->
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="default">
-  <meta name="apple-mobile-web-app-title" content="Loyd Foundation">
-  <!-- Perf Preconnects -->
-  <link rel="preconnect" href="https://unpkg.com">
-  <link rel="preconnect" href="https://formspree.io">
-  <link rel="dns-prefetch" href="https://www.google.com">
-  <!-- CSP -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://unpkg.com https://formspree.io; style-src 'self' https://unpkg.com; frame-src https://www.google.com; img-src 'self' data: https:; media-src 'self' blob:;">
-  <!-- Favicon/Manifest -->
-  <link rel="icon" type="image/png" href="images/loydfavicon.png">
-  <link rel="manifest" href="manifest.json">
-  <meta name="theme-color" content="#1e6f5c">
-  <!-- Hreflang -->
-  <link rel="alternate" hreflang="en-KE" href="https://mrcharleske.github.io/The-Loyd-Foundation-/programs.html">
-  <link rel="alternate" hreflang="en-US" href="https://mrcharleske.github.io/The-Loyd-Foundation-/programs.html">
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
-  <!-- Schema (tailored for programs page) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "NGO",
-    "name": "The Loyd Foundation",
-    "description": "Explore our programs in SME empowerment, farmers support, feeding programs, and education scholarships.",
-    "url": "https://mrcharleske.github.io/The-Loyd-Foundation-/programs.html",
-    "contactPoint": {"@type": "ContactPoint", "email": "loydfoundation.co@gmail.com"},
-    "sameAs": ["https://facebook.com/loydfoundation", "https://instagram.com/loydfoundation", "https://linkedin.com/company/loydfoundation", "https://twitter.com/loydfoundation"]
-  }
-  </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Programs | Loyds Foundation</title>
+    <meta name="description" content="Explore Loyds Foundation's four pillars: SME support, farming innovation, community feeding, and youth education—bridging Kenya and global partners.">
+    <meta name="keywords" content="programs, SMEs, farmers, feeding, education, Loyds Foundation, Kenya, USA">
+    <link rel="canonical" href="https://mrcharleske.github.io/The-Loyd-Foundation-/programs.html">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Our Programs | Loyds Foundation">
+    <meta property="og:description" content="Transforming communities through innovative programs in Kenya, supported by international partners.">
+    <meta property="og:image" content="images/program-smes-banner.jpg">
+    <meta property="og:url" content="https://mrcharleske.github.io/The-Loyd-Foundation-/programs.html">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Our Programs | Loyds Foundation">
+    <meta name="twitter:description" content="Transforming communities through innovative programs.">
+    <meta name="twitter:image" content="images/program-smes-banner.jpg">
+    
+    <!-- Schema.org for Programs -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": "Loyds Foundation Programs",
+        "url": "https://mrcharleske.github.io/The-Loyd-Foundation-/programs.html",
+        "description": "Programs empowering SMEs, farmers, feeding, and education in Kenya and beyond.",
+        "mainEntity": [
+            {"@type": "Program", "name": "SME Support"},
+            {"@type": "Program", "name": "Farming Innovation"},
+            {"@type": "Program", "name": "Community Feeding"},
+            {"@type": "Program", "name": "Youth Education"}
+        ]
+    }
+    </script>
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#2E7D32">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/loydfavicon.png">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- AOS for Animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
-  <a href="#main" class="sr-only">Skip to main content</a>
-  <button class="btn-install" id="installBtn" style="display: none;">Install The Loyd Foundation</button>
-  <header class="navbar">
-    <div class="wrap nav">
-      <div class="logo">
-        <img src="images/loydfavicon.png" alt="The Loyd Foundation Logo">
-        <strong>The Loyd Foundation</strong>
-      </div>
-      <nav class="nav-links" id="navMenu">
-        <a href="index.html">Home</a>
-        <a href="programs.html" class="active">Programs</a>
-        <a href="about.html">About</a>
-        <a href="impact.html">Impact</a>
-        <a href="donate.html">Donate</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-      <button class="hamburger" id="hamburger" aria-expanded="false">☰</button>
-    </div>
-  </header>
-  <section id="main" class="hero" data-aos="fade-up">
-    <div class="wrap hero-content">
-      <div class="hero-media">
-        <picture><source srcset="images/program-smes-banner.webp" type="image/webp"><img src="images/program-smes-banner.jpg" alt="Programs Banner" loading="lazy" class="flap"></picture>
-        <div class="hero-overlay"></div>
-      </div>
-      <div class="hero-text">
-        <h1>Our Programs</h1>
-        <p>Targeted initiatives providing tools, training, and resources—from market access for farmers to scholarships for students.</p>
-        <p class="text-sm muted">Click any program to support it directly.</p>
-        <button class="btn-primary" data-modal="donate">Donate Now</button>
-      </div>
-    </div>
-  </section>
-  <section class="wrap" data-aos="fade-up">
-    <div class="cards">
-      <article class="card" data-aos="zoom-in" data-aos-delay="100">
-        <!-- Icon placeholder: Replace with real SVG -->
-        <svg class="card-icon" viewBox="0 0 24 24" fill="var(--primary)"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-        <picture><source srcset="images/program-smes-support.webp" type="image/webp"><img src="images/program-smes-support.jpg" alt="SME Empowerment Program" loading="lazy" class="flap"></picture>
-        <h3>SME Empowerment</h3>
-        <p class="muted">Training, mentorship, and micro-grants to help local businesses scale responsibly, focusing on bookkeeping, digital presence, and market-readiness. Helped 50+ businesses double revenue last year.</p>
-        <div><button class="btn-primary" data-modal="donate" data-cause="sme_empowerment">Support this Program</button></div>
-      </article>
-      <article class="card" data-aos="zoom-in" data-aos-delay="200">
-        <!-- Icon placeholder -->
-        <svg class="card-icon" viewBox="0 0 24 24" fill="var(--primary)"><path d="M6 2c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6H6zm7 7V3.5L18.5 9H13z"/></svg>
-        <picture><source srcset="images/program-farmers-support.webp" type="image/webp"><img src="images/program-farmers-support.png" alt="Farmers Empowerment Program" loading="lazy" class="flap"></picture>
-        <h3>Farmers Empowerment</h3>
-        <p class="muted">Capacity-building, quality inputs, and buyer linkages, promoting climate-smart methods and cooperative marketing to raise incomes. Supported 1,200 farmers with 30% yield increase.</p>
-        <div><button class="btn-primary" data-modal="donate" data-cause="farmers_empowerment">Support this Program</button></div>
-      </article>
-      <article class="card" data-aos="zoom-in" data-aos-delay="300">
-        <!-- Icon placeholder -->
-        <svg class="card-icon" viewBox="0 0 24 24" fill="var(--primary)"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03L21.7 4H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/></svg>
-        <picture><source srcset="images/program-feeding-support.webp" type="image/webp"><img src="images/program-feeding-support.png" alt="Feeding Program" loading="lazy" class="flap"></picture>
-        <h3>Feeding Program</h3>
-        <p class="muted">School and community feeding programs delivering nutritious meals to children, reducing absenteeism, and sourcing food locally. Served 50,000+ meals, improving attendance by 25%.</p>
-        <div><button class="btn-primary" data-modal="donate" data-cause="feeding_program">Support this Program</button></div>
-      </article>
-      <article class="card" data-aos="zoom-in" data-aos-delay="400">
-        <!-- Icon placeholder -->
-        <svg class="card-icon" viewBox="0 0 24 24" fill="var(--primary)"><path d="M13 17H6a2 2 0 01-2-2V5a2 2 0 012-2h6a2 2 0 012 2v2h4a2 2 0 012 2v2a2 2 0 01-2 2h-4v3a1 1 0 01-.8.93L13 17zM6 3v2h5V3h-5zm11 7v2h3v-2h-3z"/></svg>
-        <picture><source srcset="images/program-education-support.webp" type="image/webp"><img src="images/program-education-support.jpg" alt="Education and Scholarships Program" loading="lazy" class="flap"></picture>
-        <h3>Education & Scholarships</h3>
-        <p class="muted">Scholarships for tuition, supplies, and mentorship for high-potential students, with progress tracking and guidance. Awarded 45 scholarships, with 90% graduation rate.</p>
-        <div><button class="btn-primary" data-modal="donate" data-cause="education_scholarship">Support this Program</button></div>
-      </article>
-    </div>
-  </section>
-  <!-- Footer and Modal (standard from index) -->
-  <footer>
-    <div class="wrap">
-      <div class="footer-content">
-        <div><strong>The Loyd Foundation</strong></div>
-        <div class="text-sm muted">© <span id="year"></span> The Loyd Foundation — All rights reserved. <a href="privacy.html">Privacy Policy</a> | Donations may be tax-deductible (consult advisor).</div>
-        <div class="social-links">
-          <a href="https://facebook.com/loydfoundation" data-aos="fade-up">Facebook</a> |
-          <a href="https://instagram.com/loydfoundation" data-aos="fade-up" data-aos-delay="100">Instagram</a> |
-          <a href="https://linkedin.com/company/loydfoundation" data-aos="fade-up" data-aos-delay="200">LinkedIn</a> |
-          <a href="https://twitter.com/loydfoundation" data-aos="fade-up" data-aos-delay="300">Twitter</a>
-        </div>
-        <form id="newsletterForm" action="https://formspree.io/f/xovkarkw" method="POST" class="text-sm">
-          <label for="email-news">Stay Updated</label>
-          <input id="email-news" type="email" name="email" placeholder="Your email" required class="form-input" autocomplete="email">
-          <button type="submit" class="btn-ghost">Subscribe</button>
-          <input type="hidden" name="_subject" value="Newsletter Signup">
-          <input type="text" name="_gotcha" style="display:none;">
-          <div id="form-errors" role="alert" aria-live="polite"></div>
-        </form>
-      </div>
-    </div>
-  </footer>
-  <!-- Donation Modal (standard from index) -->
-  <div class="modal-backdrop" id="modalBackdrop" aria-hidden="true">
-    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="donateTitle" data-aos="zoom-in">
-      <h3 id="donateTitle">Make a Donation</h3>
-      <div class="steps" id="modalSteps" role="tablist">
-        <div class="step active" role="tab" aria-selected="true" tabindex="0"></div>
-        <div class="step" role="tab" aria-selected="false" tabindex="-1"></div>
-        <div class="step" role="tab" aria-selected="false" tabindex="-1"></div>
-      </div>
-      <div id="stepContent">
-        <div class="step-panel" data-step="1" role="tabpanel">
-          <p class="muted">Support a cause that matters. Your gift creates lasting impact.</p>
-          <div id="causeTiles">
-            <button class="amount-btn" data-cause="general">General Support</button>
-            <button class="amount-btn" data-cause="sme_empowerment">SME Empowerment</button>
-            <button class="amount-btn" data-cause="farmers_empowerment">Farmers Empowerment</button>
-            <button class="amount-btn" data-cause="feeding_program">Feeding Program</button>
-            <button class="amount-btn" data-cause="education_scholarship">Education Scholarships</button>
-          </div>
-          <div class="modal-actions">
-            <button class="btn-ghost" id="modalClose">Cancel</button>
-            <button class="btn-primary" id="toStep2">Next</button>
-          </div>
-        </div>
-        <div class="step-panel" data-step="2" style="display: none;" role="tabpanel">
-          <p class="muted">Select amount or enter custom amount</p>
-          <div class="grid-2">
-            <div>
-              <div class="amount-options">
-                <button class="amount-btn" data-amount="500">KES 500</button>
-                <button class="amount-btn" data-amount="1000">KES 1,000</button>
-                <button class="amount-btn" data-amount="2500">KES 2,500</button>
-                <button class="amount-btn" data-amount="5000">KES 5,000</button>
-                <button class="amount-btn" data-amount="custom">Custom</button>
-              </div>
-              <input type="number" id="customAmount" placeholder="Enter amount (KES)" class="form-input" min="100">
+    <!-- Skip Link for Accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <!-- Header with Navigation Bar -->
+    <header class="header">
+        <nav class="nav-bar" role="navigation" aria-label="Main navigation">
+            <div class="nav-container">
+                <a href="index.html" class="logo" aria-label="Loyds Foundation Home">
+                    <img src="images/loydfavicon.png" alt="Loyds Foundation Logo" width="40" height="40">
+                    Loyds Foundation
+                </a>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="who-we-are.html" class="nav-link">Who We Are</a></li>
+                    <li><a href="programs.html" class="nav-link active">Programs</a></li>
+                    <li><a href="impact.html" class="nav-link">Impact</a></li>
+                    <li><a href="donate.html" class="nav-link donate-link">Donate</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+                <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+                <!-- Language Toggle with Five Options -->
+                <select id="lang-toggle" aria-label="Language">
+                    <option value="en">EN</option>
+                    <option value="sw">SW</option>
+                    <option value="fr">FR</option>
+                    <option value="es">ES</option>
+                    <option value="ar">AR</option>
+                </select>
             </div>
-            <div>
-              <div class="frequency-label">Frequency</div>
-              <div class="frequency-options">
-                <button class="amount-btn" data-frequency="one_time">One-time</button>
-                <button class="amount-btn" data-frequency="monthly">Monthly</button>
-              </div>
-              <div id="selectedAmountPreview" class="muted"></div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Hero Section (No Overlay) -->
+        <section class="hero hero-programs" role="banner">
+            <div class="hero-image-container">
+                <img src="images/program-smes-banner.jpg" alt="Programs Overview: Diverse initiatives empowering communities" class="hero-image" loading="lazy" height="400">
+                <div class="hero-content" data-aos="fade-up">
+                    <h1>Our Programs: Pillars of Change</h1>
+                    <p>Four targeted initiatives, blending Kenyan innovation with global support to create sustainable impact.</p>
+                    <div class="hero-buttons">
+                        <a href="#smes" class="cta-button secondary">Start with SMEs</a>
+                        <a href="donate.html" class="cta-button gold">Support All</a>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="modal-actions">
-            <button class="btn-ghost" id="backToStep1">Back</button>
-            <button class="btn-primary" id="toStep3">Next</button>
-          </div>
-        </div>
-        <div class="step-panel" data-step="3" style="display: none;" role="tabpanel">
-          <p class="muted">Choose payment method</p>
-          <div class="payment-options">
-            <button class="amount-btn" data-payment="paypal">PayPal</button>
-            <button class="amount-btn" data-payment="bank_card">Bank Card</button>
-            <button class="amount-btn" data-payment="mpesa">M-Pesa</button>
-            <button class="amount-btn" data-payment="offline">Offline</button>
-          </div>
-          <form id="donationForm" action="https://formspree.io/f/xovkarkw" method="POST">
-            <input type="hidden" name="cause" id="form_cause">
-            <input type="hidden" name="amount" id="form_amount">
-            <input type="hidden" name="currency" value="KES">
-            <input type="hidden" name="frequency" id="form_frequency">
-            <input type="hidden" name="payment_method" id="form_payment">
-            <input type="hidden" name="_subject" value="Donation Inquiry">
-            <input type="text" name="_gotcha" style="display:none;">
-            <div id="form-errors" role="alert" aria-live="polite"></div>
-            <label for="donor_name">Full Name <span aria-hidden="true">*</span></label>
-            <input id="donor_name" type="text" name="name" placeholder="Full name" required class="form-input" aria-required="true" autocomplete="name">
-            <label for="donor_email">Email Address <span aria-hidden="true">*</span></label>
-            <input id="donor_email" type="email" name="_replyto" placeholder="Email address" required class="form-input" aria-required="true" autocomplete="email">
-            <label for="donor_phone">Phone (optional)</label>
-            <input id="donor_phone" type="tel" name="phone" placeholder="Phone (optional)" class="form-input" autocomplete="tel">
-            <label for="donor_message">Message (optional)</label>
-            <textarea id="donor_message" name="message" placeholder="Message (optional)" rows="3" class="form-input" autocomplete="off"></textarea>
-            <p class="text-sm muted">Donations tax-deductible in eligible regions—receipt emailed. <a href="privacy.html">Privacy Policy</a></p>
-            <div class="modal-actions">
-              <button type="button" class="btn-ghost" id="backToStep2">Back</button>
-              <button type="submit" class="btn-primary" id="confirmDonate">Confirm & Donate</button>
+        </section>
+
+        <!-- SME Program Section -->
+        <section id="smes" class="program-section" data-aos="fade-up">
+            <div class="container">
+                <h2>Small & Medium Enterprises</h2>
+                <img src="images/program-smes-banner.jpg" alt="SME Banner: Entrepreneurs collaborating" class="program-banner" loading="lazy" height="300">
+                <div class="program-desc">
+                    <p>Equipping Kenyan entrepreneurs with training, micro-loans, and market access to scale businesses and create jobs. USA partnerships provide mentorship and funding bridges.</p>
+                </div>
+                <div class="story-teaser">
+                    <p><strong>Mixed Story:</strong> Nairobi's Sarah scaled her bead business 3x via bootcamps—US donor Mike's $100 monthly sparked global exports. "Investing across oceans."</p>
+                </div>
+                <img src="images/program-smes-support.jpg" alt="SME Support: Training session in action" class="program-support" loading="lazy" height="250">
+                <div class="program-video">
+                    <video controls poster="images/home-smes.jpg" loading="lazy">
+                        <source src="images/video-sme.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="program-stats">
+                    <p>150+ businesses supported | 500 jobs created</p>
+                </div>
+                <a href="donate.html?smes" class="cta-button gold">Support SMEs</a>
             </div>
-          </form>
+        </section>
+
+        <!-- Farmers Program Section -->
+        <section id="farmers" class="program-section alternate" data-aos="fade-up">
+            <div class="container">
+                <h2>Farming Innovation</h2>
+                <img src="images/program-farmers-banner.png" alt="Farmers Banner: Lush fields and irrigation" class="program-banner" loading="lazy" height="300">
+                <div class="program-desc">
+                    <p>Delivering drought-resistant seeds, irrigation tech, and market linkages to boost yields for smallholder farmers in arid Kenya regions.</p>
+                </div>
+                <div class="story-teaser">
+                    <p><strong>Mixed Story:</strong> Kitui's Mama Grace increased yields 200% with our seeds—California donor Elena's grants made it possible. "Growing hope together."</p>
+                </div>
+                <img src="images/program-farmers-support.png" alt="Farmers Support: Hands-on workshop" class="program-support" loading="lazy" height="250">
+                <div class="program-video">
+                    <video controls poster="images/home-farmer.png" loading="lazy">
+                        <source src="images/loyfarmers.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="program-stats">
+                    <p>200+ farmers trained | 40% average yield boost</p>
+                </div>
+                <a href="donate.html?farmers" class="cta-button gold">Support Farmers</a>
+            </div>
+        </section>
+
+        <!-- Feeding Program Section -->
+        <section id="feeding" class="program-section" data-aos="fade-up">
+            <div class="container">
+                <h2>Community Feeding</h2>
+                <img src="images/program-feeding-banner.png" alt="Feeding Banner: Nutritious meals being served" class="program-banner" loading="lazy" height="300">
+                <div class="program-desc">
+                    <p>Providing weekly nutritious meals to vulnerable families in urban slums, plus nutrition education for long-term health.</p>
+                </div>
+                <div class="story-teaser">
+                    <p><strong>Mixed Story:</strong> Mombasa's Halima feeds her family daily through mobile kitchens—NYC teacher Jamal's drive reached 200 kids. "Full circle impact."</p>
+                </div>
+                <img src="images/program-feeding-support.png" alt="Feeding Support: Community kitchen operations" class="program-support" loading="lazy" height="250">
+                <div class="program-video">
+                    <video controls poster="images/home-feeding.png" loading="lazy">
+                        <source src="images/loydfeeding.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="program-stats">
+                    <p>300+ families weekly | 1,000+ meals distributed</p>
+                </div>
+                <a href="donate.html?feeding" class="cta-button gold">Support Feeding</a>
+            </div>
+        </section>
+
+        <!-- Education Program Section -->
+        <section id="education" class="program-section alternate" data-aos="fade-up">
+            <div class="container">
+                <h2>Youth Education</h2>
+                <img src="images/program-education-banner.jpg" alt="Education Banner: Students engaged in learning" class="program-banner" loading="lazy" height="300">
+                <div class="program-desc">
+                    <p>Scholarships, tutoring, and tech skills for underprivileged youth, ensuring access to quality education and future opportunities.</p>
+                </div>
+                <div class="story-teaser">
+                    <p><strong>Mixed Story:</strong> Eldoret's Lila aced exams with scholarships—Seattle donor Raj bridged the gap. "Bridging worlds through learning."</p>
+                </div>
+                <img src="images/program-education-support.jpg" alt="Education Support: Tutoring session" class="program-support" loading="lazy" height="250">
+                <div class="program-video">
+                    <video controls poster="images/home-education.jpg" loading="lazy">
+                        <source src="images/loydstudent.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="program-stats">
+                    <p>100+ students aided | 85% pass rate improvement</p>
+                </div>
+                <a href="donate.html?education" class="cta-button gold">Support Education</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Email Signup Modal -->
+    <div id="signup-modal" class="modal" role="dialog" aria-labelledby="modal-title" aria-hidden="true">
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Close modal">&times;</button>
+            <h3 id="modal-title">Join 5,000+ Changemakers</h3>
+            <p>Get field updates and inspiring stories from Kenya to the USA.</p>
+            <form id="signup-form" action="https://formspree.io/f/xovkarkw" method="POST">
+                <input type="email" name="email" placeholder="Your email" required aria-label="Email address">
+                <select name="region" aria-label="Preferred region">
+                    <option value="global">Global</option>
+                    <option value="kenya">Kenya</option>
+                    <option value="usa">USA</option>
+                </select>
+                <button type="submit" class="cta-button gold">Subscribe</button>
+            </form>
         </div>
-      </div>
     </div>
-  </div>
-  <script src="main.js"></script>
-  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <noscript>
-    <p class="muted">JavaScript is disabled—some features like animations and forms may not work fully. <a href="contact.html">Email us</a> instead.</p>
-    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
-  </noscript>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2025 Loyds Foundation. All rights reserved. | <a href="privacy.html">Privacy Policy</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="main.js"></script>
+    <!-- PWA Service Worker Registration -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js')
+                    .then(reg => console.log('SW registered'))
+                    .catch(err => console.log('SW registration failed'));
+            });
+        }
+    </script>
 </body>
 </html>
