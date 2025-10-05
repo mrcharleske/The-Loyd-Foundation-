@@ -3,426 +3,256 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Global Gold Foundation - Uniting the World for a Brighter Future</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --gold-primary: #FFD700;
-            --gold-secondary: #E6B800;
-            --gold-dark: #B8860B;
-            --neutral-dark: #1a1a1a;
-            --neutral-light: #f8f9fa;
-            --text-dark: #333;
-            --text-light: #666;
+    <title>Loyds Foundation | Empowering Communities Globally</title>
+    <meta name="description" content="Loyds Foundation: Transforming lives through SME support, farming innovation, feeding programs, and education in Kenya and beyond. Join our global mission.">
+    <meta name="keywords" content="non-profit, Kenya, USA, community empowerment, donations, education, farming">
+    <link rel="canonical" href="https://mrcharleske.github.io/The-Loyd-Foundation-/">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Loyds Foundation | Global Change Starts Here">
+    <meta property="og:description" content="Empowering Kenyan communities with USA partnerships. Donate today.">
+    <meta property="og:image" content="images/home-hero.png">
+    <meta property="og:url" content="https://mrcharleske.github.io/The-Loyd-Foundation-/">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Loyds Foundation | Global Change Starts Here">
+    <meta name="twitter:description" content="Empowering Kenyan communities with USA partnerships.">
+    <meta name="twitter:image" content="images/home-hero.png">
+    
+    <!-- Schema.org for Non-Profit -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "NGO",
+        "name": "Loyds Foundation",
+        "url": "https://mrcharleske.github.io/The-Loyd-Foundation-/",
+        "description": "International foundation empowering communities through education, farming, SMEs, and feeding programs.",
+        "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "KE"
+        },
+        "founder": {
+            "@type": "Person",
+            "name": "Loyd Founder"
         }
-        body {
-            font-family: 'Inter', sans-serif;
-            line-height: 1.6;
-            color: var(--text-dark);
-            background-color: #fff;
-        }
-        .navbar {
-            background-color: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-        .navbar-brand {
-            font-weight: 700;
-            color: var(--gold-primary) !important;
-            font-size: 1.5rem;
-        }
-        .nav-link {
-            color: var(--text-dark) !important;
-            font-weight: 400;
-            transition: color 0.3s ease;
-        }
-        .nav-link:hover {
-            color: var(--gold-primary) !important;
-        }
-        .hero {
-            background: linear-gradient(135deg, var(--gold-primary) 0%, var(--gold-secondary) 100%);
-            color: var(--neutral-dark);
-            padding: 150px 0;
-            position: relative;
-            overflow: hidden;
-        }
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="2" fill="rgba(255,215,0,0.1)"/><circle cx="80" cy="40" r="1.5" fill="rgba(255,215,0,0.1)"/><circle cx="40" cy="80" r="2" fill="rgba(255,215,0,0.1)"/></svg>') repeat;
-            opacity: 0.3;
-        }
-        .hero h1 {
-            font-size: 3.5rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-        }
-        .hero p {
-            font-size: 1.25rem;
-            margin-bottom: 2rem;
-        }
-        .btn-gold {
-            background-color: var(--neutral-dark);
-            color: var(--gold-primary);
-            border: 2px solid var(--neutral-dark);
-            padding: 12px 30px;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            border-radius: 50px;
-        }
-        .btn-gold:hover {
-            background-color: var(--gold-primary);
-            color: var(--neutral-dark);
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-        }
-        .section-padding {
-            padding: 100px 0;
-        }
-        .about {
-            background-color: var(--neutral-light);
-        }
-        .about h2 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: var(--neutral-dark);
-            margin-bottom: 2rem;
-            text-align: center;
-        }
-        .about p {
-            font-size: 1.1rem;
-            color: var(--text-light);
-            text-align: center;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        .stories {
-            background-color: #fff;
-        }
-        .story-card {
-            background: #fff;
-            border: none;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            border-radius: 15px;
-            overflow: hidden;
-            transition: transform 0.3s ease;
-            margin-bottom: 30px;
-        }
-        .story-card:hover {
-            transform: translateY(-5px);
-        }
-        .story-card img {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
-        }
-        .story-card-body {
-            padding: 30px;
-        }
-        .story-card h5 {
-            font-weight: 600;
-            color: var(--neutral-dark);
-            margin-bottom: 1rem;
-        }
-        .story-card p {
-            color: var(--text-light);
-        }
-        .donate-section {
-            background: linear-gradient(135deg, var(--neutral-dark) 0%, #2c2c2c 100%);
-            color: #fff;
-            text-align: center;
-        }
-        .donate-section h2 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-        }
-        .donate-section p {
-            font-size: 1.1rem;
-            margin-bottom: 2rem;
-            opacity: 0.9;
-        }
-        .footer {
-            background-color: var(--neutral-dark);
-            color: #fff;
-            padding: 50px 0 20px;
-        }
-        .footer a {
-            color: var(--gold-primary);
-            text-decoration: none;
-        }
-        .footer a:hover {
-            text-decoration: underline;
-        }
-        /* Modal Styles */
-        .donation-modal .modal-content {
-            border-radius: 15px;
-            border: none;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-        }
-        .donation-modal .modal-header {
-            background-color: var(--gold-primary);
-            color: var(--neutral-dark);
-            border-radius: 15px 15px 0 0;
-        }
-        .donation-modal .modal-title {
-            font-weight: 700;
-        }
-        .donation-modal .modal-body {
-            padding: 30px;
-        }
-        .form-control {
-            border-radius: 10px;
-            border: 1px solid #ddd;
-            padding: 12px;
-        }
-        .form-control:focus {
-            border-color: var(--gold-primary);
-            box-shadow: 0 0 0 0.2rem rgba(255,215,0,0.25);
-        }
-        /* International Feel - World Map Background in Hero or subtle global icons */
-        .global-icon {
-            font-size: 3rem;
-            color: var(--gold-primary);
-            opacity: 0.8;
-        }
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-            .section-padding {
-                padding: 50px 0;
-            }
-        }
-    </style>
+    }
+    </script>
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#2E7D32">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/loydfavicon.png">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- AOS for Animations (CDN for world-class polish) -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
-
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="#"><i class="fas fa-globe-americas me-2"></i>Global Gold Foundation</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#stories">Stories</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#donate">Donate</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+    <!-- Skip Link for Accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav" role="navigation" aria-label="Main navigation">
+            <div class="nav-container">
+                <a href="index.html" class="logo" aria-label="Loyds Foundation Home">
+                    <img src="images/loydfavicon.png" alt="Loyds Foundation Logo" width="40" height="40">
+                    Loyds Foundation
+                </a>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link active">Home</a></li>
+                    <li><a href="who-we-are.html" class="nav-link">Who We Are</a></li>
+                    <li><a href="programs.html" class="nav-link">Programs</a></li>
+                    <li><a href="impact.html" class="nav-link">Impact</a></li>
+                    <li><a href="donate.html" class="nav-link donate-link">Donate</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
                 </ul>
+                <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+                <!-- Language Toggle Placeholder -->
+                <select id="lang-toggle" aria-label="Language">
+                    <option value="en">EN</option>
+                    <option value="sw">SW</option>
+                </select>
             </div>
-        </div>
-    </nav>
+        </nav>
+    </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="container position-relative">
-            <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <h1>Empowering Global Change Through Golden Opportunities</h1>
-                    <p>Join us in forging a brighter future for communities worldwide. Your support turns aspirations into achievements.</p>
-                    <a href="#donate" class="btn btn-gold btn-lg me-3">Donate Now</a>
-                    <a href="#stories" class="btn btn-outline-light btn-lg">Our Stories</a>
-                </div>
-                <div class="col-lg-6 text-center">
-                    <i class="global-icon fas fa-globe"></i>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="about section-padding">
-        <div class="container">
-            <h2 class="text-center mb-5">Our Mission: A World United in Prosperity</h2>
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <p>The Global Gold Foundation is dedicated to fostering international collaboration for sustainable development. Inspired by the enduring value of gold, we symbolize resilience, purity, and global unity. From education in Africa to environmental conservation in Asia, our initiatives span the globe, creating lasting impact.</p>
-                    <p>With a commitment to transparency and excellence, we partner with local leaders to ensure every project reflects the unique needs of diverse cultures. Together, we build bridges across borders.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Stories Section -->
-    <section id="stories" class="stories section-padding">
-        <div class="container">
-            <h2 class="text-center mb-5">Inspiring Stories from Around the World</h2>
-            <div class="row">
-                <div class="col-lg-4 col-md-6">
-                    <div class="card story-card">
-                        <img src="https://via.placeholder.com/400x250?text=Africa+Education" alt="Africa Education Project" class="card-img-top">
-                        <div class="card-body story-card-body">
-                            <h5 class="card-title">Empowering Youth in Kenya</h5>
-                            <p class="card-text">Through scholarships and tech labs, we've transformed lives in rural Kenya, providing access to world-class education and sparking innovation.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="card story-card">
-                        <img src="https://via.placeholder.com/400x250?text=Asia+Conservation" alt="Asia Conservation" class="card-img-top">
-                        <div class="card-body story-card-body">
-                            <h5 class="card-title">Protecting Rainforests in Indonesia</h5>
-                            <p class="card-text">Our reforestation efforts have planted over 50,000 trees, preserving biodiversity and supporting indigenous communities.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="card story-card">
-                        <img src="https://via.placeholder.com/400x250?text=Europe+Health" alt="Europe Health Initiative" class="card-img-top">
-                        <div class="card-body story-card-body">
-                            <h5 class="card-title">Healthcare Access in Eastern Europe</h5>
-                            <p class="card-text">Mobile clinics have reached remote villages, delivering essential medical services to thousands in need.</p>
-                        </div>
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="hero" role="banner">
+            <div class="hero-video-container">
+                <video autoplay muted loop playsinline poster="images/home-hero.png">
+                    <source src="images/home-hero.mp4" type="video/mp4">
+                    <img src="images/home-hero.png" alt="Empowering communities: A vibrant montage of farmers, students, and families">
+                </video>
+                <div class="hero-overlay">
+                    <div class="hero-content" data-aos="fade-up">
+                        <h1>Empowering Communities, Transforming Lives</h1>
+                        <p>From Kenyan fields to global partnerships, Loyds Foundation bridges worlds for sustainable change. Join us in building a brighter tomorrow.</p>
+                        <a href="donate.html" class="cta-button gold">Donate Now</a>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Donate Section -->
-    <section id="donate" class="donate-section section-padding">
-        <div class="container">
-            <h2>Make a Difference Today</h2>
-            <p>Your generous donation fuels our global initiatives. Every contribution, big or small, creates ripples of change across the world.</p>
-            <button type="button" class="btn btn-gold btn-lg" data-bs-toggle="modal" data-bs-target="#donationModal">
-                Donate Now
-            </button>
-        </div>
-    </section>
+        <!-- Mission Teaser -->
+        <section class="mission" data-aos="fade-up">
+            <div class="container">
+                <h2>Our Global Mission</h2>
+                <p>Rooted in Kenya, reaching the world. We support SMEs, farmers, feeding initiatives, and education—fueled by USA and international donors. Together, we're 1,200+ lives stronger.</p>
+            </div>
+        </section>
 
-    <!-- Donation Modal -->
-    <div class="modal fade donation-modal" id="donationModal" tabindex="-1">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Support Our Global Mission</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
-                </div>
-                <div class="modal-body">
-                    <form id="donationForm">
-                        <div class="mb-3">
-                            <label for="amount" class="form-label">Donation Amount</label>
-                            <select class="form-control" id="amount">
-                                <option>$25</option>
-                                <option>$50</option>
-                                <option>$100</option>
-                                <option>$250</option>
-                                <option>Custom</option>
-                            </select>
+        <!-- Programs Teaser Grid -->
+        <section class="programs-teaser" role="region" aria-label="Our Programs">
+            <div class="container">
+                <h2 data-aos="fade-up">Our Four Pillars</h2>
+                <div class="grid">
+                    <!-- SME Card -->
+                    <article class="card" data-aos="fade-up" data-aos-delay="100">
+                        <img src="images/program-smes-banner.jpg" alt="SME Support: Entrepreneurs in action" loading="lazy">
+                        <div class="card-content">
+                            <h3>Small & Medium Enterprises</h3>
+                            <p>Nairobi entrepreneur Sarah scaled her bead business 3x with our bootcamps—now exporting globally. US donor Mike's monthly gift sparked it: "Investing across oceans."</p>
+                            <a href="programs.html#smes" class="card-link">Learn More</a>
                         </div>
-                        <div class="mb-3">
-                            <label for="name" class="form-label">Full Name</label>
-                            <input type="text" class="form-control" id="name" required>
+                    </article>
+                    <!-- Farmers Card -->
+                    <article class="card" data-aos="fade-up" data-aos-delay="200">
+                        <img src="images/program-farmers-banner.png" alt="Farmers Program: Harvesting hope in Kitui" loading="lazy">
+                        <div class="card-content">
+                            <h3>Farming Innovation</h3>
+                            <p>Kitui's Mama Grace boosted yields 200% with drought-resistant seeds. California donor Elena matched grants: "Growing hope together."</p>
+                            <a href="programs.html#farmers" class="card-link">Learn More</a>
                         </div>
-                        <div class="mb-3">
-                            <label for="email" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="email" required>
+                    </article>
+                    <!-- Feeding Card -->
+                    <article class="card" data-aos="fade-up" data-aos-delay="300">
+                        <img src="images/program-feeding-banner.png" alt="Feeding Program: Community kitchen in Mombasa" loading="lazy">
+                        <div class="card-content">
+                            <h3>Community Feeding</h3>
+                            <p>Mombasa's Halima now feeds her family daily via mobile kitchens. NYC teacher Jamal's drive fed 200 kids: "Full circle impact."</p>
+                            <a href="programs.html#feeding" class="card-link">Learn More</a>
                         </div>
-                        <div class="mb-3">
-                            <label for="message" class="form-label">Message (Optional)</label>
-                            <textarea class="form-control" id="message" rows="3"></textarea>
+                    </article>
+                    <!-- Education Card -->
+                    <article class="card" data-aos="fade-up" data-aos-delay="400">
+                        <img src="images/program-education-banner.jpg" alt="Education Program: Students learning in Eldoret" loading="lazy">
+                        <div class="card-content">
+                            <h3>Youth Education</h3>
+                            <p>Eldoret's Lila aced exams with our scholarships. Seattle donor Raj: "Bridging worlds through learning."</p>
+                            <a href="programs.html#education" class="card-link">Learn More</a>
                         </div>
-                        <button type="submit" class="btn btn-gold w-100">Process Donation</button>
-                    </form>
-                    <p class="mt-3 text-muted small">Secure payment processed via Stripe. We never store your card details.</p>
+                    </article>
                 </div>
             </div>
+        </section>
+
+        <!-- Impact Highlights -->
+        <section class="impact-teaser" role="region" aria-label="Impact Highlights">
+            <div class="container">
+                <h2 data-aos="fade-up">Global Impact at a Glance</h2>
+                <div class="stats-grid" data-aos="fade-up" data-aos-delay="200">
+                    <div class="stat">
+                        <span class="stat-number" data-target="1200">0</span>
+                        <p>Lives Touched</p>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" data-target="150">0</span>
+                        <p>Projects Funded</p>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" data-target="150000">0</span>
+                        <p>USD Raised</p>
+                    </div>
+                </div>
+                <a href="impact.html" class="cta-button">See Stories</a>
+            </div>
+        </section>
+
+        <!-- Partners Row -->
+        <section class="partners" role="region" aria-label="Our Partners">
+            <div class="container">
+                <h2 data-aos="fade-up">Global Partners</h2>
+                <div class="partners-grid">
+                    <img src="images/logo-partner1.png" alt="Partner 1 Logo" loading="lazy" onerror="this.src='images/placeholder-partner.png';">
+                    <!-- Placeholders for others -->
+                    <div class="partner-placeholder" data-aos="fade-up" data-aos-delay="100">Partner 2 <span>Coming Soon</span></div>
+                    <div class="partner-placeholder" data-aos="fade-up" data-aos-delay="200">Partner 3 <span>Coming Soon</span></div>
+                    <div class="partner-placeholder" data-aos="fade-up" data-aos-delay="300">Partner 4 <span>Coming Soon</span></div>
+                    <div class="partner-placeholder" data-aos="fade-up" data-aos-delay="400">Partner 5 <span>Coming Soon</span></div>
+                    <div class="partner-placeholder" data-aos="fade-up" data-aos-delay="500">Partner 6 <span>Coming Soon</span></div>
+                </div>
+                <p class="partners-note">We're growing—join us as a partner!</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Email Signup Modal -->
+    <div id="signup-modal" class="modal" role="dialog" aria-labelledby="modal-title" aria-hidden="true">
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Close modal">&times;</button>
+            <h3 id="modal-title">Join 5,000+ Changemakers</h3>
+            <p>Get field updates and inspiring stories from Kenya to the USA.</p>
+            <form id="signup-form" action="https://formspree.io/f/xovkarkw" method="POST">
+                <input type="email" name="email" placeholder="Your email" required aria-label="Email address">
+                <select name="region" aria-label="Preferred region">
+                    <option value="global">Global</option>
+                    <option value="kenya">Kenya</option>
+                    <option value="usa">USA</option>
+                </select>
+                <button type="submit" class="cta-button gold">Subscribe</button>
+            </form>
         </div>
     </div>
 
     <!-- Footer -->
-    <footer id="contact" class="footer">
+    <footer class="footer" role="contentinfo">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-4 mb-4">
-                    <h5><i class="fas fa-globe-americas me-2"></i>Global Gold Foundation</h5>
-                    <p>Building a united world through sustainable initiatives.</p>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <a href="index.html" class="logo">Loyds Foundation</a>
+                    <p>Empowering global change, one community at a time.</p>
                 </div>
-                <div class="col-lg-4 mb-4">
-                    <h5>Quick Links</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="#stories">Stories</a></li>
-                        <li><a href="#donate">Donate</a></li>
+                <nav class="footer-nav">
+                    <ul>
+                        <li><a href="who-we-are.html">Who We Are</a></li>
+                        <li><a href="programs.html">Programs</a></li>
+                        <li><a href="impact.html">Impact</a></li>
+                        <li><a href="donate.html">Donate</a></li>
                     </ul>
-                </div>
-                <div class="col-lg-4 mb-4">
-                    <h5>Contact</h5>
-                    <p>Email: info@globalgoldfoundation.org<br>Phone: +1 (555) 123-4567</p>
-                    <div class="social-icons">
-                        <a href="#" class="me-3"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="me-3"><i class="fab fa-facebook"></i></a>
-                        <a href="#" class="me-3"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" class="me-3"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
+                    <ul>
+                        <li><a href="privacy.html">Privacy</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="sitemap.xml">Sitemap</a></li>
+                    </ul>
+                </nav>
             </div>
-            <hr class="my-4">
-            <div class="text-center">
-                <p>&copy; 2025 Global Gold Foundation. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Loyds Foundation. All rights reserved. | <a href="privacy.html">Privacy Policy</a></p>
             </div>
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="main.js"></script>
+    <!-- PWA Service Worker Registration -->
     <script>
-        // Modal Timing: Show donation modal after 10 seconds if not already interacted
-        let modalTimer;
-        function startModalTimer() {
-            modalTimer = setTimeout(() => {
-                if (!document.body.classList.contains('modal-open')) {
-                    new bootstrap.Modal(document.getElementById('donationModal')).show();
-                }
-            }, 10000); // 10 seconds
-        }
-
-        // Start timer on page load
-        window.addEventListener('load', startModalTimer);
-
-        // Clear timer on user interaction
-        ['click', 'scroll', 'keydown'].forEach(event => {
-            document.addEventListener(event, () => {
-                clearTimeout(modalTimer);
-            }, { once: true });
-        });
-
-        // Donation Form Submission (simulated)
-        document.getElementById('donationForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Thank you for your donation! Your support means the world to us. (This is a demo - in production, integrate with Stripe API.)');
-            bootstrap.Modal.getInstance(document.getElementById('donationModal')).hide();
-        });
-
-        // Smooth scrolling for nav links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js')
+                    .then(reg => console.log('SW registered'))
+                    .catch(err => console.log('SW registration failed'));
             });
-        });
-
-        // Navbar shrink on scroll
-        window.addEventListener('scroll', () => {
-            const navbar = document.querySelector('.navbar');
-            if (window.scrollY > 50) {
-                navbar.style.backgroundColor = 'rgba(255, 255, 255, 0.98)';
-            } else {
-                navbar.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
-            }
-        });
+        }
     </script>
 </body>
-</html>
+                        </html>
