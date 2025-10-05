@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — The Loyd Foundation</title>
+  <meta name="description" content="Get in touch with The Loyd Foundation. Reach us via email, visit our offices in Nairobi or Maryland, or send us a message.">
+  <link rel="canonical" href="https://mrcharleske.github.io/The-Loyd-Foundation-/contact.html">
+  <meta name="robots" content="index, follow">
+  <!-- OG/Twitter -->
+  <meta property="og:title" content="Contact — The Loyd Foundation">
+  <meta property="og:description" content="Get in touch with The Loyd Foundation. Reach us via email, visit our offices in Nairobi or Maryland, or send us a message.">
+  <meta property="og:image" content="https://mrcharleske.github.io/The-Loyd-Foundation-/images/home-hero.png">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mrcharleske.github.io/The-Loyd-Foundation-/contact.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://mrcharleske.github.io/The-Loyd-Foundation-/images/home-hero.png">
+  <!-- PWA iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Loyd Foundation">
+  <!-- Perf Preconnects -->
+  <link rel="preconnect" href="https://unpkg.com">
+  <link rel="preconnect" href="https://formspree.io">
+  <link rel="dns-prefetch" href="https://www.google.com">
+  <!-- CSP -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://unpkg.com https://formspree.io; style-src 'self' https://unpkg.com; frame-src https://www.google.com; img-src 'self' data: https:; media-src 'self' blob:;">
+  <!-- Favicon/Manifest -->
+  <link rel="icon" type="image/png" href="images/loydfavicon.png">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#1e6f5c">
+  <!-- Hreflang -->
+  <link rel="alternate" hreflang="en-KE" href="https://mrcharleske.github.io/The-Loyd-Foundation-/contact.html">
+  <link rel="alternate" hreflang="en-US" href="https://mrcharleske.github.io/The-Loyd-Foundation-/contact.html">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+  <!-- Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "NGO",
+    "name": "The Loyd Foundation",
+    "description": "Contact us for inquiries about our programs and donations.",
+    "url": "https://mrcharleske.github.io/The-Loyd-Foundation-/contact.html",
+    "contactPoint": {"@type": "ContactPoint", "email": "loydfoundation.co@gmail.com", "telephone": "+254-20-1234567"},
+    "sameAs": ["https://facebook.com/loydfoundation", "https://instagram.com/loydfoundation", "https://linkedin.com/company/loydfoundation", "https://twitter.com/loydfoundation"]
+  }
+  </script>
+</head>
+<body>
+  <!-- Install Button -->
+  <button class="btn-install" id="installBtn" style="display: none;">Install The Loyd Foundation</button>
+
+  <!-- Header -->
+  <header class="navbar">
+    <div class="wrap nav">
+      <div class="logo">
+        <img src="images/loydfavicon.png" alt="The Loyd Foundation Logo">
+        <strong>The Loyd Foundation</strong>
+      </div>
+      <nav class="nav-links" id="navMenu">
+        <a href="index.html">Home</a>
+        <a href="programs.html">Programs</a>
+        <a href="about.html">About</a>
+        <a href="impact.html">Impact</a>
+        <a href="donate.html">Donate</a>
+        <a href="contact.html" class="active">Contact</a>
+      </nav>
+      <button class="hamburger" id="hamburger">☰</button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" data-aos="fade-up">
+    <div class="wrap hero-content">
+      <div class="hero-media">
+        <img src="images/home-hero.png" alt="Contact The Loyd Foundation" class="flap">
+        <div class="hero-overlay"></div>
+      </div>
+      <div class="hero-text">
+        <h1>Contact Us</h1>
+        <p>Have a question or want to get involved? Reach out, we’d love to hear from you.</p>
+        <button class="btn-primary" data-modal="donate">Support Our Work</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Info and Form -->
+  <section class="section-alt" data-aos="fade-up">
+    <div class="wrap grid-2">
+      <div>
+        <h2>Get in Touch</h2>
+        <p class="muted">Send us a message, and we’ll respond as soon as possible. All fields are required for submission.</p>
+        <form id="contactForm" action="https://formspree.io/f/xovkarkw" method="POST" data-aos="fade-up" data-aos-delay="100">
+          <input type="text" name="name" placeholder="Full name" required class="form-input" aria-label="Full name">
+          <input type="email" name="_replyto" placeholder="Email address" required class="form-input" aria-label="Email address">
+          <textarea name="message" placeholder="Your message" rows="5" required class="form-input" aria-label="Message"></textarea>
+          <button type="submit" class="btn-primary">Send Message</button>
+          <div id="form-errors" role="alert" aria-live="polite"></div>
+        </form>
+      </div>
+      <div>
+        <h3>Contact Details</h3>
+        <p class="muted"><strong>Email:</strong> <a href="mailto:loydfoundation.co@gmail.com">loydfoundation.co@gmail.com</a></p>
+        <p class="muted"><strong>Phone:</strong> +254-20-1234567 (Nairobi) | +1-410-555-0199 (Maryland)</p>
+        <p class="muted"><strong>Offices:</strong> The Hub, Karen, Nairobi, Kenya (Mon-Fri, 9AM-5PM EAT) | 123 Main St, Annapolis, MD 21401, USA (Mon-Fri, 9AM-5PM EST)</p>
+        <h3>Find Us</h3>
+        <div class="map" data-aos="zoom-in" data-aos-delay="200">
+          <h4>Nairobi, Kenya</h4>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.95!2d36.685!3d-1.367!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f1729f0f8e2b%3A0x2c1c02cbf72708!2sThe%20Hub%2C%20Nairobi!5e0!3m2!1sen!2sus!4v1728130000000!5m2!1sen!2sus" width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Nairobi Office Location"></iframe>
+        </div>
+        <div class="map" data-aos="zoom-in" data-aos-delay="300">
+          <h4>Maryland, USA</h4>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d124312.08!2d-76.492!3d38.978!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7c6de5af6e45b%3A0xb3559b1c2c8c4c4!2sAnnapolis%2C%20MD!5e0!3m2!1sen!2sus!4v1728130000000!5m2!1sen!2sus" width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Maryland Office Location"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="wrap">
+      <div class="footer-content">
+        <div><strong>The Loyd Foundation</strong></div>
+        <div class="text-sm muted">© <span id="year"></span> The Loyd Foundation — All rights reserved. <a href="privacy.html">Privacy Policy</a> | Donations may be tax-deductible (consult advisor).</div>
+        <div class="social-links">
+          <a href="https://facebook.com/loydfoundation" data-aos="fade-up">Facebook</a> |
+          <a href="https://instagram.com/loydfoundation" data-aos="fade-up" data-aos-delay="100">Instagram</a> |
+          <a href="https://linkedin.com/company/loydfoundation" data-aos="fade-up" data-aos-delay="200">LinkedIn</a> |
+          <a href="https://twitter.com/loydfoundation" data-aos="fade-up" data-aos-delay="300">Twitter</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Donation Modal -->
+  <div class="modal-backdrop" id="modalBackdrop" aria-hidden="true">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="donateTitle" data-aos="zoom-in">
+      <h3 id="donateTitle">Make a Donation</h3>
+      <div class="steps" id="modalSteps">
+        <div class="step active"></div>
+        <div class="step"></div>
+        <div class="step"></div>
+      </div>
+      <div id="stepContent">
+        <!-- Step 1: Choose Cause -->
+        <div class="step-panel" data-step="1">
+          <p class="muted">Support a cause that matters. Your gift creates lasting impact.</p>
+          <div id="causeTiles">
+            <button class="amount-btn" data-cause="general">General Support</button>
+            <button class="amount-btn" data-cause="sme_empowerment">SME Empowerment</button>
+            <button class="amount-btn" data-cause="farmers_empowerment">Farmers Empowerment</button>
+            <button class="amount-btn" data-cause="feeding
