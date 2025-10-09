@@ -1,156 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Offline - Loyds Foundation</title>
-    <meta name="description" content="You're offline, but Loyds Foundation's mission continues. Explore our story and programs—connect when back online.">
-    <link rel="canonical" href="https://mrcharleske.github.io/The-Loyd-Foundation-/offline.html">
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Offline - Loyds Foundation">
-    <meta property="og:description" content="Stay inspired even offline—our global impact endures.">
-    <meta property="og:image" content="images/home-hero.png">
-    <meta property="og:url" content="https://mrcharleske.github.io/The-Loyd-Foundation-/offline.html">
-    
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Offline - Loyds Foundation">
-    <meta name="twitter:description" content="Stay inspired even offline.">
-    <meta name="twitter:image" content="images/home-hero.png">
-    
-    <!-- Schema.org for Offline Page -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "WebPage",
-        "name": "Loyds Foundation Offline",
-        "url": "https://mrcharleske.github.io/The-Loyd-Foundation-/offline.html",
-        "description": "Offline fallback page for Loyds Foundation PWA."
-    }
-    </script>
-    
-    <!-- PWA Manifest -->
-    <link rel="manifest" href="manifest.json">
-    <meta name="theme-color" content="#2E7D32">
-    <link rel="icon" type="image/png" sizes="32x32" href="images/loydfavicon.png">
-    
-    <!-- Styles -->
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Offline — The Loyd Foundation</title>
+  <meta name="description" content="You’re offline. Please check your connection and try again.">
+  <link rel="icon" type="image/png" href="images/loydfavicon.png">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#1e6f5c">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
 </head>
 <body>
-    <!-- Skip Link for Accessibility -->
-    <a href="#main-content" class="skip-link">Skip to main content</a>
-    
-    <!-- Simple Header (Offline-Friendly) -->
-    <header class="header offline-header">
-        <div class="nav-container">
-            <a href="index.html" class="logo" aria-label="Loyds Foundation Home">
-                <img src="images/loydfavicon.png" alt="Loyds Foundation Logo" width="40" height="40">
-                Loyds Foundation
-            </a>
-            <p class="offline-notice">You're offline—content cached for you.</p>
-        </div>
-    </header>
+  <!-- Install Button -->
+  <button class="btn-install" id="installBtn" style="display: none;">Install The Loyd Foundation</button>
 
-    <!-- Main Content -->
-    <main id="main-content">
-        <!-- Offline Hero -->
-        <section class="hero hero-offline" role="banner">
-            <img src="images/home-hero.png" alt="Offline Hero: Empowering communities, even offline" class="hero-image" loading="lazy" height="300">
-            <div class="hero-content" data-aos="fade-up">
-                <h1>Connected in Spirit</h1>
-                <p>Signal down? Our mission isn't. Explore stories from Kenya and global partners—refresh when online for updates.</p>
-                <button id="refresh-btn" class="cta-button gold">Back Online? Refresh</button>
-            </div>
-        </section>
-
-        <!-- Mission Recap -->
-        <section class="mission-offline" data-aos="fade-up">
-            <div class="container">
-                <h2>Our Mission, Always On</h2>
-                <p>Rooted in Kenya, powered by USA and worldwide support. We uplift SMEs, farmers, families, and youth—1,200+ lives and counting.</p>
-            </div>
-        </section>
-
-        <!-- Static Stories Teaser (Cached) -->
-        <section class="stories-offline" role="region" aria-label="Offline Stories">
-            <div class="container">
-                <h2>Cached Stories of Change</h2>
-                <div class="grid">
-                    <!-- SME Story -->
-                    <article class="card offline-card" data-aos="fade-up" data-aos-delay="100">
-                        <img src="images/program-smes-support.jpg" alt="Sarah's SME story" loading="lazy" height="200">
-                        <div class="card-content">
-                            <h3>Sarah's Spark</h3>
-                            <p>Nairobi entrepreneur scales globally with US donor backing. "Investing across oceans."</p>
-                        </div>
-                    </article>
-                    <!-- Farmers Story -->
-                    <article class="card offline-card" data-aos="fade-up" data-aos-delay="200">
-                        <img src="images/program-farmers-support.png" alt="Mama Grace's harvest" loading="lazy" height="200">
-                        <div class="card-content">
-                            <h3>Mama Grace's Hope</h3>
-                            <p>Kitui yields double—California grants sow the seeds. "Growing together."</p>
-                        </div>
-                    </article>
-                    <!-- Feeding Story -->
-                    <article class="card offline-card" data-aos="fade-up" data-aos-delay="300">
-                        <img src="images/program-feeding-support.png" alt="Halima's meals" loading="lazy" height="200">
-                        <div class="card-content">
-                            <h3>Halima's Joy</h3>
-                            <p>Mombasa family nourished—NYC drive closes the circle. "Full impact."</p>
-                        </div>
-                    </article>
-                    <!-- Education Story -->
-                    <article class="card offline-card" data-aos="fade-up" data-aos-delay="400">
-                        <img src="images/program-education-support.jpg" alt="Lila's future" loading="lazy" height="200">
-                        <div class="card-content">
-                            <h3>Lila's Ladder</h3>
-                            <p>Eldoret scholar rises—Seattle ties bridge worlds. "Wings built."</p>
-                        </div>
-                    </article>
-                </div>
-                <p class="offline-note">More stories load online. Your intent (forms/donations) is queued—syncs on reconnect.</p>
-            </div>
-        </section>
-    </main>
-
-    <!-- Minimal Signup Modal (Queues Offline) -->
-    <div id="signup-modal" class="modal" role="dialog" aria-labelledby="modal-title" aria-hidden="true">
-        <div class="modal-content">
-            <button class="modal-close" aria-label="Close modal">&times;</button>
-            <h3 id="modal-title">Join Offline</h3>
-            <p>Sign up for stories—sends when online.</p>
-            <form id="signup-form" action="https://formspree.io/f/xovkarkw" method="POST">
-                <input type="email" name="email" placeholder="Your email" required aria-label="Email address">
-                <button type="submit" class="cta-button gold">Queue Signup</button>
-            </form>
-        </div>
+  <!-- Header -->
+  <header class="navbar">
+    <div class="wrap nav">
+      <div class="logo">
+        <img src="images/loydfavicon.png" alt="The Loyd Foundation Logo">
+        <strong>The Loyd Foundation</strong>
+      </div>
+      <nav class="nav-links" id="navMenu">
+        <a href="index.html">Home</a>
+        <a href="programs.html">Programs</a>
+        <a href="about.html">About</a>
+        <a href="impact.html">Impact</a>
+        <a href="donate.html">Donate</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <button class="hamburger" id="hamburger">☰</button>
     </div>
+  </header>
 
-    <!-- Footer -->
-    <footer class="footer" role="contentinfo">
-        <div class="container">
-            <div class="footer-bottom">
-                <p>&copy; 2025 Loyds Foundation. All rights reserved. | <a href="privacy.html">Privacy Policy</a></p>
-            </div>
+  <!-- Offline Message -->
+  <section class="wrap" data-aos="fade-up">
+    <div class="offline-content">
+      <img src="images/loydfavicon.png" alt="The Loyd Foundation Logo" class="offline-logo" data-aos="zoom-in">
+      <h1>You’re Offline</h1>
+      <p class="muted">It looks like you’re not connected to the internet. Please check your connection and try again.</p>
+      <button class="btn-primary" id="retryBtn">Try Again</button>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="wrap">
+      <div class="footer-content">
+        <div><strong>The Loyd Foundation</strong></div>
+        <div class="text-sm muted">© <span id="year"></span> The Loyd Foundation — All rights reserved.</div>
+        <div class="social-links">
+          <a href="#" data-aos="fade-up">Facebook</a> |
+          <a href="#" data-aos="fade-up" data-aos-delay="100">Instagram</a> |
+          <a href="#" data-aos="fade-up" data-aos-delay="200">LinkedIn</a>
         </div>
-    </footer>
+      </div>
+    </div>
+  </footer>
 
-    <!-- Scripts (Minimal for Offline) -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="main.js"></script>
-    <!-- PWA Service Worker Registration -->
-    <script>
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', () => {
-                navigator.serviceWorker.register('/service-worker.js')
-                    .then(reg => console.log('SW registered'))
-                    .catch(err => console.log('SW registration failed'));
-            });
-        }
-    </script>
+  <script src="main.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 </body>
 </html>
