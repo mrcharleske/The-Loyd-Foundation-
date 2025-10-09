@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Thank You — The Loyd Foundation</title>
-  <meta name="description" content="Thank you for your donation to The Loyd Foundation. Your support makes a difference!">
+  <title>Donate — The Loyd Foundation</title>
+  <meta name="description" content="Support The Loyd Foundation’s mission to empower communities through your donation. Choose your cause and make a difference.">
   <link rel="icon" type="image/png" href="images/loydfavicon.png">
   <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#1e6f5c">
@@ -27,22 +27,61 @@
         <a href="programs.html">Programs</a>
         <a href="about.html">About</a>
         <a href="impact.html">Impact</a>
-        <a href="donate.html">Donate</a>
+        <a href="donate.html" class="active">Donate</a>
         <a href="contact.html">Contact</a>
       </nav>
       <button class="hamburger" id="hamburger">☰</button>
     </div>
   </header>
 
-  <!-- Thank You Message -->
-  <section class="wrap" data-aos="fade-up">
-    <div class="offline-content">
-      <img src="images/donation-success.jpg" alt="Donation Success" class="offline-logo flap" data-aos="zoom-in">
-      <h1>Thank You for Your Support!</h1>
-      <p class="muted">Your donation to The Loyd Foundation will help empower communities through entrepreneurship, agriculture, nutrition, and education.</p>
+  <!-- Hero -->
+  <section class="hero" data-aos="fade-up">
+    <div class="wrap hero-content">
+      <div class="hero-media">
+        <img src="images/donation-bg.jpg" alt="Donation Banner" class="flap">
+        <div class="hero-overlay"></div>
+      </div>
+      <div class="hero-text">
+        <h1>Make a Difference</h1>
+        <p>Your support fuels entrepreneurship, agriculture, nutrition, and education for communities in need.</p>
+        <button class="btn-primary" data-modal="donate">Donate Now</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Donation Info -->
+  <section class="section-alt" data-aos="fade-up">
+    <div class="wrap">
+      <h2>Why Donate?</h2>
+      <p class="muted">Every contribution, big or small, helps us empower communities through sustainable programs.</p>
+      <div class="cards">
+        <div class="card" data-aos="zoom-in" data-aos-delay="100">
+          <img src="images/home-smes.jpg" alt="SME Empowerment Donation" class="flap">
+          <h3>SME Empowerment</h3>
+          <p class="text-sm muted">Your donation provides training and micro-grants to help small businesses grow.</p>
+          <button class="btn-ghost" data-modal="donate" data-cause="sme_empowerment">Support SMEs</button>
+        </div>
+        <div class="card" data-aos="zoom-in" data-aos-delay="200">
+          <img src="images/home-farmers.png" alt="Farmers Empowerment Donation" class="flap">
+          <h3>Farmers Empowerment</h3>
+          <p class="text-sm muted">Support farmers with seeds, training, and market access for sustainable growth.</p>
+          <button class="btn-ghost" data-modal="donate" data-cause="farmers_empowerment">Support Farmers</button>
+        </div>
+        <div class="card" data-aos="zoom-in" data-aos-delay="300">
+          <img src="images/home-feeding.png" alt="Feeding Program Donation" class="flap">
+          <h3>Feeding Program</h3>
+          <p class="text-sm muted">Help provide nutritious meals to children in schools and communities.</p>
+          <button class="btn-ghost" data-modal="donate" data-cause="feeding_program">Support Feeding</button>
+        </div>
+        <div class="card" data-aos="zoom-in" data-aos-delay="400">
+          <img src="images/home-education.jpg" alt="Education Donation" class="flap">
+          <h3>Education & Scholarships</h3>
+          <p class="text-sm muted">Fund scholarships and supplies for students to achieve their dreams.</p>
+          <button class="btn-ghost" data-modal="donate" data-cause="education_scholarship">Support Education</button>
+        </div>
+      </div>
       <div class="action">
-        <a href="index.html" class="btn-primary">Return Home</a>
-        <a href="programs.html" class="btn-ghost">Explore Programs</a>
+        <button class="btn-primary" data-modal="donate">Donate Now</button>
       </div>
     </div>
   </section>
@@ -61,6 +100,88 @@
       </div>
     </div>
   </footer>
+
+  <!-- Donation Modal -->
+  <div class="modal-backdrop" id="modalBackdrop" aria-hidden="true">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="donateTitle" data-aos="zoom-in">
+      <h3 id="donateTitle">Make a Donation</h3>
+      <div class="steps" id="modalSteps">
+        <div class="step active"></div>
+        <div class="step"></div>
+        <div class="step"></div>
+      </div>
+      <div id="stepContent">
+        <!-- Step 1: Choose Cause -->
+        <div class="step-panel" data-step="1">
+          <p class="muted">Support a cause that matters. Your gift creates lasting impact.</p>
+          <div id="causeTiles">
+            <button class="amount-btn" data-cause="general">General Support</button>
+            <button class="amount-btn" data-cause="sme_empowerment">SME Empowerment</button>
+            <button class="amount-btn" data-cause="farmers_empowerment">Farmers Empowerment</button>
+            <button class="amount-btn" data-cause="feeding_program">Feeding Program</button>
+            <button class="amount-btn" data-cause="education_scholarship">Education Scholarships</button>
+          </div>
+          <div class="modal-actions">
+            <button class="btn-ghost" id="modalClose">Cancel</button>
+            <button class="btn-primary" id="toStep2">Next</button>
+          </div>
+        </div>
+        <!-- Step 2: Amount & Frequency -->
+        <div class="step-panel" data-step="2" style="display: none;">
+          <p class="muted">Select amount or enter custom amount</p>
+          <div class="grid-2">
+            <div>
+              <div class="amount-options">
+                <button class="amount-btn" data-amount="500">KES 500</button>
+                <button class="amount-btn" data-amount="1000">KES 1,000</button>
+                <button class="amount-btn" data-amount="2500">KES 2,500</button>
+                <button class="amount-btn" data-amount="5000">KES 5,000</button>
+                <button class="amount-btn" data-amount="custom">Custom</button>
+              </div>
+              <input type="number" id="customAmount" placeholder="Enter amount (KES)" class="form-input">
+            </div>
+            <div>
+              <div class="frequency-label">Frequency</div>
+              <div class="frequency-options">
+                <button class="amount-btn" data-frequency="one_time">One-time</button>
+                <button class="amount-btn" data-frequency="monthly">Monthly</button>
+              </div>
+              <div id="selectedAmountPreview" class="muted"></div>
+            </div>
+          </div>
+          <div class="modal-actions">
+            <button class="btn-ghost" id="backToStep1">Back</button>
+            <button class="btn-primary" id="toStep3">Next</button>
+          </div>
+        </div>
+        <!-- Step 3: Payment & Donor Info -->
+        <div class="step-panel" data-step="3" style="display: none;">
+          <p class="muted">Choose payment method</p>
+          <div class="payment-options">
+            <button class="amount-btn" data-payment="paypal">PayPal</button>
+            <button class="amount-btn" data-payment="bank_card">Bank Card</button>
+            <button class="amount-btn" data-payment="mpesa">M-Pesa</button>
+            <button class="amount-btn" data-payment="offline">Offline</button>
+          </div>
+          <form id="donationForm" action="https://formspree.io/f/xovkarkw" method="POST">
+            <input type="hidden" name="cause" id="form_cause">
+            <input type="hidden" name="amount" id="form_amount">
+            <input type="hidden" name="currency" value="KES">
+            <input type="hidden" name="frequency" id="form_frequency">
+            <input type="hidden" name="payment_method" id="form_payment">
+            <input type="text" name="name" id="donor_name" placeholder="Full name" required class="form-input" aria-label="Full name">
+            <input type="email" name="_replyto" id="donor_email" placeholder="Email address" required class="form-input" aria-label="Email address">
+            <input type="tel" name="phone" id="donor_phone" placeholder="Phone (optional)" class="form-input" aria-label="Phone number">
+            <textarea name="message" id="donor_message" placeholder="Message (optional)" rows="3" class="form-input" aria-label="Message"></textarea>
+            <div class="modal-actions">
+              <button type="button" class="btn-ghost" id="backToStep2">Back</button>
+              <button type="submit" class="btn-primary" id="confirmDonate">Confirm & Donate</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <script src="main.js"></script>
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
