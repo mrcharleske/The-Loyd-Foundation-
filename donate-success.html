@@ -1,174 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thank You! | Loyds Foundation</title>
-    <meta name="description" content="Thank you for your generous donation to Loyds Foundation. Your support is transforming lives in Kenya—stay connected for impact updates.">
-    <meta name="keywords" content="thank you, donation success, Loyds Foundation, impact">
-    <link rel="canonical" href="https://mrcharleske.github.io/The-Loyd-Foundation-/donate-success.html">
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Thank You for Donating! | Loyds Foundation">
-    <meta property="og:description" content="Your gift is making a difference—join us in celebrating the change.">
-    <meta property="og:image" content="images/donation-success.jpg">
-    <meta property="og:url" content="https://mrcharleske.github.io/The-Loyd-Foundation-/donate-success.html">
-    
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Thank You for Donating! | Loyds Foundation">
-    <meta name="twitter:description" content="Your gift is making a difference.">
-    <meta name="twitter:image" content="images/donation-success.jpg">
-    
-    <!-- Schema.org for Confirmation -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Order",
-        "name": "Donation Confirmation",
-        "orderStatus": "https://schema.org/OrderConfirmed"
-    }
-    </script>
-    
-    <!-- PWA Manifest -->
-    <link rel="manifest" href="manifest.json">
-    <meta name="theme-color" content="#2E7D32">
-    <link rel="icon" type="image/png" sizes="32x32" href="images/loydfavicon.png">
-    
-    <!-- Styles -->
-    <link rel="stylesheet" href="style.css">
-    
-    <!-- AOS for Animations -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thank You — The Loyd Foundation</title>
+  <meta name="description" content="Thank you for your donation to The Loyd Foundation. Your support makes a difference!">
+  <link rel="icon" type="image/png" href="images/loydfavicon.png">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#1e6f5c">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
 </head>
 <body>
-    <!-- Skip Link for Accessibility -->
-    <a href="#main-content" class="skip-link">Skip to main content</a>
-    
-    <!-- Header with Navigation Bar -->
-    <header class="header">
-        <nav class="nav-bar" role="navigation" aria-label="Main navigation">
-            <div class="nav-container">
-                <a href="index.html" class="logo" aria-label="Loyds Foundation Home">
-                    <img src="images/loydfavicon.png" alt="Loyds Foundation Logo" width="40" height="40">
-                    Loyds Foundation
-                </a>
-                <ul class="nav-menu">
-                    <li><a href="index.html" class="nav-link">Home</a></li>
-                    <li><a href="who-we-are.html" class="nav-link">Who We Are</a></li>
-                    <li><a href="programs.html" class="nav-link">Programs</a></li>
-                    <li><a href="impact.html" class="nav-link">Impact</a></li>
-                    <li><a href="donate.html" class="nav-link donate-link active">Donate</a></li>
-                    <li><a href="contact.html" class="nav-link">Contact</a></li>
-                </ul>
-                <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
-                    <span></span><span></span><span></span>
-                </button>
-                <!-- Language Toggle with Five Options -->
-                <select id="lang-toggle" aria-label="Language">
-                    <option value="en">EN</option>
-                    <option value="sw">SW</option>
-                    <option value="fr">FR</option>
-                    <option value="es">ES</option>
-                    <option value="ar">AR</option>
-                </select>
-            </div>
-        </nav>
-    </header>
+  <!-- Install Button -->
+  <button class="btn-install" id="installBtn" style="display: none;">Install The Loyd Foundation</button>
 
-    <!-- Main Content -->
-    <main id="main-content">
-        <!-- Hero Section (No Overlay) -->
-        <section class="hero hero-success" role="banner">
-            <div class="hero-image-container">
-                <img src="images/donation-success.jpg" alt="Success Hero: Joyful community celebration" class="hero-image" loading="lazy" height="400">
-                <div class="hero-content" data-aos="fade-up">
-                    <h1>Thank You, [Donor Name]!</h1>
-                    <p>Your [$Amount] gift to [Program] is already making waves. You've empowered a family, a farmer, or a future—welcome to the changemakers.</p>
-                    <div class="hero-buttons">
-                        <a href="impact.html" class="cta-button secondary">See the Impact</a>
-                        <a href="donate.html?monthly" class="cta-button gold">Go Monthly?</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Recap Section -->
-        <section class="recap" data-aos="fade-up">
-            <div class="container">
-                <h2>Here's What You've Done</h2>
-                <div class="recap-grid">
-                    <div class="recap-item">
-                        <h3>One-Time Gift</h3>
-                        <p>[$Amount] to Loyds Foundation—thank you for your generosity!</p>
-                    </div>
-                    <div class="recap-item">
-                        <h3>Program Focus</h3>
-                        <p>Supporting [Program]: Transforming lives in Kenya with global reach.</p>
-                    </div>
-                    <div class="recap-item">
-                        <h3>Next Steps</h3>
-                        <p>Check your email for a receipt and first impact story. Share your win below!</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Share & Upsell -->
-        <section class="share" data-aos="fade-up">
-            <div class="container">
-                <h2>Spread the Joy</h2>
-                <p>Help us reach more changemakers—your story inspires others.</p>
-                <div class="share-buttons">
-                    <a href="https://twitter.com/intent/tweet?text=I just supported Loyds Foundation—empowering Kenya one gift at a time! %23LoydsImpact" class="share-btn twitter">Share on X</a>
-                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://mrcharleske.github.io/The-Loyd-Foundation-/" class="share-btn facebook">Share on Facebook</a>
-                    <a href="mailto:?subject=Join me in supporting Loyds Foundation&body=Your gift to https://mrcharleske.github.io/The-Loyd-Foundation-/ changes lives!" class="share-btn email">Email Friends</a>
-                </div>
-                <a href="programs.html" class="cta-button">Explore More Programs</a>
-            </div>
-        </section>
-    </main>
-
-    <!-- Email Signup Modal -->
-    <div id="signup-modal" class="modal" role="dialog" aria-labelledby="modal-title" aria-hidden="true">
-        <div class="modal-content">
-            <button class="modal-close" aria-label="Close modal">&times;</button>
-            <h3 id="modal-title">Join 5,000+ Changemakers</h3>
-            <p>Get field updates and inspiring stories from Kenya to the USA.</p>
-            <form id="signup-form" action="https://formspree.io/f/xovkarkw" method="POST">
-                <input type="email" name="email" placeholder="Your email" required aria-label="Email address">
-                <select name="region" aria-label="Preferred region">
-                    <option value="global">Global</option>
-                    <option value="kenya">Kenya</option>
-                    <option value="usa">USA</option>
-                </select>
-                <button type="submit" class="cta-button gold">Subscribe</button>
-            </form>
-        </div>
+  <!-- Header -->
+  <header class="navbar">
+    <div class="wrap nav">
+      <div class="logo">
+        <img src="images/loydfavicon.png" alt="The Loyd Foundation Logo">
+        <strong>The Loyd Foundation</strong>
+      </div>
+      <nav class="nav-links" id="navMenu">
+        <a href="index.html">Home</a>
+        <a href="programs.html">Programs</a>
+        <a href="about.html">About</a>
+        <a href="impact.html">Impact</a>
+        <a href="donate.html">Donate</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <button class="hamburger" id="hamburger">☰</button>
     </div>
+  </header>
 
-    <!-- Footer -->
-    <footer class="footer" role="contentinfo">
-        <div class="container">
-            <div class="footer-bottom">
-                <p>&copy; 2025 Loyds Foundation. All rights reserved. | <a href="privacy.html">Privacy Policy</a></p>
-            </div>
+  <!-- Thank You Message -->
+  <section class="wrap" data-aos="fade-up">
+    <div class="offline-content">
+      <img src="images/donation-success.jpg" alt="Donation Success" class="offline-logo flap" data-aos="zoom-in">
+      <h1>Thank You for Your Support!</h1>
+      <p class="muted">Your donation to The Loyd Foundation will help empower communities through entrepreneurship, agriculture, nutrition, and education.</p>
+      <div class="action">
+        <a href="index.html" class="btn-primary">Return Home</a>
+        <a href="programs.html" class="btn-ghost">Explore Programs</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="wrap">
+      <div class="footer-content">
+        <div><strong>The Loyd Foundation</strong></div>
+        <div class="text-sm muted">© <span id="year"></span> The Loyd Foundation — All rights reserved.</div>
+        <div class="social-links">
+          <a href="#" data-aos="fade-up">Facebook</a> |
+          <a href="#" data-aos="fade-up" data-aos-delay="100">Instagram</a> |
+          <a href="#" data-aos="fade-up" data-aos-delay="200">LinkedIn</a>
         </div>
-    </footer>
+      </div>
+    </div>
+  </footer>
 
-    <!-- Scripts -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="main.js"></script>
-    <!-- PWA Service Worker Registration -->
-    <script>
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', () => {
-                navigator.serviceWorker.register('/service-worker.js')
-                    .then(reg => console.log('SW registered'))
-                    .catch(err => console.log('SW registration failed'));
-            });
-        }
-    </script>
+  <script src="main.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 </body>
 </html>
