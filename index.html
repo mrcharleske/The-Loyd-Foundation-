@@ -1,84 +1,239 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="The Loyd Foundation empowers communities through SMEs, farming, education, and feeding programs.">
-    <meta name="keywords" content="nonprofit, charity, SMEs, farmers, education, feeding, donation">
-    <meta name="author" content="The Loyd Foundation">
-    <title>The Loyd Foundation - Home</title>
-    <link rel="icon" type="image/png" href="https://mrcharleske.github.io/The-Loyd-Foundation-/loydfavicon.png">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link rel="stylesheet" href="styles.css">
-    <link rel="manifest" href="manifest.json">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Loyd Foundation — Empowering Communities</title>
+  <meta name="description" content="The Loyd Foundation empowers small businesses, farmers, and students through training, grants, feeding programs, and scholarships.">
+  <link rel="icon" type="image/png" href="images/loydfavicon.png">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#1e6f5c">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
 </head>
 <body>
-    <!-- Install Popup -->
-    <div id="install-popup" role="dialog" aria-labelledby="install-title">
-        <h3 id="install-title">Install The Loyd Foundation App</h3>
-        <p>Add our app to your home screen for quick access!</p>
-        <button onclick="installApp()">Install</button>
-        <button onclick="closePopup()">Close</button>
+  <!-- Install Button -->
+  <button class="btn-install" id="installBtn" style="display: none;">Install The Loyd Foundation</button>
+
+  <!-- Header -->
+  <header class="navbar">
+    <div class="wrap nav">
+      <div class="logo">
+        <img src="images/loydfavicon.png" alt="The Loyd Foundation Logo">
+        <strong>The Loyd Foundation</strong>
+      </div>
+      <nav class="nav-links" id="navMenu">
+        <a href="index.html" class="active">Home</a>
+        <a href="programs.html">Programs</a>
+        <a href="about.html">About</a>
+        <a href="impact.html">Impact</a>
+        <a href="donate.html">Donate</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <button class="hamburger" id="hamburger">☰</button>
     </div>
+  </header>
 
-    <!-- Header -->
-    <header>
-        <nav>
-            <img src="https://mrcharleske.github.io/The-Loyd-Foundation-/logo-partner1.png" alt="The Loyd Foundation Logo" aria-label="The Loyd Foundation Logo">
-            <ul>
-                <li><a href="index.html" aria-current="page">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="programs.html">Programs</a></li>
-                <li><a href="donate.html">Donate</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <!-- Homepage -->
-    <section id="home" class="hero">
-        <video autoplay muted loop>
-            <source src="https://mrcharleske.github.io/The-Loyd-Foundation-/home-hero.mp4" type="video/mp4">
+  <!-- Hero -->
+  <section class="hero" data-aos="fade-up">
+    <div class="wrap hero-content">
+      <div class="hero-media">
+        <video autoplay muted loop playsinline poster="images/home-hero.png">
+          <source src="images/home-hero.mp4" type="video/mp4">
         </video>
-        <div data-aos="fade-in">
-            <h1>Welcome to The Loyd Foundation</h1>
-            <p>Empowering communities through sustainable programs in SMEs, farming, education, and feeding initiatives.</p>
-            <a href="donate.html" class="btn">Support Our Cause</a>
+        <div class="hero-overlay"></div>
+      </div>
+      <div class="hero-text">
+        <h1>Empowering Communities, Transforming Lives</h1>
+        <p>Join The Loyd Foundation in building sustainable livelihoods through empowerment, education, and compassion.</p>
+        <div class="action">
+          <a href="programs.html" class="btn-ghost">Explore Programs</a>
+          <button class="btn-primary" data-modal="donate">Donate Now</button>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <section class="section" data-aos="slide-up">
-        <h2>Our Impact</h2>
-        <div class="grid">
-            <div class="card" data-aos="zoom-in">
-                <img src="https://mrcharleske.github.io/The-Loyd-Foundation-/home-smes.jpg" alt="SMEs Empowerment">
-                <h3>SMEs Empowerment</h3>
-                <p>Supporting small businesses to thrive and create jobs.</p>
-            </div>
-            <div class="card" data-aos="zoom-in" data-aos-delay="100">
-                <img src="https://mrcharleske.github.io/The-Loyd-Foundation-/home-farmer.png" alt="Farmers Empowerment">
-                <h3>Farmers Empowerment</h3>
-                <p>Equipping farmers with tools and knowledge for sustainable agriculture.</p>
-            </div>
-            <div class="card" data-aos="zoom-in" data-aos-delay="200">
-                <img src="https://mrcharleske.github.io/The-Loyd-Foundation-/home-education.jpg" alt="Educational Sponsorship">
-                <h3>Educational Sponsorship</h3>
-                <p>Providing access to quality education for underprivileged students.</p>
-            </div>
-            <div class="card" data-aos="zoom-in" data-aos-delay="300">
-                <img src="https://mrcharleske.github.io/The-Loyd-Foundation-/home-feeding.png" alt="Feeding Programs">
-                <h3>Feeding Programs</h3>
-                <p>Ensuring no one goes hungry through community feeding initiatives.</p>
-            </div>
+  <!-- Program Highlights -->
+  <section class="section-alt" data-aos="fade-up">
+    <div class="wrap">
+      <h2>Programs</h2>
+      <p class="muted">Focused, measurable programs that deliver opportunity and dignity.</p>
+      <div class="cards">
+        <article class="card" data-aos="zoom-in" data-aos-delay="100">
+          <img src="images/home-smes.jpg" alt="SME Empowerment Program" class="flap">
+          <h3>SME Empowerment</h3>
+          <p class="text-sm muted">Training, mentorship, and micro-grants to grow local businesses.</p>
+          <div><button class="btn-ghost" data-modal="donate" data-cause="sme_empowerment">Support this Program</button></div>
+        </article>
+        <article class="card" data-aos="zoom-in" data-aos-delay="200">
+          <img src="images/home-farmers.png" alt="Farmers Empowerment Program" class="flap">
+          <h3>Farmers Empowerment</h3>
+          <p class="text-sm muted">Sustainable farming training, quality inputs, and market access.</p>
+          <div><button class="btn-ghost" data-modal="donate" data-cause="farmers_empowerment">Support this Program</button></div>
+        </article>
+        <article class="card" data-aos="zoom-in" data-aos-delay="300">
+          <img src="images/home-feeding.png" alt="Feeding Program" class="flap">
+          <h3>Feeding Program</h3>
+          <p class="text-sm muted">School and community feeding to ensure children get nutrition.</p>
+          <div><button class="btn-ghost" data-modal="donate" data-cause="feeding_program">Support this Program</button></div>
+        </article>
+        <article class="card" data-aos="zoom-in" data-aos-delay="400">
+          <img src="images/home-education.jpg" alt="Education and Scholarships Program" class="flap">
+          <h3>Education & Scholarships</h3>
+          <p class="text-sm muted">Tuition, supplies, and mentorship for high-potential students.</p>
+          <div><button class="btn-ghost" data-modal="donate" data-cause="education_scholarship">Support this Program</button></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Impact -->
+  <section data-aos="fade-up">
+    <div class="wrap">
+      <h2>Impact</h2>
+      <p class="muted">Numbers don’t tell everything, but they show progress.</p>
+      <div class="impact">
+        <div class="counters">
+          <div class="counter" data-aos="fade-up" data-aos-delay="100">
+            <div class="count" data-count-to="4200">0</div>
+            <div class="text-sm muted">Farmers Empowered</div>
+          </div>
+          <div class="counter" data-aos="fade-up" data-aos-delay="200">
+            <div class="count" data-count-to="50000">0</div>
+            <div class="text-sm muted">Meals Served</div>
+          </div>
+          <div class="counter" data-aos="fade-up" data-aos-delay="300">
+            <div class="count" data-count-to="120">0</div>
+            <div class="text-sm muted">SMEs Trained</div>
+          </div>
+          <div class="counter" data-aos="fade-up" data-aos-delay="400">
+            <div class="count" data-count-to="45">0</div>
+            <div class="text-sm muted">Scholarships Awarded</div>
+          </div>
         </div>
-    </section>
+        <div class="impact-video">
+          <video controls playsinline poster="images/home-impact.jpg" data-aos="zoom-in">
+            <source src="images/video-drone.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- Footer -->
-    <footer>
-        <p>The Loyd Foundation. All rights reserved. <a href="#privacy">Privacy Policy</a></p>
-    </footer>
+  <!-- Partners -->
+  <section class="section-alt" data-aos="fade-up">
+    <div class="wrap">
+      <h3>Partners & Supporters</h3>
+      <div class="partners">
+        <img src="images/logo-partner1.png" alt="Partner 1 Logo" data-aos="fade-left">
+        <img src="images/placeholder.png" alt="Partner 2 Placeholder" data-aos="fade-left" data-aos-delay="100">
+        <img src="images/placeholder.png" alt="Partner 3 Placeholder" data-aos="fade-left" data-aos-delay="200">
+        <img src="images/placeholder.png" alt="Partner 4 Placeholder" data-aos="fade-left" data-aos-delay="300">
+        <img src="images/placeholder.png" alt="Partner 5 Placeholder" data-aos="fade-left" data-aos-delay="400">
+        <img src="images/placeholder.png" alt="Partner 6 Placeholder" data-aos="fade-left" data-aos-delay="500">
+      </div>
+    </div>
+  </section>
 
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script src="script.js"></script>
+  <!-- Footer -->
+  <footer>
+    <div class="wrap">
+      <div class="footer-content">
+        <div><strong>The Loyd Foundation</strong></div>
+        <div class="text-sm muted">© <span id="year"></span> The Loyd Foundation — All rights reserved.</div>
+        <div class="social-links">
+          <a href="#" data-aos="fade-up">Facebook</a> |
+          <a href="#" data-aos="fade-up" data-aos-delay="100">Instagram</a> |
+          <a href="#" data-aos="fade-up" data-aos-delay="200">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Donation Modal -->
+  <div class="modal-backdrop" id="modalBackdrop" aria-hidden="true">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="donateTitle" data-aos="zoom-in">
+      <h3 id="donateTitle">Make a Donation</h3>
+      <div class="steps" id="modalSteps">
+        <div class="step active"></div>
+        <div class="step"></div>
+        <div class="step"></div>
+      </div>
+      <div id="stepContent">
+        <!-- Step 1: Choose Cause -->
+        <div class="step-panel" data-step="1">
+          <p class="muted">Support a cause that matters. Your gift creates lasting impact.</p>
+          <div id="causeTiles">
+            <button class="amount-btn" data-cause="general">General Support</button>
+            <button class="amount-btn" data-cause="sme_empowerment">SME Empowerment</button>
+            <button class="amount-btn" data-cause="farmers_empowerment">Farmers Empowerment</button>
+            <button class="amount-btn" data-cause="feeding_program">Feeding Program</button>
+            <button class="amount-btn" data-cause="education_scholarship">Education Scholarships</button>
+          </div>
+          <div class="modal-actions">
+            <button class="btn-ghost" id="modalClose">Cancel</button>
+            <button class="btn-primary" id="toStep2">Next</button>
+          </div>
+        </div>
+        <!-- Step 2: Amount & Frequency -->
+        <div class="step-panel" data-step="2" style="display: none;">
+          <p class="muted">Select amount or enter custom amount</p>
+          <div class="grid-2">
+            <div>
+              <div class="amount-options">
+                <button class="amount-btn" data-amount="500">KES 500</button>
+                <button class="amount-btn" data-amount="1000">KES 1,000</button>
+                <button class="amount-btn" data-amount="2500">KES 2,500</button>
+                <button class="amount-btn" data-amount="5000">KES 5,000</button>
+                <button class="amount-btn" data-amount="custom">Custom</button>
+              </div>
+              <input type="number" id="customAmount" placeholder="Enter amount (KES)" class="form-input">
+            </div>
+            <div>
+              <div class="frequency-label">Frequency</div>
+              <div class="frequency-options">
+                <button class="amount-btn" data-frequency="one_time">One-time</button>
+                <button class="amount-btn" data-frequency="monthly">Monthly</button>
+              </div>
+              <div id="selectedAmountPreview" class="muted"></div>
+            </div>
+          </div>
+          <div class="modal-actions">
+            <button class="btn-ghost" id="backToStep1">Back</button>
+            <button class="btn-primary" id="toStep3">Next</button>
+          </div>
+        </div>
+        <!-- Step 3: Payment & Donor Info -->
+        <div class="step-panel" data-step="3" style="display: none;">
+          <p class="muted">Choose payment method</p>
+          <div class="payment-options">
+            <button class="amount-btn" data-payment="paypal">PayPal</button>
+            <button class="amount-btn" data-payment="bank_card">Bank Card</button>
+            <button class="amount-btn" data-payment="mpesa">M-Pesa</button>
+            <button class="amount-btn" data-payment="offline">Offline</button>
+          </div>
+          <form id="donationForm" action="https://formspree.io/f/xovkarkw" method="POST">
+            <input type="hidden" name="cause" id="form_cause">
+            <input type="hidden" name="amount" id="form_amount">
+            <input type="hidden" name="currency" value="KES">
+            <input type="hidden" name="frequency" id="form_frequency">
+            <input type="hidden" name="payment_method" id="form_payment">
+            <input type="text" name="name" id="donor_name" placeholder="Full name" required class="form-input" aria-label="Full name">
+            <input type="email" name="_replyto" id="donor_email" placeholder="Email address" required class="form-input" aria-label="Email address">
+            <input type="tel" name="phone" id="donor_phone" placeholder="Phone (optional)" class="form-input" aria-label="Phone number">
+            <textarea name="message" id="donor_message" placeholder="Message (optional)" rows="3" class="form-input" aria-label="Message"></textarea>
+            <div class="modal-actions">
+              <button type="button" class="btn-ghost" id="backToStep2">Back</button>
+              <button type="submit" class="btn-primary" id="confirmDonate">Confirm & Donate</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 </body>
 </html>
