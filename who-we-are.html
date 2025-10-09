@@ -1,227 +1,254 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Who We Are | Loyds Foundation</title>
-    <meta name="description" content="Discover the story behind Loyds Foundation: Our founder, team, projects, and global mission to empower communities in Kenya and the USA.">
-    <meta name="keywords" content="about, founder, team, projects, Loyds Foundation, Kenya, USA">
-    <link rel="canonical" href="https://mrcharleske.github.io/The-Loyd-Foundation-/who-we-are.html">
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Who We Are | Loyds Foundation">
-    <meta property="og:description" content="Rooted in passion, reaching the world. Learn about our founder, team, and impact-driven projects.">
-    <meta property="og:image" content="images/loydfounder.jpg">
-    <meta property="og:url" content="https://mrcharleske.github.io/The-Loyd-Foundation-/who-we-are.html">
-    
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Who We Are | Loyds Foundation">
-    <meta name="twitter:description" content="Rooted in passion, reaching the world.">
-    <meta name="twitter:image" content="images/loydfounder.jpg">
-    
-    <!-- Schema.org for Organization -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "Loyds Foundation",
-        "url": "https://mrcharleske.github.io/The-Loyd-Foundation-/",
-        "description": "International foundation empowering communities through targeted programs.",
-        "founder": {
-            "@type": "Person",
-            "name": "Loyd Founder",
-            "jobTitle": "Founder & CEO"
-        },
-        "address": {
-            "@type": "PostalAddress",
-            "addressCountry": "KE"
-        }
-    }
-    </script>
-    
-    <!-- PWA Manifest -->
-    <link rel="manifest" href="manifest.json">
-    <meta name="theme-color" content="#2E7D32">
-    <link rel="icon" type="image/png" sizes="32x32" href="images/loydfavicon.png">
-    
-    <!-- Styles -->
-    <link rel="stylesheet" href="style.css">
-    
-    <!-- AOS for Animations -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — The Loyd Foundation</title>
+  <meta name="description" content="Learn about The Loyd Foundation’s mission, vision, team, and impact in empowering communities.">
+  <link rel="icon" type="image/png" href="images/loydfavicon.png">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#1e6f5c">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
 </head>
 <body>
-    <!-- Skip Link for Accessibility -->
-    <a href="#main-content" class="skip-link">Skip to main content</a>
-    
-    <!-- Header with Navigation Bar -->
-    <header class="header">
-        <nav class="nav-bar" role="navigation" aria-label="Main navigation">
-            <div class="nav-container">
-                <a href="index.html" class="logo" aria-label="Loyds Foundation Home">
-                    <img src="images/loydfavicon.png" alt="Loyds Foundation Logo" width="40" height="40">
-                    Loyds Foundation
-                </a>
-                <ul class="nav-menu">
-                    <li><a href="index.html" class="nav-link">Home</a></li>
-                    <li><a href="who-we-are.html" class="nav-link active">Who We Are</a></li>
-                    <li><a href="programs.html" class="nav-link">Programs</a></li>
-                    <li><a href="impact.html" class="nav-link">Impact</a></li>
-                    <li><a href="donate.html" class="nav-link donate-link">Donate</a></li>
-                    <li><a href="contact.html" class="nav-link">Contact</a></li>
-                </ul>
-                <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
-                    <span></span><span></span><span></span>
-                </button>
-                <!-- Language Toggle with Five Options -->
-                <select id="lang-toggle" aria-label="Language">
-                    <option value="en">EN</option>
-                    <option value="sw">SW</option>
-                    <option value="fr">FR</option>
-                    <option value="es">ES</option>
-                    <option value="ar">AR</option>
-                </select>
-            </div>
-        </nav>
-    </header>
+  <!-- Install Button -->
+  <button class="btn-install" id="installBtn" style="display: none;">Install The Loyd Foundation</button>
 
-    <!-- Main Content -->
-    <main id="main-content">
-        <!-- Hero Section (No Overlay) -->
-        <section class="hero hero-about" role="banner">
-            <div class="hero-image-container">
-                <img src="images/loydfounder.jpg" alt="Loyd Founder: Visionary leader in community empowerment" class="hero-image" loading="lazy" height="400">
-                <div class="hero-content" data-aos="fade-up">
-                    <h1>Our Story: From Vision to Global Impact</h1>
-                    <p>Founded on the belief that every community holds untapped potential, Loyds bridges Kenya's grassroots needs with worldwide support.</p>
-                    <div class="hero-buttons">
-                        <a href="contact.html" class="cta-button secondary">Contact Us</a>
-                        <a href="programs.html" class="cta-button gold">Explore Programs</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Founder Section: Image Left, Text Right -->
-        <section id="founder" class="founder layout-row" data-aos="fade-up">
-            <div class="container">
-                <h2>The Founder</h2>
-                <div class="founder-content">
-                    <img src="images/loydfounder.jpg" alt="Portrait of Loyd Founder" class="founder-image" loading="lazy" height="300">
-                    <div class="founder-text">
-                        <p>Loyd [Last Name], a Kenyan social entrepreneur with roots in rural agriculture and a Harvard fellowship under his belt, launched Loyds in 2020. Witnessing SME struggles during COVID and education gaps in slums, he rallied USA partners for seed funding. "It's not charity—it's shared prosperity," Loyd says. Today, his vision has touched 1,200 lives, blending local wisdom with global resources.</p>
-                        <blockquote>"Empower one, uplift all—from Nairobi markets to New York boardrooms."</blockquote>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Team Section: Text Left, Image Right -->
-        <section class="team layout-row-reverse" data-aos="fade-up">
-            <div class="container">
-                <h2>Our Dedicated Team</h2>
-                <p>A multicultural crew: Kenyan field experts and USA strategists, united by impact.</p>
-                <div class="team-content">
-                    <div class="team-text">
-                        <p>Our team of 15+ combines on-the-ground passion with strategic insight, ensuring every program delivers lasting change. From logistics in Nairobi to donor relations in the US, we're a family forging global ties.</p>
-                    </div>
-                    <img src="images/about-team.jpg" alt="Loyds Team: Diverse group collaborating in a workshop" class="team-image" loading="lazy" height="300">
-                </div>
-            </div>
-        </section>
-
-        <!-- Projects Spotlight -->
-        <section class="projects" role="region" aria-label="Featured Projects">
-            <div class="container">
-                <h2 data-aos="fade-up">Spotlight Projects</h2>
-                <div class="grid">
-                    <!-- Project 1 -->
-                    <article class="card project-card" data-aos="fade-up" data-aos-delay="100">
-                        <img src="images/about-project1.jpg" alt="Project 1: SME Bootcamp in Nairobi" loading="lazy" height="250">
-                        <div class="card-content">
-                            <h3>SME Empowerment Hub</h3>
-                            <p>Aisha's Nairobi startup thrived post-bootcamp—USA donor Mike's support scaled it globally. "Cross-continental collaboration at its best."</p>
-                            <a href="programs.html#smes" class="card-link">Details</a>
-                        </div>
-                    </article>
-                    <!-- Project 2 -->
-                    <article class="card project-card" data-aos="fade-up" data-aos-delay="200">
-                        <img src="images/about-project2.jpg" alt="Project 2: Farmer Irrigation Initiative" loading="lazy" height="250">
-                        <div class="card-content">
-                            <h3>Rural Resilience Program</h3>
-                            <p>Juma's Kitui farm doubled output with Loyds' tech—matched by California grants. "Seeds of change, sown worldwide."</p>
-                            <a href="programs.html#farmers" class="card-link">Details</a>
-                        </div>
-                    </article>
-                    <!-- Project 3 -->
-                    <article class="card project-card" data-aos="fade-up" data-aos-delay="300">
-                        <img src="images/about-project3.jpg" alt="Project 3: Education Outreach" loading="lazy" height="250">
-                        <div class="card-content">
-                            <h3>Scholarship Bridges</h3>
-                            <p>Kelvin's story from dropout to scholar, fueled by Seattle contributions. "Education knows no borders."</p>
-                            <a href="programs.html#education" class="card-link">Details</a>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <!-- Values Section -->
-        <section class="values" data-aos="fade-up">
-            <div class="container">
-                <h2>Our Core Values</h2>
-                <ul class="values-list">
-                    <li><strong>Equity:</strong> Fair access for all, from Kenyan villages to USA cities.</li>
-                    <li><strong>Innovation:</strong> Blending local traditions with global tech.</li>
-                    <li><strong>Partnership:</strong> Kenya-USA collaborations driving sustainable wins.</li>
-                    <li><strong>Transparency:</strong> Every dollar tracked, every story shared.</li>
-                </ul>
-                <a href="impact.html" class="cta-button">See Our Impact</a>
-            </div>
-        </section>
-    </main>
-
-    <!-- Email Signup Modal -->
-    <div id="signup-modal" class="modal" role="dialog" aria-labelledby="modal-title" aria-hidden="true">
-        <div class="modal-content">
-            <button class="modal-close" aria-label="Close modal">&times;</button>
-            <h3 id="modal-title">Join 5,000+ Changemakers</h3>
-            <p>Get field updates and inspiring stories from Kenya to the USA.</p>
-            <form id="signup-form" action="https://formspree.io/f/xovkarkw" method="POST">
-                <input type="email" name="email" placeholder="Your email" required aria-label="Email address">
-                <select name="region" aria-label="Preferred region">
-                    <option value="global">Global</option>
-                    <option value="kenya">Kenya</option>
-                    <option value="usa">USA</option>
-                </select>
-                <button type="submit" class="cta-button gold">Subscribe</button>
-            </form>
-        </div>
+  <!-- Header -->
+  <header class="navbar">
+    <div class="wrap nav">
+      <div class="logo">
+        <img src="images/loydfavicon.png" alt="The Loyd Foundation Logo">
+        <strong>The Loyd Foundation</strong>
+      </div>
+      <nav class="nav-links" id="navMenu">
+        <a href="index.html">Home</a>
+        <a href="programs.html">Programs</a>
+        <a href="about.html" class="active">About</a>
+        <a href="impact.html">Impact</a>
+        <a href="donate.html">Donate</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <button class="hamburger" id="hamburger">☰</button>
     </div>
+  </header>
 
-    <!-- Footer -->
-    <footer class="footer" role="contentinfo">
-        <div class="container">
-            <div class="footer-bottom">
-                <p>&copy; 2025 Loyds Foundation. All rights reserved. | <a href="privacy.html">Privacy Policy</a></p>
-            </div>
+  <!-- Hero -->
+  <section class="hero" data-aos="fade-up">
+    <div class="wrap hero-content">
+      <div class="hero-media">
+        <img src="images/home-impact.jpg" alt="About The Loyd Foundation" class="flap">
+        <div class="hero-overlay"></div>
+      </div>
+      <div class="hero-text">
+        <h1>About Us</h1>
+        <p>Empowering communities through entrepreneurship, agriculture, education, and compassion.</p>
+        <button class="btn-primary" data-modal="donate">Support Our Mission</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Impact -->
+  <section class="section-alt" data-aos="fade-up">
+    <div class="wrap">
+      <h2>Our Impact</h2>
+      <div class="counters">
+        <div class="counter" data-aos="fade-up" data-aos-delay="100">
+          <div class="count" data-count-to="4200">0</div>
+          <div class="text-sm muted">Farmers Empowered</div>
         </div>
-    </footer>
+        <div class="counter" data-aos="fade-up" data-aos-delay="200">
+          <div class="count" data-count-to="50000">0</div>
+          <div class="text-sm muted">Meals Served</div>
+        </div>
+        <div class="counter" data-aos="fade-up" data-aos-delay="300">
+          <div class="count" data-count-to="120">0</div>
+          <div class="text-sm muted">SMEs Trained</div>
+        </div>
+        <div class="counter" data-aos="fade-up" data-aos-delay="400">
+          <div class="count" data-count-to="45">0</div>
+          <div class="text-sm muted">Scholarships Awarded</div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- Scripts -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="main.js"></script>
-    <!-- PWA Service Worker Registration -->
-    <script>
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', () => {
-                navigator.serviceWorker.register('/service-worker.js')
-                    .then(reg => console.log('SW registered'))
-                    .catch(err => console.log('SW registration failed'));
-            });
-        }
-    </script>
+  <!-- Gallery -->
+  <section data-aos="fade-up">
+    <div class="wrap">
+      <h2>Moments That Inspire</h2>
+      <div class="gallery-grid">
+        <div class="gallery-item" data-aos="fade-right">
+          <img src="images/about-project1.jpg" alt="Community Project" class="flap">
+        </div>
+        <div class="gallery-item" data-aos="fade-left" data-aos-delay="100">
+          <img src="images/about-project2.jpg" alt="Empowerment Initiative" class="flap">
+        </div>
+        <div class="gallery-item" data-aos="fade-right" data-aos-delay="200">
+          <img src="images/about-project3.jpg" alt="Education Program" class="flap">
+        </div>
+        <div class="gallery-item" data-aos="fade-left" data-aos-delay="300">
+          <video controls playsinline poster="images/home-feeding.png" class="flap">
+            <source src="images/loydfeeding.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="gallery-item" data-aos="fade-right" data-aos-delay="400">
+          <img src="images/home-farmers.png" alt="Farmers Program" class="flap">
+        </div>
+        <div class="gallery-item" data-aos="fade-left" data-aos-delay="500">
+          <img src="images/home-education.jpg" alt="Scholarship Program" class="flap">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stories -->
+  <section class="section-alt" data-aos="fade-up">
+    <div class="wrap">
+      <h2>Real Stories, Real Change</h2>
+      <div class="cards">
+        <div class="card" data-aos="zoom-in" data-aos-delay="100">
+          <p>“Before The Loyd Foundation, my farm was barely producing enough. Now, I sell to local markets and support my family.”</p>
+          <span class="muted">— Peter, Farmer Beneficiary</span>
+        </div>
+        <div class="card" data-aos="zoom-in" data-aos-delay="200">
+          <p>“Through their scholarship, I finished my degree in education and now teach in my village.”</p>
+          <span class="muted">— Grace, Scholarship Recipient</span>
+        </div>
+        <div class="card" data-aos="zoom-in" data-aos-delay="300">
+          <p>“Our feeding program ensures hundreds of children don’t go to bed hungry.”</p>
+          <span class="muted">— Lydia, Volunteer Coordinator</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section data-aos="fade-up">
+    <div class="wrap">
+      <h2>About The Loyd Foundation</h2>
+      <div class="about-content">
+        <img src="images/loydfounder.jpg" alt="Founder of The Loyd Foundation" class="flap" data-aos="zoom-in">
+        <div>
+          <p>The Loyd Foundation is a non-profit dedicated to empowering communities across Kenya and beyond. We focus on SME growth, sustainable farming, feeding programs, and educational scholarships to create lasting impact through opportunity and compassion.</p>
+          <ul>
+            <li><strong>Mission:</strong> To empower individuals and communities through education, entrepreneurship, and sustainability.</li>
+            <li><strong>Vision:</strong> A world where every person thrives with dignity.</li>
+            <li><strong>Core Values:</strong> Integrity, Equity, Innovation, Service.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team -->
+  <section class="section-alt" data-aos="fade-up">
+    <div class="wrap">
+      <h2>Our Team</h2>
+      <img src="images/about-team.jpg" alt="The Loyd Foundation Team" class="flap" data-aos="zoom-in">
+      <p class="muted">Behind every impact story is a team of passionate individuals committed to change and service.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="wrap">
+      <div class="footer-content">
+        <div><strong>The Loyd Foundation</strong></div>
+        <div class="text-sm muted">© <span id="year"></span> The Loyd Foundation — All rights reserved.</div>
+        <div class="social-links">
+          <a href="#" data-aos="fade-up">Facebook</a> |
+          <a href="#" data-aos="fade-up" data-aos-delay="100">Instagram</a> |
+          <a href="#" data-aos="fade-up" data-aos-delay="200">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Donation Modal -->
+  <div class="modal-backdrop" id="modalBackdrop" aria-hidden="true">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="donateTitle" data-aos="zoom-in">
+      <h3 id="donateTitle">Make a Donation</h3>
+      <div class="steps" id="modalSteps">
+        <div class="step active"></div>
+        <div class="step"></div>
+        <div class="step"></div>
+      </div>
+      <div id="stepContent">
+        <!-- Step 1: Choose Cause -->
+        <div class="step-panel" data-step="1">
+          <p class="muted">Support a cause that matters. Your gift creates lasting impact.</p>
+          <div id="causeTiles">
+            <button class="amount-btn" data-cause="general">General Support</button>
+            <button class="amount-btn" data-cause="sme_empowerment">SME Empowerment</button>
+            <button class="amount-btn" data-cause="farmers_empowerment">Farmers Empowerment</button>
+            <button class="amount-btn" data-cause="feeding_program">Feeding Program</button>
+            <button class="amount-btn" data-cause="education_scholarship">Education Scholarships</button>
+          </div>
+          <div class="modal-actions">
+            <button class="btn-ghost" id="modalClose">Cancel</button>
+            <button class="btn-primary" id="toStep2">Next</button>
+          </div>
+        </div>
+        <!-- Step 2: Amount & Frequency -->
+        <div class="step-panel" data-step="2" style="display: none;">
+          <p class="muted">Select amount or enter custom amount</p>
+          <div class="grid-2">
+            <div>
+              <div class="amount-options">
+                <button class="amount-btn" data-amount="500">KES 500</button>
+                <button class="amount-btn" data-amount="1000">KES 1,000</button>
+                <button class="amount-btn" data-amount="2500">KES 2,500</button>
+                <button class="amount-btn" data-amount="5000">KES 5,000</button>
+                <button class="amount-btn" data-amount="custom">Custom</button>
+              </div>
+              <input type="number" id="customAmount" placeholder="Enter amount (KES)" class="form-input">
+            </div>
+            <div>
+              <div class="frequency-label">Frequency</div>
+              <div class="frequency-options">
+                <button class="amount-btn" data-frequency="one_time">One-time</button>
+                <button class="amount-btn" data-frequency="monthly">Monthly</button>
+              </div>
+              <div id="selectedAmountPreview" class="muted"></div>
+            </div>
+          </div>
+          <div class="modal-actions">
+            <button class="btn-ghost" id="backToStep1">Back</button>
+            <button class="btn-primary" id="toStep3">Next</button>
+          </div>
+        </div>
+        <!-- Step 3: Payment & Donor Info -->
+        <div class="step-panel" data-step="3" style="display: none;">
+          <p class="muted">Choose payment method</p>
+          <div class="payment-options">
+            <button class="amount-btn" data-payment="paypal">PayPal</button>
+            <button class="amount-btn" data-payment="bank_card">Bank Card</button>
+            <button class="amount-btn" data-payment="mpesa">M-Pesa</button>
+            <button class="amount-btn" data-payment="offline">Offline</button>
+          </div>
+          <form id="donationForm" action="https://formspree.io/f/xovkarkw" method="POST">
+            <input type="hidden" name="cause" id="form_cause">
+            <input type="hidden" name="amount" id="form_amount">
+            <input type="hidden" name="currency" value="KES">
+            <input type="hidden" name="frequency" id="form_frequency">
+            <input type="hidden" name="payment_method" id="form_payment">
+            <input type="text" name="name" id="donor_name" placeholder="Full name" required class="form-input" aria-label="Full name">
+            <input type="email" name="_replyto" id="donor_email" placeholder="Email address" required class="form-input" aria-label="Email address">
+            <input type="tel" name="phone" id="donor_phone" placeholder="Phone (optional)" class="form-input" aria-label="Phone number">
+            <textarea name="message" id="donor_message" placeholder="Message (optional)" rows="3" class="form-input" aria-label="Message"></textarea>
+            <div class="modal-actions">
+              <button type="button" class="btn-ghost" id="backToStep2">Back</button>
+              <button type="submit" class="btn-primary" id="confirmDonate">Confirm & Donate</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 </body>
 </html>
