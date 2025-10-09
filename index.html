@@ -3,243 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Loyds Foundation | Empowering Communities Globally</title>
-    <meta name="description" content="Loyds Foundation: Transforming lives through SME support, farming innovation, feeding programs, and education in Kenya and beyond. Join our global mission.">
-    <meta name="keywords" content="non-profit, Kenya, USA, community empowerment, donations, education, farming">
-    <link rel="canonical" href="https://mrcharleske.github.io/The-Loyd-Foundation-/">
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Loyds Foundation | Global Change Starts Here">
-    <meta property="og:description" content="Empowering Kenyan communities with USA partnerships. Donate today.">
-    <meta property="og:image" content="images/home-hero.png">
-    <meta property="og:url" content="https://mrcharleske.github.io/The-Loyd-Foundation-/">
-    
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Loyds Foundation | Global Change Starts Here">
-    <meta name="twitter:description" content="Empowering Kenyan communities with USA partnerships.">
-    <meta name="twitter:image" content="images/home-hero.png">
-    
-    <!-- Schema.org for Non-Profit -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "NGO",
-        "name": "Loyds Foundation",
-        "url": "https://mrcharleske.github.io/The-Loyd-Foundation-/",
-        "description": "International foundation empowering communities through education, farming, SMEs, and feeding programs.",
-        "address": {
-            "@type": "PostalAddress",
-            "addressCountry": "KE"
-        },
-        "founder": {
-            "@type": "Person",
-            "name": "Loyd Founder"
-        }
-    }
-    </script>
-    
-    <!-- PWA Manifest -->
+    <meta name="description" content="The Loyd Foundation empowers communities through SMEs, farming, education, and feeding programs.">
+    <meta name="keywords" content="nonprofit, charity, SMEs, farmers, education, feeding, donation">
+    <meta name="author" content="The Loyd Foundation">
+    <title>The Loyd Foundation - Home</title>
+    <link rel="icon" type="image/png" href="https://mrcharleske.github.io/The-Loyd-Foundation-/loydfavicon.png">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="styles.css">
     <link rel="manifest" href="manifest.json">
-    <meta name="theme-color" content="#2E7D32">
-    <link rel="icon" type="image/png" sizes="32x32" href="images/loydfavicon.png">
-    
-    <!-- Styles -->
-    <link rel="stylesheet" href="style.css">
-    
-    <!-- AOS for Animations (CDN for world-class polish) -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
-    <!-- Skip Link for Accessibility -->
-    <a href="#main-content" class="skip-link">Skip to main content</a>
-    
-    <!-- Header with Navigation Bar -->
-    <header class="header">
-        <nav class="nav-bar" role="navigation" aria-label="Main navigation">
-            <div class="nav-container">
-                <a href="index.html" class="logo" aria-label="Loyds Foundation Home">
-                    <img src="images/loydfavicon.png" alt="Loyds Foundation Logo" width="40" height="40">
-                    Loyds Foundation
-                </a>
-                <ul class="nav-menu">
-                    <li><a href="index.html" class="nav-link active">Home</a></li>
-                    <li><a href="who-we-are.html" class="nav-link">Who We Are</a></li>
-                    <li><a href="programs.html" class="nav-link">Programs</a></li>
-                    <li><a href="impact.html" class="nav-link">Impact</a></li>
-                    <li><a href="donate.html" class="nav-link donate-link">Donate</a></li>
-                    <li><a href="contact.html" class="nav-link">Contact</a></li>
-                </ul>
-                <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
-                    <span></span><span></span><span></span>
-                </button>
-                <!-- Language Toggle with Five Options -->
-                <select id="lang-toggle" aria-label="Language">
-                    <option value="en">EN</option>
-                    <option value="sw">SW</option>
-                    <option value="fr">FR</option>
-                    <option value="es">ES</option>
-                    <option value="ar">AR</option>
-                </select>
-            </div>
+    <!-- Install Popup -->
+    <div id="install-popup" role="dialog" aria-labelledby="install-title">
+        <h3 id="install-title">Install The Loyd Foundation App</h3>
+        <p>Add our app to your home screen for quick access!</p>
+        <button onclick="installApp()">Install</button>
+        <button onclick="closePopup()">Close</button>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <nav>
+            <img src="https://mrcharleske.github.io/The-Loyd-Foundation-/logo-partner1.png" alt="The Loyd Foundation Logo" aria-label="The Loyd Foundation Logo">
+            <ul>
+                <li><a href="index.html" aria-current="page">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="programs.html">Programs</a></li>
+                <li><a href="donate.html">Donate</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
         </nav>
     </header>
 
-    <!-- Main Content -->
-    <main id="main-content">
-        <!-- Hero Section -->
-        <section class="hero" role="banner">
-            <div class="hero-video-container">
-                <video autoplay muted loop playsinline poster="images/home-hero.png" class="hero-video">
-                    <source src="images/home-hero.mp4" type="video/mp4">
-                    <img src="images/home-hero.png" alt="Empowering communities: A vibrant montage of farmers, students, and families" class="hero-image">
-                </video>
-                <div class="hero-overlay">
-                    <div class="hero-content" data-aos="fade-up">
-                        <h1>Empowering Communities, Transforming Lives</h1>
-                        <p>From Kenyan fields to global partnerships, Loyds Foundation bridges worlds for sustainable change. Join us in building a brighter tomorrow.</p>
-                        <div class="hero-buttons">
-                            <a href="who-we-are.html" class="cta-button secondary">Learn More</a>
-                            <a href="donate.html" class="cta-button gold">Donate Now</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Mission Teaser -->
-        <section class="mission" data-aos="fade-up">
-            <div class="container">
-                <h2>Our Global Mission</h2>
-                <p>Rooted in Kenya, reaching the world. We support SMEs, farmers, feeding initiatives, and education—fueled by USA and international donors. Together, we're 1,200+ lives stronger.</p>
-            </div>
-        </section>
-
-        <!-- Programs Teaser Grid -->
-        <section class="programs-teaser" role="region" aria-label="Our Programs">
-            <div class="container">
-                <h2 data-aos="fade-up">Our Four Pillars</h2>
-                <div class="grid">
-                    <!-- SME Card -->
-                    <article class="card" data-aos="fade-up" data-aos-delay="100">
-                        <img src="images/program-smes-banner.jpg" alt="SME Support: Entrepreneurs in action" loading="lazy">
-                        <div class="card-content">
-                            <h3>Small & Medium Enterprises</h3>
-                            <p>Nairobi entrepreneur Sarah scaled her bead business 3x with our bootcamps—now exporting globally. US donor Mike's monthly gift sparked it: "Investing across oceans."</p>
-                            <a href="programs.html#smes" class="card-link">Learn More</a>
-                        </div>
-                    </article>
-                    <!-- Farmers Card -->
-                    <article class="card" data-aos="fade-up" data-aos-delay="200">
-                        <img src="images/program-farmers-banner.png" alt="Farmers Program: Harvesting hope in Kitui" loading="lazy">
-                        <div class="card-content">
-                            <h3>Farming Innovation</h3>
-                            <p>Kitui's Mama Grace boosted yields 200% with drought-resistant seeds. California donor Elena matched grants: "Growing hope together."</p>
-                            <a href="programs.html#farmers" class="card-link">Learn More</a>
-                        </div>
-                    </article>
-                    <!-- Feeding Card -->
-                    <article class="card" data-aos="fade-up" data-aos-delay="300">
-                        <img src="images/program-feeding-banner.png" alt="Feeding Program: Community kitchen in Mombasa" loading="lazy">
-                        <div class="card-content">
-                            <h3>Community Feeding</h3>
-                            <p>Mombasa's Halima now feeds her family daily via mobile kitchens. NYC teacher Jamal's drive fed 200 kids: "Full circle impact."</p>
-                            <a href="programs.html#feeding" class="card-link">Learn More</a>
-                        </div>
-                    </article>
-                    <!-- Education Card -->
-                    <article class="card" data-aos="fade-up" data-aos-delay="400">
-                        <img src="images/program-education-banner.jpg" alt="Education Program: Students learning in Eldoret" loading="lazy">
-                        <div class="card-content">
-                            <h3>Youth Education</h3>
-                            <p>Eldoret's Lila aced exams with our scholarships. Seattle donor Raj: "Bridging worlds through learning."</p>
-                            <a href="programs.html#education" class="card-link">Learn More</a>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <!-- Impact Highlights -->
-        <section class="impact-teaser" role="region" aria-label="Impact Highlights">
-            <div class="container">
-                <h2 data-aos="fade-up">Global Impact at a Glance</h2>
-                <div class="stats-grid" data-aos="fade-up" data-aos-delay="200">
-                    <div class="stat">
-                        <span class="stat-number" data-target="1200">0</span>
-                        <p>Lives Touched</p>
-                    </div>
-                    <div class="stat">
-                        <span class="stat-number" data-target="150">0</span>
-                        <p>Projects Funded</p>
-                    </div>
-                    <div class="stat">
-                        <span class="stat-number" data-target="150000">0</span>
-                        <p>USD Raised</p>
-                    </div>
-                </div>
-                <a href="impact.html" class="cta-button">See Stories</a>
-            </div>
-        </section>
-
-        <!-- Partners Row -->
-        <section class="partners" role="region" aria-label="Our Partners">
-            <div class="container">
-                <h2 data-aos="fade-up">Global Partners</h2>
-                <div class="partners-grid">
-                    <img src="images/logo-partner1.png" alt="Partner 1 Logo" loading="lazy" onerror="this.src='images/placeholder-partner.png';">
-                    <!-- Placeholders for others -->
-                    <div class="partner-placeholder" data-aos="fade-up" data-aos-delay="100">Partner 2 <span>Coming Soon</span></div>
-                    <div class="partner-placeholder" data-aos="fade-up" data-aos-delay="200">Partner 3 <span>Coming Soon</span></div>
-                    <div class="partner-placeholder" data-aos="fade-up" data-aos-delay="300">Partner 4 <span>Coming Soon</span></div>
-                    <div class="partner-placeholder" data-aos="fade-up" data-aos-delay="400">Partner 5 <span>Coming Soon</span></div>
-                    <div class="partner-placeholder" data-aos="fade-up" data-aos-delay="500">Partner 6 <span>Coming Soon</span></div>
-                </div>
-                <p class="partners-note">We're growing—join us as a partner!</p>
-            </div>
-        </section>
-    </main>
-
-    <!-- Email Signup Modal -->
-    <div id="signup-modal" class="modal" role="dialog" aria-labelledby="modal-title" aria-hidden="true">
-        <div class="modal-content">
-            <button class="modal-close" aria-label="Close modal">&times;</button>
-            <h3 id="modal-title">Join 5,000+ Changemakers</h3>
-            <p>Get field updates and inspiring stories from Kenya to the USA.</p>
-            <form id="signup-form" action="https://formspree.io/f/xovkarkw" method="POST">
-                <input type="email" name="email" placeholder="Your email" required aria-label="Email address">
-                <select name="region" aria-label="Preferred region">
-                    <option value="global">Global</option>
-                    <option value="kenya">Kenya</option>
-                    <option value="usa">USA</option>
-                </select>
-                <button type="submit" class="cta-button gold">Subscribe</button>
-            </form>
+    <!-- Homepage -->
+    <section id="home" class="hero">
+        <video autoplay muted loop>
+            <source src="https://mrcharleske.github.io/The-Loyd-Foundation-/home-hero.mp4" type="video/mp4">
+        </video>
+        <div data-aos="fade-in">
+            <h1>Welcome to The Loyd Foundation</h1>
+            <p>Empowering communities through sustainable programs in SMEs, farming, education, and feeding initiatives.</p>
+            <a href="donate.html" class="btn">Support Our Cause</a>
         </div>
-    </div>
+    </section>
+
+    <section class="section" data-aos="slide-up">
+        <h2>Our Impact</h2>
+        <div class="grid">
+            <div class="card" data-aos="zoom-in">
+                <img src="https://mrcharleske.github.io/The-Loyd-Foundation-/home-smes.jpg" alt="SMEs Empowerment">
+                <h3>SMEs Empowerment</h3>
+                <p>Supporting small businesses to thrive and create jobs.</p>
+            </div>
+            <div class="card" data-aos="zoom-in" data-aos-delay="100">
+                <img src="https://mrcharleske.github.io/The-Loyd-Foundation-/home-farmer.png" alt="Farmers Empowerment">
+                <h3>Farmers Empowerment</h3>
+                <p>Equipping farmers with tools and knowledge for sustainable agriculture.</p>
+            </div>
+            <div class="card" data-aos="zoom-in" data-aos-delay="200">
+                <img src="https://mrcharleske.github.io/The-Loyd-Foundation-/home-education.jpg" alt="Educational Sponsorship">
+                <h3>Educational Sponsorship</h3>
+                <p>Providing access to quality education for underprivileged students.</p>
+            </div>
+            <div class="card" data-aos="zoom-in" data-aos-delay="300">
+                <img src="https://mrcharleske.github.io/The-Loyd-Foundation-/home-feeding.png" alt="Feeding Programs">
+                <h3>Feeding Programs</h3>
+                <p>Ensuring no one goes hungry through community feeding initiatives.</p>
+            </div>
+        </div>
+    </section>
 
     <!-- Footer -->
-    <footer class="footer" role="contentinfo">
-        <div class="container">
-            <div class="footer-bottom">
-                <p>&copy; 2025 Loyds Foundation. All rights reserved. | <a href="privacy.html">Privacy Policy</a></p>
-            </div>
-        </div>
+    <footer>
+        <p>The Loyd Foundation. All rights reserved. <a href="#privacy">Privacy Policy</a></p>
     </footer>
 
-    <!-- Scripts -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="main.js"></script>
-    <!-- PWA Service Worker Registration -->
-    <script>
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', () => {
-                navigator.serviceWorker.register('/service-worker.js')
-                    .then(reg => console.log('SW registered'))
-                    .catch(err => console.log('SW registration failed'));
-            });
-        }
-    </script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
