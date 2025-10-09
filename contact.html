@@ -1,219 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us | Loyds Foundation</title>
-    <meta name="description" content="Get in touch with Loyds Foundation. Reach our team for partnerships, inquiries, or support on our Kenya and global programs.">
-    <meta name="keywords" content="contact, email, phone, Loyds Foundation, Kenya, USA">
-    <link rel="canonical" href="https://mrcharleske.github.io/The-Loyd-Foundation-/contact.html">
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Contact Us | Loyds Foundation">
-    <meta property="og:description" content="Connect with our team to learn more or collaborate on empowering communities.">
-    <meta property="og:image" content="images/about-team.jpg">
-    <meta property="og:url" content="https://mrcharleske.github.io/The-Loyd-Foundation-/contact.html">
-    
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Contact Us | Loyds Foundation">
-    <meta name="twitter:description" content="Connect with our team.">
-    <meta name="twitter:image" content="images/about-team.jpg">
-    
-    <!-- Schema.org for Contact Page -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "ContactPage",
-        "name": "Loyds Foundation Contact",
-        "url": "https://mrcharleske.github.io/The-Loyd-Foundation-/contact.html",
-        "description": "Contact information for Loyds Foundation team.",
-        "contactPoint": {
-            "@type": "ContactPoint",
-            "contactType": "Customer Support",
-            "url": "https://mrcharleske.github.io/The-Loyd-Foundation-/contact.html",
-            "email": "info@loydsfoundation.org"
-        }
-    }
-    </script>
-    
-    <!-- PWA Manifest -->
-    <link rel="manifest" href="manifest.json">
-    <meta name="theme-color" content="#2E7D32">
-    <link rel="icon" type="image/png" sizes="32x32" href="images/loydfavicon.png">
-    
-    <!-- Styles -->
-    <link rel="stylesheet" href="style.css">
-    
-    <!-- AOS for Animations -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — The Loyd Foundation</title>
+  <meta name="description" content="Get in touch with The Loyd Foundation. Reach us via email, visit our offices in Nairobi or Maryland, or send us a message.">
+  <link rel="icon" type="image/png" href="images/loydfavicon.png">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#1e6f5c">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
 </head>
 <body>
-    <!-- Skip Link for Accessibility -->
-    <a href="#main-content" class="skip-link">Skip to main content</a>
-    
-    <!-- Header with Navigation Bar -->
-    <header class="header">
-        <nav class="nav-bar" role="navigation" aria-label="Main navigation">
-            <div class="nav-container">
-                <a href="index.html" class="logo" aria-label="Loyds Foundation Home">
-                    <img src="images/loydfavicon.png" alt="Loyds Foundation Logo" width="40" height="40">
-                    Loyds Foundation
-                </a>
-                <ul class="nav-menu">
-                    <li><a href="index.html" class="nav-link">Home</a></li>
-                    <li><a href="who-we-are.html" class="nav-link">Who We Are</a></li>
-                    <li><a href="programs.html" class="nav-link">Programs</a></li>
-                    <li><a href="impact.html" class="nav-link">Impact</a></li>
-                    <li><a href="donate.html" class="nav-link donate-link">Donate</a></li>
-                    <li><a href="contact.html" class="nav-link active">Contact</a></li>
-                </ul>
-                <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
-                    <span></span><span></span><span></span>
-                </button>
-                <!-- Language Toggle with Five Options -->
-                <select id="lang-toggle" aria-label="Language">
-                    <option value="en">EN</option>
-                    <option value="sw">SW</option>
-                    <option value="fr">FR</option>
-                    <option value="es">ES</option>
-                    <option value="ar">AR</option>
-                </select>
-            </div>
-        </nav>
-    </header>
+  <!-- Install Button -->
+  <button class="btn-install" id="installBtn" style="display: none;">Install The Loyd Foundation</button>
 
-    <!-- Main Content -->
-    <main id="main-content">
-        <!-- Hero Section (No Overlay) -->
-        <section class="hero hero-contact" role="banner">
-            <div class="hero-image-container">
-                <img src="images/about-team.jpg" alt="Contact Hero: Our team ready to connect" class="hero-image" loading="lazy" height="400">
-                <div class="hero-content" data-aos="fade-up">
-                    <h1>Get In Touch</h1>
-                    <p>We're here to answer questions, discuss partnerships, or hear your ideas for empowering communities in Kenya and beyond.</p>
-                    <div class="hero-buttons">
-                        <a href="#contact-form" class="cta-button secondary">Send Message</a>
-                        <a href="mailto:info@loydsfoundation.org" class="cta-button gold">Email Us</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Info -->
-        <section class="contact-info" data-aos="fade-up">
-            <div class="container">
-                <h2>Reach Our Team</h2>
-                <div class="contact-grid">
-                    <div class="contact-item">
-                        <h3>General Inquiries</h3>
-                        <p><strong>Email:</strong> info@loydsfoundation.org</p>
-                        <p><strong>Phone:</strong> +254 700 123 456 (Kenya) | +1 800 555 0199 (USA)</p>
-                    </div>
-                    <div class="contact-item">
-                        <h3>Media & Partnerships</h3>
-                        <p><strong>Email:</strong> partners@loydsfoundation.org</p>
-                        <p>Join our global network—let's collaborate!</p>
-                    </div>
-                    <div class="contact-item">
-                        <h3>Office Locations</h3>
-                        <p><strong>Nairobi, Kenya:</strong> Plot 123, Uhuru Highway</p>
-                        <p><strong>New York, USA:</strong> 456 Global Ave (Virtual)</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Form -->
-        <section id="contact-form" class="contact-form" data-aos="fade-up">
-            <div class="container">
-                <h2>Send Us a Message</h2>
-                <form action="https://formspree.io/f/xovkarkw" method="POST">
-                    <div class="form-group">
-                        <label for="name">Full Name</label>
-                        <input type="text" id="name" name="name" required aria-label="Full Name">
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email Address</label>
-                        <input type="email" id="email" name="email" required aria-label="Email Address">
-                    </div>
-                    <div class="form-group">
-                        <label for="subject">Subject</label>
-                        <select id="subject" name="subject" required aria-label="Subject">
-                            <option value="">Select...</option>
-                            <option value="inquiry">General Inquiry</option>
-                            <option value="partnership">Partnership Opportunity</option>
-                            <option value="donation">Donation Question</option>
-                            <option value="media">Media Request</option>
-                            <option value="other">Other</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" rows="5" required aria-label="Message"></textarea>
-                    </div>
-                    <label class="checkbox-label">
-                        <input type="checkbox" name="newsletter" aria-label="Subscribe to updates">
-                        Add me to your newsletter for impact stories.
-                    </label>
-                    <button type="submit" class="cta-button gold">Send Message</button>
-                </form>
-            </div>
-        </section>
-
-        <!-- Map Placeholder -->
-        <section class="map-section" data-aos="fade-up">
-            <div class="container">
-                <h2>Find Us</h2>
-                <p>Our work spans Kenya and global partners—visit or connect virtually.</p>
-                <div class="map-placeholder">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.726!2d36.821!3d-1.292!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f173!2sNairobi!5e0!3m2!1sen!2sus!4v1630000000000" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    <!-- Nairobi Map Embed - Replace with dynamic if needed -->
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Email Signup Modal -->
-    <div id="signup-modal" class="modal" role="dialog" aria-labelledby="modal-title" aria-hidden="true">
-        <div class="modal-content">
-            <button class="modal-close" aria-label="Close modal">&times;</button>
-            <h3 id="modal-title">Join 5,000+ Changemakers</h3>
-            <p>Get field updates and inspiring stories from Kenya to the USA.</p>
-            <form id="signup-form" action="https://formspree.io/f/xovkarkw" method="POST">
-                <input type="email" name="email" placeholder="Your email" required aria-label="Email address">
-                <select name="region" aria-label="Preferred region">
-                    <option value="global">Global</option>
-                    <option value="kenya">Kenya</option>
-                    <option value="usa">USA</option>
-                </select>
-                <button type="submit" class="cta-button gold">Subscribe</button>
-            </form>
-        </div>
+  <!-- Header -->
+  <header class="navbar">
+    <div class="wrap nav">
+      <div class="logo">
+        <img src="images/loydfavicon.png" alt="The Loyd Foundation Logo">
+        <strong>The Loyd Foundation</strong>
+      </div>
+      <nav class="nav-links" id="navMenu">
+        <a href="index.html">Home</a>
+        <a href="programs.html">Programs</a>
+        <a href="about.html">About</a>
+        <a href="impact.html">Impact</a>
+        <a href="donate.html">Donate</a>
+        <a href="contact.html" class="active">Contact</a>
+      </nav>
+      <button class="hamburger" id="hamburger">☰</button>
     </div>
+  </header>
 
-    <!-- Footer -->
-    <footer class="footer" role="contentinfo">
-        <div class="container">
-            <div class="footer-bottom">
-                <p>&copy; 2025 Loyds Foundation. All rights reserved. | <a href="privacy.html">Privacy Policy</a></p>
-            </div>
+  <!-- Hero -->
+  <section class="hero" data-aos="fade-up">
+    <div class="wrap hero-content">
+      <div class="hero-media">
+        <img src="images/home-hero.png" alt="Contact The Loyd Foundation" class="flap">
+        <div class="hero-overlay"></div>
+      </div>
+      <div class="hero-text">
+        <h1>Contact Us</h1>
+        <p>Have a question or want to get involved? Reach out, we’d love to hear from you.</p>
+        <button class="btn-primary" data-modal="donate">Support Our Work</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Info and Form -->
+  <section class="section-alt" data-aos="fade-up">
+    <div class="wrap grid-2">
+      <div>
+        <h2>Get in Touch</h2>
+        <p class="muted">Send us a message, and we’ll respond as soon as possible.</p>
+        <form id="contactForm" action="https://formspree.io/f/xovkarkw" method="POST" data-aos="fade-up" data-aos-delay="100">
+          <input type="text" name="name" placeholder="Full name" required class="form-input" aria-label="Full name">
+          <input type="email" name="_replyto" placeholder="Email address" required class="form-input" aria-label="Email address">
+          <textarea name="message" placeholder="Your message" rows="5" required class="form-input" aria-label="Message"></textarea>
+          <button type="submit" class="btn-primary">Send Message</button>
+        </form>
+      </div>
+      <div>
+        <h3>Contact Details</h3>
+        <p class="muted"><strong>Email:</strong> <a href="mailto:loydfoundation.co@gmail.com">loydfoundation.co@gmail.com</a></p>
+        <p class="muted"><strong>Offices:</strong> Nairobi, Kenya<br>Maryland, USA</p>
+        <h3>Find Us</h3>
+        <div class="map" data-aos="zoom-in" data-aos-delay="200">
+          <h4>Nairobi, Kenya</h4>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.950105845925!2d36.817224614799!3d-1.292065935775527!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f10e8ef0f8e2b%3A0x2c1c02cbf72708!2sNairobi%2C+Kenya!5e0!3m2!1sen!2sus!4v1728130000000!5m2!1sen!2sus" width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
-    </footer>
+        <div class="map" data-aos="zoom-in" data-aos-delay="300">
+          <h4>Maryland, USA</h4>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d124312.080057979!2d-76.612189379724!3d39.045754879724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7c6de5af6e45b%3A0xb3559b1c2c8c4c4!2sMaryland%2C+USA!5e0!3m2!1sen!2sus!4v1728130000000!5m2!1sen!2sus" width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- Scripts -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="main.js"></script>
-    <!-- PWA Service Worker Registration -->
-    <script>
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', () => {
-                navigator.serviceWorker.register('/service-worker.js')
-                    .then(reg => console.log('SW registered'))
-                    .catch(err => console.log('SW registration failed'));
-            });
-        }
-    </script>
+  <!-- Footer -->
+  <footer>
+    <div class="wrap">
+      <div class="footer-content">
+        <div><strong>The Loyd Foundation</strong></div>
+        <div class="text-sm muted">© <span id="year"></span> The Loyd Foundation — All rights reserved.</div>
+        <div class="social-links">
+          <a href="#" data-aos="fade-up">Facebook</a> |
+          <a href="#" data-aos="fade-up" data-aos-delay="100">Instagram</a> |
+          <a href="#" data-aos="fade-up" data-aos-delay="200">LinkedIn</a> |
+          <a href="#" data-aos="fade-up" data-aos-delay="300">Twitter</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Donation Modal -->
+  <div class="modal-backdrop" id="modalBackdrop" aria-hidden="true">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="donateTitle" data-aos="zoom-in">
+      <h3 id="donateTitle">Make a Donation</h3>
+      <div class="steps" id="modalSteps">
+        <div class="step active"></div>
+        <div class="step"></div>
+        <div class="step"></div>
+      </div>
+      <div id="stepContent">
+        <!-- Step 1: Choose Cause -->
+        <div class="step-panel" data-step="1">
+          <p class="muted">Support a cause that matters. Your gift creates lasting impact.</p>
+          <div id="causeTiles">
+            <button class="amount-btn" data-cause="general">General Support</button>
+            <button class="amount-btn" data-cause="sme_empowerment">SME Empowerment</button>
+            <button class="amount-btn" data-cause="farmers_empowerment">Farmers Empowerment</button>
+            <button class="amount-btn" data-cause="feeding_program">Feeding Program</button>
+            <button class="amount-btn" data-cause="education_scholarship">Education Scholarships</button>
+          </div>
+          <div class="modal-actions">
+            <button class="btn-ghost" id="modalClose">Cancel</button>
+            <button class="btn-primary" id="toStep2">Next</button>
+          </div>
+        </div>
+        <!-- Step 2: Amount & Frequency -->
+        <div class="step-panel" data-step="2" style="display: none;">
+          <p class="muted">Select amount or enter custom amount</p>
+          <div class="grid-2">
+            <div>
+              <div class="amount-options">
+                <button class="amount-btn" data-amount="500">KES 500</button>
+                <button class="amount-btn" data-amount="1000">KES 1,000</button>
+                <button class="amount-btn" data-amount="2500">KES 2,500</button>
+                <button class="amount-btn" data-amount="5000">KES 5,000</button>
+                <button class="amount-btn" data-amount="custom">Custom</button>
+              </div>
+              <input type="number" id="customAmount" placeholder="Enter amount (KES)" class="form-input">
+            </div>
+            <div>
+              <div class="frequency-label">Frequency</div>
+              <div class="frequency-options">
+                <button class="amount-btn" data-frequency="one_time">One-time</button>
+                <button class="amount-btn" data-frequency="monthly">Monthly</button>
+              </div>
+              <div id="selectedAmountPreview" class="muted"></div>
+            </div>
+          </div>
+          <div class="modal-actions">
+            <button class="btn-ghost" id="backToStep1">Back</button>
+            <button class="btn-primary" id="toStep3">Next</button>
+          </div>
+        </div>
+        <!-- Step 3: Payment & Donor Info -->
+        <div class="step-panel" data-step="3" style="display: none;">
+          <p class="muted">Choose payment method</p>
+          <div class="payment-options">
+            <button class="amount-btn" data-payment="paypal">PayPal</button>
+            <button class="amount-btn" data-payment="bank_card">Bank Card</button>
+            <button class="amount-btn" data-payment="mpesa">M-Pesa</button>
+            <button class="amount-btn" data-payment="offline">Offline</button>
+          </div>
+          <form id="donationForm" action="https://formspree.io/f/xovkarkw" method="POST">
+            <input type="hidden" name="cause" id="form_cause">
+            <input type="hidden" name="amount" id="form_amount">
+            <input type="hidden" name="currency" value="KES">
+            <input type="hidden" name="frequency" id="form_frequency">
+            <input type="hidden" name="payment_method" id="form_payment">
+            <input type="text" name="name" id="donor_name" placeholder="Full name" required class="form-input" aria-label="Full name">
+            <input type="email" name="_replyto" id="donor_email" placeholder="Email address" required class="form-input" aria-label="Email address">
+            <input type="tel" name="phone" id="donor_phone" placeholder="Phone (optional)" class="form-input" aria-label="Phone number">
+            <textarea name="message" id="donor_message" placeholder="Message (optional)" rows="3" class="form-input" aria-label="Message"></textarea>
+            <div class="modal-actions">
+              <button type="button" class="btn-ghost" id="backToStep2">Back</button>
+              <button type="submit" class="btn-primary" id="confirmDonate">Confirm & Donate</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 </body>
 </html>
