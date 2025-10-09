@@ -1,267 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Donate | Loyds Foundation</title>
-    <meta name="description" content="Make a difference with Loyds Foundation. One-time or monthly donations in USD or KES support our programs in Kenya and global initiatives. Secure and easy.">
-    <meta name="keywords" content="donate, donation, support, Loyds Foundation, Kenya, USA, charity">
-    <link rel="canonical" href="https://mrcharleske.github.io/The-Loyd-Foundation-/donate.html">
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Donate to Loyds Foundation">
-    <meta property="og:description" content="Your gift empowers communities in Kenya through our SME, farming, feeding, and education programs.">
-    <meta property="og:image" content="images/donation-bg.jpg">
-    <meta property="og:url" content="https://mrcharleske.github.io/The-Loyd-Foundation-/donate.html">
-    
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Donate to Loyds Foundation">
-    <meta name="twitter:description" content="Empower change with a secure donation.">
-    <meta name="twitter:image" content="images/donation-bg.jpg">
-    
-    <!-- Schema.org for Donation Page -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "DonateAction",
-        "name": "Donate to Loyds Foundation",
-        "url": "https://mrcharleske.github.io/The-Loyd-Foundation-/donate.html",
-        "description": "Secure donations supporting community programs in Kenya and USA partnerships.",
-        "target": {
-            "@type": "NGO",
-            "name": "Loyds Foundation"
-        }
-    }
-    </script>
-    
-    <!-- PWA Manifest -->
-    <link rel="manifest" href="manifest.json">
-    <meta name="theme-color" content="#2E7D32">
-    <link rel="icon" type="image/png" sizes="32x32" href="images/loydfavicon.png">
-    
-    <!-- Styles -->
-    <link rel="stylesheet" href="style.css">
-    
-    <!-- AOS for Animations -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thank You — The Loyd Foundation</title>
+  <meta name="description" content="Thank you for your donation to The Loyd Foundation. Your support makes a difference!">
+  <link rel="icon" type="image/png" href="images/loydfavicon.png">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#1e6f5c">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
 </head>
 <body>
-    <!-- Skip Link for Accessibility -->
-    <a href="#main-content" class="skip-link">Skip to main content</a>
-    
-    <!-- Header with Navigation Bar -->
-    <header class="header">
-        <nav class="nav-bar" role="navigation" aria-label="Main navigation">
-            <div class="nav-container">
-                <a href="index.html" class="logo" aria-label="Loyds Foundation Home">
-                    <img src="images/loydfavicon.png" alt="Loyds Foundation Logo" width="40" height="40">
-                    Loyds Foundation
-                </a>
-                <ul class="nav-menu">
-                    <li><a href="index.html" class="nav-link">Home</a></li>
-                    <li><a href="who-we-are.html" class="nav-link">Who We Are</a></li>
-                    <li><a href="programs.html" class="nav-link">Programs</a></li>
-                    <li><a href="impact.html" class="nav-link">Impact</a></li>
-                    <li><a href="donate.html" class="nav-link donate-link active">Donate</a></li>
-                    <li><a href="contact.html" class="nav-link">Contact</a></li>
-                </ul>
-                <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
-                    <span></span><span></span><span></span>
-                </button>
-                <!-- Language Toggle with Five Options -->
-                <select id="lang-toggle" aria-label="Language">
-                    <option value="en">EN</option>
-                    <option value="sw">SW</option>
-                    <option value="fr">FR</option>
-                    <option value="es">ES</option>
-                    <option value="ar">AR</option>
-                </select>
-            </div>
-        </nav>
-    </header>
+  <!-- Install Button -->
+  <button class="btn-install" id="installBtn" style="display: none;">Install The Loyd Foundation</button>
 
-    <!-- Main Content -->
-    <main id="main-content">
-        <!-- Hero Section (No Overlay) -->
-        <section class="hero hero-donate" role="banner">
-            <div class="hero-image-container">
-                <img src="images/donation-bg.jpg" alt="Donation Hero: Hands uniting in support" class="hero-image" loading="lazy" height="400">
-                <div class="hero-content" data-aos="fade-up">
-                    <h1>Your Gift Changes Lives</h1>
-                    <p>Every dollar supports Kenyan communities through our programs—fueled by global partners like you. Choose one-time or monthly, in USD or KES.</p>
-                    <button id="donate-trigger" class="cta-button gold" aria-label="Open donation form">Donate Now</button>
-                </div>
-            </div>
-        </section>
-
-        <!-- Why Donate Section -->
-        <section class="why-donate" data-aos="fade-up">
-            <div class="container">
-                <h2>Why Your Support Matters</h2>
-                <div class="why-grid">
-                    <div class="why-item">
-                        <h3>Direct Impact</h3>
-                        <p>$25 feeds a family for a week or funds seeds for a farmer's plot.</p>
-                    </div>
-                    <div class="why-item">
-                        <h3>Global Reach</h3>
-                        <p>Join USA donors bridging Kenya's needs—your gift multiplies across borders.</p>
-                    </div>
-                    <div class="why-item">
-                        <h3>Secure & Transparent</h3>
-                        <p>100% of donations go to programs; full reporting in our impact stories.</p>
-                    </div>
-                </div>
-                <div class="donation-breakdown">
-                    <p><strong>Breakdown:</strong> 40% SMEs | 30% Farmers | 20% Feeding | 10% Education</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Quick Links to Programs -->
-        <section class="program-links" data-aos="fade-up">
-            <div class="container">
-                <h2>Target Your Gift</h2>
-                <div class="grid">
-                    <a href="donate.html?smes" class="program-link-card">
-                        <img src="images/program-smes-banner.jpg" alt="Support SMEs" loading="lazy" height="200">
-                        <h3>SMEs</h3>
-                        <p>Empower entrepreneurs</p>
-                    </a>
-                    <a href="donate.html?farmers" class="program-link-card">
-                        <img src="images/program-farmers-banner.png" alt="Support Farmers" loading="lazy" height="200">
-                        <h3>Farmers</h3>
-                        <p>Boost sustainable agriculture</p>
-                    </a>
-                    <a href="donate.html?feeding" class="program-link-card">
-                        <img src="images/program-feeding-banner.png" alt="Support Feeding" loading="lazy" height="200">
-                        <h3>Feeding</h3>
-                        <p>Nourish families</p>
-                    </a>
-                    <a href="donate.html?education" class="program-link-card">
-                        <img src="images/program-education-banner.jpg" alt="Support Education" loading="lazy" height="200">
-                        <h3>Education</h3>
-                        <p>Build futures</p>
-                    </a>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Donation Modal -->
-    <div id="donation-modal" class="modal donation-modal" role="dialog" aria-labelledby="donation-title" aria-hidden="true">
-        <div class="modal-content">
-            <button class="modal-close" aria-label="Close donation modal">&times;</button>
-            <h3 id="donation-title">Make Your Donation</h3>
-            <form id="donation-form" action="https://formspree.io/f/xovkarkw" method="POST">
-                <!-- Step 1: Donation Type -->
-                <div class="form-step" id="step-type">
-                    <h4>Step 1: Choose Your Support</h4>
-                    <label><input type="radio" name="type" value="one-time" checked required> One-Time Donation</label>
-                    <label><input type="radio" name="type" value="monthly"> Monthly Recurring</label>
-                </div>
-
-                <!-- Step 2: Amount -->
-                <div class="form-step" id="step-amount">
-                    <h4>Step 2: Select Amount (USD)</h4>
-                    <button type="button" class="amount-btn" data-amount="10">$10</button>
-                    <button type="button" class="amount-btn" data-amount="25">$25</button>
-                    <button type="button" class="amount-btn" data-amount="50">$50</button>
-                    <button type="button" class="amount-btn" data-amount="100">$100</button>
-                    <button type="button" class="amount-btn custom" data-amount="custom">Custom</button>
-                    <input type="number" id="custom-amount" name="amount" placeholder="Enter amount" min="5" style="display:none;">
-                    <label>
-                        <input type="checkbox" id="kes-toggle"> Switch to KES (approx. rates apply)
-                    </label>
-                    <input type="hidden" name="currency" value="USD">
-                </div>
-
-                <!-- Step 3: Payment Method -->
-                <div class="form-step" id="step-payment">
-                    <h4>Step 3: Payment Method</h4>
-                    <div class="payment-options">
-                        <label class="payment-option">
-                            <input type="radio" name="payment" value="mpesa" required>
-                            <span>M-Pesa (KES only)</span>
-                            <input type="tel" name="mpesa-phone" placeholder="Phone Number" style="display:none;">
-                        </label>
-                        <label class="payment-option">
-                            <input type="radio" name="payment" value="paypal">
-                            <span>PayPal</span>
-                            <!-- Placeholder for PayPal button -->
-                            <div class="paypal-placeholder">Integrate PayPal API here</div>
-                        </label>
-                        <label class="payment-option">
-                            <input type="radio" name="payment" value="bank">
-                            <span>Bank Transfer</span>
-                            <input type="text" name="bank-details" placeholder="Account Details" style="display:none;">
-                            <small>Swift: LOYDKE, Account: 123456789</small>
-                        </label>
-                    </div>
-                </div>
-
-                <!-- Donor Info -->
-                <div class="form-step donor-info">
-                    <h4>Donor Information</h4>
-                    <input type="text" name="name" placeholder="Full Name" required aria-label="Full Name">
-                    <input type="email" name="email" placeholder="Email Address" required aria-label="Email Address">
-                    <label><input type="checkbox" name="newsletter"> Send me monthly impact updates</label>
-                    <input type="hidden" name="program" value="">
-                </div>
-
-                <div class="form-actions">
-                    <button type="button" id="prev-step">Previous</button>
-                    <button type="button" id="next-step">Next</button>
-                    <button type="submit" class="cta-button gold" style="display:none;">Complete Donation</button>
-                </div>
-            </form>
-            <div id="success-message" style="display:none;">
-                <p>Thank you! Redirecting to success page...</p>
-            </div>
-        </div>
+  <!-- Header -->
+  <header class="navbar">
+    <div class="wrap nav">
+      <div class="logo">
+        <img src="images/loydfavicon.png" alt="The Loyd Foundation Logo">
+        <strong>The Loyd Foundation</strong>
+      </div>
+      <nav class="nav-links" id="navMenu">
+        <a href="index.html">Home</a>
+        <a href="programs.html">Programs</a>
+        <a href="about.html">About</a>
+        <a href="impact.html">Impact</a>
+        <a href="donate.html">Donate</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <button class="hamburger" id="hamburger">☰</button>
     </div>
+  </header>
 
-    <!-- Email Signup Modal -->
-    <div id="signup-modal" class="modal" role="dialog" aria-labelledby="modal-title" aria-hidden="true">
-        <div class="modal-content">
-            <button class="modal-close" aria-label="Close modal">&times;</button>
-            <h3 id="modal-title">Join 5,000+ Changemakers</h3>
-            <p>Get field updates and inspiring stories from Kenya to the USA.</p>
-            <form id="signup-form" action="https://formspree.io/f/xovkarkw" method="POST">
-                <input type="email" name="email" placeholder="Your email" required aria-label="Email address">
-                <select name="region" aria-label="Preferred region">
-                    <option value="global">Global</option>
-                    <option value="kenya">Kenya</option>
-                    <option value="usa">USA</option>
-                </select>
-                <button type="submit" class="cta-button gold">Subscribe</button>
-            </form>
-        </div>
+  <!-- Thank You Message -->
+  <section class="wrap" data-aos="fade-up">
+    <div class="offline-content">
+      <img src="images/donation-success.jpg" alt="Donation Success" class="offline-logo flap" data-aos="zoom-in">
+      <h1>Thank You for Your Support!</h1>
+      <p class="muted">Your donation to The Loyd Foundation will help empower communities through entrepreneurship, agriculture, nutrition, and education.</p>
+      <div class="action">
+        <a href="index.html" class="btn-primary">Return Home</a>
+        <a href="programs.html" class="btn-ghost">Explore Programs</a>
+      </div>
     </div>
+  </section>
 
-    <!-- Footer -->
-    <footer class="footer" role="contentinfo">
-        <div class="container">
-            <div class="footer-bottom">
-                <p>&copy; 2025 Loyds Foundation. All rights reserved. | <a href="privacy.html">Privacy Policy</a></p>
-            </div>
+  <!-- Footer -->
+  <footer>
+    <div class="wrap">
+      <div class="footer-content">
+        <div><strong>The Loyd Foundation</strong></div>
+        <div class="text-sm muted">© <span id="year"></span> The Loyd Foundation — All rights reserved.</div>
+        <div class="social-links">
+          <a href="#" data-aos="fade-up">Facebook</a> |
+          <a href="#" data-aos="fade-up" data-aos-delay="100">Instagram</a> |
+          <a href="#" data-aos="fade-up" data-aos-delay="200">LinkedIn</a>
         </div>
-    </footer>
+      </div>
+    </div>
+  </footer>
 
-    <!-- Scripts -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="main.js"></script>
-    <!-- PWA Service Worker Registration -->
-    <script>
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', () => {
-                navigator.serviceWorker.register('/service-worker.js')
-                    .then(reg => console.log('SW registered'))
-                    .catch(err => console.log('SW registration failed'));
-            });
-        }
-    </script>
+  <script src="main.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 </body>
 </html>
